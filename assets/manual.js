@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var lang = document.documentElement.lang || "es";
+  var lang = (document.documentElement.lang || "es").slice(0, 2); // la página en portugués es «pt-BR»
   var TEXTOS = {
     es: { nada: "Nada coincide con «{q}». Prueba con otra palabra.", uno: "1 resultado", varios: "{n} resultados" },
     en: { nada: "Nothing matches “{q}”. Try another word.", uno: "1 result", varios: "{n} results" },
