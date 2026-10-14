@@ -724,6 +724,13 @@ mark { background: color-mix(in srgb, var(--warn) 30%, transparent); color: inhe
   .shell { padding-inline: 16px; }
   .cover { padding-block: 36px 28px; }
   section { scroll-margin-top: 130px; }
+  /* Una etiqueta larga («Sem domínio (não conta contra nenhum teto)») no cabe en un móvil:
+     se parte, y cada trozo lleva su propio borde. */
+  .ui { white-space: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+}
+/* En los móviles más estrechos «by Siete» empuja los idiomas a otra línea. */
+@media (max-width: 380px) {
+  .topbar .brandline span:not(.mark) { display: none; }
 }
 @media print {
   .topbar { display: none; }
