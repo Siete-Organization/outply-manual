@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de Outply</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>
+  // Abre el manual en el idioma pedido (?lang=, el que manda el botón «?» de Outply), si no en el
+  // último que se usó, y si no en el del navegador. Conserva ?q= y la sección (#sN).
+  (function () {
+    var p = new URLSearchParams(location.search);
+    var guardado = null;
+    try { guardado = localStorage.getItem("outply-manual-lang"); } catch (e) { guardado = null; }
+    var pedido = (p.get("lang") || guardado || navigator.language || "es").slice(0, 2).toLowerCase();
+    var lang = ["es", "en", "pt"].indexOf(pedido) >= 0 ? pedido : "es";
+    var q = p.get("q");
+    location.replace(lang + "/" + (q ? "?q=" + encodeURIComponent(q) : "") + location.hash);
+  })();
+</script>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 3rem auto; max-width: 32rem; padding: 0 1rem; color: #0a0b0d; }
+  a { color: #0060cc; }
+</style>
+</head>
+<body>
+  <p>Manual de Outply · Outply user guide · Manual do Outply</p>
+  <ul>
+    <li><a href="es/">Español</a></li>
+    <li><a href="en/">English</a></li>
+    <li><a href="pt/">Português</a></li>
+  </ul>
+</body>
+</html>

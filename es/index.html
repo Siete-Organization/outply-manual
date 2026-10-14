@@ -1,0 +1,1923 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de Outply</title>
+<meta name="description" content="Cómo se usa Outply, pantalla por pantalla: bandejas, campañas, contactos, respuestas y entregabilidad.">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="pt-BR" href="../pt/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="../assets/manual.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="brandline" href="#">
+      <span class="mark" aria-hidden="true">O</span>
+      <b>Outply</b>
+      <span>by Siete</span>
+    </a>
+    <div class="search" role="search">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="m10.4 10.4 3.4 3.4"/></svg>
+      <input id="buscar" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Buscar en el manual (pulsa /)" aria-label="Buscar en el manual"
+             aria-controls="resultados" aria-expanded="false">
+      <div id="resultados" class="results" role="listbox" hidden></div>
+    </div>
+    <nav class="langs" aria-label="Idioma">
+        <a href="../es/" hreflang="es" lang="es" aria-current="true">ES</a>
+        <a href="../en/" hreflang="en" lang="en">EN</a>
+        <a href="../pt/" hreflang="pt" lang="pt-BR">PT</a>
+    </nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <header class="cover">
+  <p class="eyebrow">Manual de usuario</p>
+  <h1>Cómo se usa Outply</h1>
+  <p class="lede">
+    Outply envía correo en frío desde las bandejas de tus clientes, dosificado para que no
+    se queme el dominio, y te dice quién contestó. Este manual recorre la herramienta
+    pantalla por pantalla, en el orden en que se usa.
+  </p>
+  <div class="covermeta">
+    <span><b>Versión</b> Octubre de 2026</span>
+    <span><b>Dirigido a</b> SDR, operadores y administradores de agencia</span>
+    <span><b>Idiomas</b> Español, English, Português</span>
+  </div>
+  <div class="legend">
+    <div>
+      <b>Nombres de pantalla</b>
+      Lo que aparece escrito en la herramienta va así:
+      <span class="ui">Campañas</span> → <span class="ui">Nueva campaña</span>.
+    </div>
+    <div>
+      <b>Valores y variables</b>
+      Lo que se teclea literal va así: <code>{{FirstName}}</code>, <code>trk.tudominio.com</code>.
+    </div>
+    <div>
+      <b>Avisos</b>
+      Ámbar es algo que conviene revisar. Rojo es algo que no se deshace.
+      <span class="nuevo">Nuevo</span> marca lo que llegó desde septiembre.
+    </div>
+  </div>
+</header>
+
+  <div class="body">
+
+    <nav class="toc" aria-label="Índice">
+      <p class="toc-title">Contenido</p>
+      <ol>
+        <li><a href="#s1"><i>01</i> Qué es Outply</a></li>
+        <li><a href="#s2"><i>02</i> Entrar, elegir espacio y moverse por Outply</a></li>
+        <li><a href="#s3"><i>03</i> Puesta en marcha</a></li>
+        <li><a href="#s4"><i>04</i> Bandejas de envío</a></li>
+        <li><a href="#s5"><i>05</i> Entregabilidad</a></li>
+        <li><a href="#s6"><i>06</i> Campañas</a></li>
+        <li><a href="#s7"><i>07</i> Cola de envíos</a></li>
+        <li><a href="#s8"><i>08</i> Contactos</a></li>
+        <li><a href="#s9"><i>09</i> Respuestas</a></li>
+        <li><a href="#s10"><i>10</i> Rebotes</a></li>
+        <li><a href="#s11"><i>11</i> Tareas</a></li>
+        <li><a href="#s12"><i>12</i> Analítica</a></li>
+        <li><a href="#s13"><i>13</i> Explorador</a></li>
+        <li><a href="#s14"><i>14</i> Lista negra</a></li>
+        <li><a href="#s15"><i>15</i> Webhooks</a></li>
+        <li><a href="#s16"><i>16</i> Visibilidad: qué puede enviar hoy</a></li>
+        <li><a href="#s17"><i>17</i> Panel de agencia</a></li>
+        <li><a href="#s18"><i>18</i> Cómo se decide qué sale</a></li>
+        <li><a href="#s19"><i>19</i> Buenas prácticas</a></li>
+        <li><a href="#s20"><i>20</i> Solución de problemas</a></li>
+        <li><a href="#s21"><i>21</i> Glosario</a></li>
+      </ol>
+    </nav>
+
+    <main>
+
+      <details class="mobiletoc">
+        <summary>Contenido</summary>
+        <ol>
+          <li><a href="#s1">Qué es Outply</a></li>
+          <li><a href="#s2">Entrar, elegir espacio y moverse por Outply</a></li>
+          <li><a href="#s3">Puesta en marcha</a></li>
+          <li><a href="#s4">Bandejas de envío</a></li>
+          <li><a href="#s5">Entregabilidad</a></li>
+          <li><a href="#s6">Campañas</a></li>
+          <li><a href="#s7">Cola de envíos</a></li>
+          <li><a href="#s8">Contactos</a></li>
+          <li><a href="#s9">Respuestas</a></li>
+          <li><a href="#s10">Rebotes</a></li>
+          <li><a href="#s11">Tareas</a></li>
+          <li><a href="#s12">Analítica</a></li>
+          <li><a href="#s13">Explorador</a></li>
+          <li><a href="#s14">Lista negra</a></li>
+          <li><a href="#s15">Webhooks</a></li>
+          <li><a href="#s16">Visibilidad: qué puede enviar hoy</a></li>
+          <li><a href="#s17">Panel de agencia</a></li>
+          <li><a href="#s18">Cómo se decide qué sale</a></li>
+          <li><a href="#s19">Buenas prácticas</a></li>
+          <li><a href="#s20">Solución de problemas</a></li>
+          <li><a href="#s21">Glosario</a></li>
+        </ol>
+      </details>
+
+      <section id="s1">
+  <h2><span class="num">01</span>Qué es Outply</h2>
+  <p class="purpose">
+    Una herramienta de prospección por correo para agencias: varias secuencias corriendo a
+    la vez, para varios clientes, sin que ninguna queme la reputación de la otra.
+  </p>
+
+  <p>
+    Los correos no salen de un servidor compartido: salen de las bandejas del propio cliente
+    (Gmail, Outlook o SMTP propio). La reputación del dominio es del cliente, no se comparte con
+    nadie, y por eso la herramienta pone tanto cuidado en no gastarla.
+  </p>
+
+  <h3>Las seis piezas que hay que tener claras</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Pieza</th><th>Qué es</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Espacio</b></td><td>Un cliente. Sus campañas, contactos, bandejas y métricas viven dentro y no se mezclan con los de otro espacio.</td></tr>
+        <tr><td><b>Bandeja</b> (mailbox)</td><td>Un buzón real conectado, con su límite diario, su ritmo, su nombre de remitente y su firma.</td></tr>
+        <tr><td><b>Campaña</b></td><td>Una secuencia: los pasos que recibe un contacto, el horario, el pool de bandejas y los topes de envío.</td></tr>
+        <tr><td><b>Paso</b></td><td>Un toque de la secuencia: un correo automático o una tarea manual (llamada, WhatsApp, LinkedIn).</td></tr>
+        <tr><td><b>Contacto</b></td><td>Una persona enrolada en una campaña, con su estado y su próximo paso agendado.</td></tr>
+        <tr><td><b>Pool</b></td><td>Las bandejas de una campaña. Los envíos rotan entre ellas (<i>round-robin</i>), y cada bandeja reparte su cupo entre las campañas activas que la usan.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Cómo sale un correo de fábrica <span class="nuevo">Nuevo</span></h3>
+  <ul>
+    <li><b>En texto plano</b>: sin imágenes (tampoco la de la firma) y sin medir aperturas ni
+        clics. Cada campaña se puede pasar a HTML (<a href="#s6">§06</a>).</li>
+    <li><b>Sin enlace ni pie de baja</b>: quien no quiere más correos responde, y si pide la baja
+        entra solo en la lista negra del espacio (<a href="#s9">§09</a>).</li>
+    <li><b>Firmado por la bandeja</b>: el remitente es el <span class="ui">Display name</span> de
+        la bandeja que envía. La campaña no tiene remitente propio.</li>
+    <li><b>Los seguimientos van en el mismo hilo</b>, con el asunto «Re: » y el del paso 1.</li>
+    <li><b>Con frenos en las bandejas nuevas</b>: límite de 40 al día, 300 a 450 segundos entre
+        correos y una rampa que empieza en 10 el día del alta y sube 3 cada día.</li>
+  </ul>
+
+  <div class="note">
+    <b class="tag">Lo que hace sola</b>
+    <p>
+      Corta la secuencia en cuanto alguien responde (en minutos; en Outlook, hasta 15). Bloquea en
+      todos los clientes a quien rebotó, salvo que el rechazo sea por la reputación del dominio que
+      envía. Al cerrar cada día, pausa la campaña cuyos rebotes superan el umbral. Y reparte los
+      envíos entre bandejas, campañas y horas para que no parezcan una ráfaga automática.
+    </p>
+  </div>
+</section>
+
+      <section id="s2">
+  <h2><span class="num">02</span>Entrar, elegir espacio y moverse por Outply</h2>
+  <p class="purpose">
+    Todo lo que ves en pantalla pertenece al espacio activo. Si los números no cuadran, lo
+    primero es mirar arriba a la izquierda qué espacio tienes abierto.
+  </p>
+
+  <h3>Iniciar sesión</h3>
+  <ol class="steps">
+    <li><p>Abre la dirección de Outply que te pasaron.</p></li>
+    <li><p>Escribe tu email y contraseña y pulsa <span class="ui">Entrar</span>, o usa
+        <span class="ui">Continuar con Google</span>.</p></li>
+    <li><p>Si no tienes cuenta, pide a un admin de agencia que te invite: el acceso es solo por
+        invitación.</p></li>
+  </ol>
+
+  <h3>Cambiar de espacio</h3>
+  <ol class="steps">
+    <li><p>Pulsa el selector que hay bajo el logo: muestra el nombre del cliente y su
+        <i>slug</i>.</p></li>
+    <li><p>Elige el espacio. La lista va de la A a la Z; con más de siete aparece
+        <span class="ui">Buscar espacio…</span>, que busca por nombre o slug (si queda uno,
+        <code>Enter</code> entra). Outply te lleva a su <span class="ui">Resumen</span>.</p></li>
+  </ol>
+  <p>
+    Si el selector dice <span class="ui">Sin espacios asignados</span>, nadie te ha dado acceso
+    a ningún cliente: pídeselo a un admin de agencia.
+  </p>
+
+  <h3>El menú <span class="nuevo">Nuevo</span></h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Grupo</th><th>Pantallas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>(sin título)</td><td><span class="ui">Resumen</span> y <span class="ui">Visibilidad</span>.</td></tr>
+        <tr><td><b>Prospección</b></td><td><span class="ui">Campañas</span>, <span class="ui">Cola de envíos</span>, <span class="ui">Contactos</span> y <span class="ui">Tareas</span>.</td></tr>
+        <tr><td><b>Resultados</b></td><td><span class="ui">Respuestas</span>, <span class="ui">Rebotes</span> y <span class="ui">Analítica</span>.</td></tr>
+        <tr><td><b>Envío</b></td><td><span class="ui">Mailboxes</span>, <span class="ui">Entregabilidad</span> y <span class="ui">Lista negra</span>.</td></tr>
+        <tr><td><b>Herramientas</b></td><td><span class="ui">Explorador</span> y <span class="ui">Webhooks</span>.</td></tr>
+        <tr><td><b>Agencia</b></td><td><span class="ui">Dashboard</span>, <span class="ui">Vista agencia</span>, <span class="ui">Espacios</span>, <span class="ui">Accesos</span>, <span class="ui">Revisiones</span> y <span class="ui">Calentamiento</span>. Solo admin de agencia.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    La barra se pliega con el botón redondo de su borde o con la tecla <code>[</code> (fuera de
+    un campo de texto). Plegada, quedan los iconos, y Outply lo recuerda en ese navegador. En el
+    móvil, una cabecera con los iconos de las primeras pantallas sustituye a la barra.
+  </p>
+
+  <h3>Idioma de la interfaz <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Outply está en español, inglés y portugués. El selector (<span class="ui">ES</span>,
+    <span class="ui">EN</span>, <span class="ui">PT</span>) está al pie de la barra lateral,
+    con la barra desplegada, y cambia las pantallas y los mensajes del servidor. La primera vez
+    toma el idioma del navegador; lo que elijas se recuerda en ese navegador. Algunas pantallas
+    de agencia, como <span class="ui">Visibilidad</span>, y algunos botones siguen en español.
+  </p>
+
+  <h3>Ayuda: el botón «?» <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Al pie de la barra lateral, junto al botón del tema, hay un icono de interrogación (también
+    con la barra plegada; en el móvil, en la cabecera). Abre este manual en otra pestaña, en el
+    idioma que tengas puesto en la interfaz. Arriba del manual hay un buscador: pulsa la tecla
+    <code>/</code> para ir directo a él y escribe lo que buscas (<i>rebote</i>, <i>rampa</i>,
+    <i>cola</i>).
+  </p>
+
+  <h3>El pie de la barra y los avisos de arriba</h3>
+  <ul>
+    <li><b>Punto de estado</b>: <span class="ui">API online</span> en verde, el motor responde;
+        <span class="ui">API offline</span> en rojo, lo que ves puede estar desactualizado. Al
+        lado, el idioma, el botón «?» y el modo claro u oscuro.</li>
+    <li><b>Tu cuenta</b>: tus iniciales, tu nombre y el correo con el que entraste, para no
+        trabajar con la cuenta equivocada. <span class="ui">Salir</span> cierra la sesión tras
+        preguntar «¿Cerrar la sesión de …?».</li>
+    <li><b>Versión nueva</b>: una banda avisa de que se publicó otra versión y esta pestaña sigue
+        con la anterior. Pulsa <span class="ui">Recargar</span> cuando termines lo que hacías.</li>
+    <li><b>Outply no responde</b>: una banda ámbar dice que tu cambio se guardará solo en cuanto
+        vuelva. No cierres la ventana ni recargues.</li>
+    <li><b>Avisos de entregabilidad</b> (solo admin de agencia): una banda ámbar temporal sobre
+        algunos dominios. <span class="ui">Entendido</span> la oculta en ese navegador.</li>
+  </ul>
+
+  <h3>Qué puede hacer cada rol</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Rol</th><th>Para qué sirve</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>admin</b></td><td>Manda en el espacio: configura, invita, opera y puede dar de baja bandejas.</td></tr>
+        <tr><td><b>operator</b></td><td>El día a día: campañas, contactos, cola de envíos, tareas, respuestas.</td></tr>
+        <tr><td><b>viewer</b></td><td>Solo mirar: no crea campañas, y lo que intente guardar da error.</td></tr>
+        <tr><td><b>Admin de agencia</b></td><td>Un permiso sobre toda la agencia, no un rol del espacio: ve la sección <span class="ui">Agencia</span>, crea espacios, da accesos y gestiona la lista negra global.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    El rol va por espacio: puedes ser <b>admin</b> en un cliente y <b>viewer</b> en otro. Quien no
+    es admin de agencia no ve la sección <span class="ui">Agencia</span>; si entra pegando la
+    dirección de una de esas pantallas, ve <span class="ui">Acceso restringido</span>.
+  </p>
+</section>
+
+      <section id="s3">
+  <h2><span class="num">03</span>Puesta en marcha</h2>
+  <p class="purpose">
+    El camino más corto desde un cliente nuevo hasta el primer correo enviado. Cada paso tiene
+    su capítulo más adelante.
+  </p>
+
+  <ol class="steps">
+    <li><p><b>Crea el espacio del cliente.</b> <span class="ui">Agencia</span> →
+        <span class="ui">Espacios</span> → <span class="ui">Nuevo espacio</span>. Solo hace falta
+        el nombre. Lo hace un admin de agencia. <a href="#s17">Ver §17</a>.</p></li>
+    <li><p><b>Conecta las bandejas.</b> <span class="ui">Mailboxes</span> →
+        <span class="ui">Conectar</span>. Dominios dedicados, nunca el principal del cliente, y
+        como máximo tres bandejas por dominio. Cada bandeja necesita
+        <span class="ui">Display name</span>. <a href="#s4">Ver §04</a>.</p></li>
+    <li><p><b>Comprueba la autenticación.</b> <span class="ui">Entregabilidad</span>: SPF, DKIM,
+        DMARC y MX en verde. <a href="#s5">Ver §05</a>.</p></li>
+    <li><p><b>Manda un test de entrega</b> desde <span class="ui">Entregabilidad</span> →
+        <span class="ui">Enviar test</span>, a una dirección tuya de otro proveedor, y comprueba
+        que no llega a spam.</p></li>
+    <li><p><b>Monta la campaña.</b> <span class="ui">Campañas</span> →
+        <span class="ui">Nueva campaña</span> abre el asistente de cinco pasos:
+        <span class="ui">Datos</span>, <span class="ui">Secuencia</span>,
+        <span class="ui">Bandejas</span>, <span class="ui">Contactos</span> y
+        <span class="ui">Revisar</span>. <a href="#s6">Ver §06</a>.</p></li>
+    <li><p><b>Carga los contactos.</b> En el asistente, de uno en uno; para una lista,
+        <span class="ui">Contactos</span> → <span class="ui">Importar CSV</span> con esa campaña
+        elegida. Una campaña en borrador acepta contactos y no envía nada.
+        <a href="#s8">Ver §08</a>.</p></li>
+    <li><p><b>Activa</b> con <span class="ui">Activar campaña</span> en el paso
+        <span class="ui">Revisar</span>, o más tarde con <span class="ui">Activar</span> en el
+        detalle. Si falta algo, la herramienta te lo dice todo de una vez.</p></li>
+    <li><p><b>Mira la cola.</b> <span class="ui">Cola de envíos</span> enseña quién sale hoy, a
+        qué hora y desde qué bandeja. <a href="#s7">Ver §07</a>.</p></li>
+  </ol>
+
+  <div class="note note--warn">
+    <b class="tag">Las bandejas nuevas vienen frenadas, y está bien</b>
+    <p>
+      Una bandeja recién conectada trae de fábrica una rampa (10 correos el día del alta y 3 más
+      cada día), una espera de 300 a 450 segundos entre correos y un límite de 40 al día. No hay
+      que activar nada. El tope de cada cliente lo decide su equipo de entregabilidad: no lo subas
+      por tu cuenta para ir más rápido. <a href="#s19">Ver §19</a>.
+    </p>
+  </div>
+</section>
+
+      <section id="s4">
+  <h2><span class="num">04</span>Bandejas de envío</h2>
+  <p class="purpose">
+    <span class="ui">Mailboxes</span> es la lista de buzones conectados: cuánto sale hoy de cada
+    uno, si están sanos, a qué ritmo escriben y con qué nombre firman.
+  </p>
+
+  <h3>Conectar una bandeja</h3>
+  <ol class="steps">
+    <li><p>Pulsa <span class="ui">Conectar</span> y elige <span class="ui">gmail</span>,
+        <span class="ui">outlook</span> o <span class="ui">SMTP</span>.</p></li>
+    <li><p><b>Gmail u Outlook</b> (lo recomendado): <span class="ui">Autorizar con Google</span>
+        o <span class="ui">Autorizar con Microsoft</span>, concedes los permisos y vuelves solo. El
+        nombre de la cuenta se trae del proveedor como <span class="ui">Display name</span>.</p></li>
+    <li><p><b>En Gmail, marca todas las casillas</b>, como recuerda el modal. La imprescindible es
+        «Leer, redactar, enviar y eliminar permanentemente todo tu correo de Gmail»: sin ella,
+        Outply no da de alta la bandeja y vuelves con un aviso rojo. Repite marcándola.</p></li>
+    <li><p><b>SMTP</b>: email, <span class="ui">Display name</span>, servidor y puerto SMTP
+        (normalmente 587), usuario, contraseña, y servidor y puerto IMAP (normalmente 993). El IMAP
+        es obligatorio: sin él no se detectan las respuestas. El alta comprueba los dos.</p></li>
+  </ol>
+  <p>
+    Outlook no necesita IMAP, pero sus respuestas pueden tardar hasta 15 minutos en aparecer. Si
+    a una bandeja SMTP le cambiaron la contraseña, vuelve a <span class="ui">Conectar</span> →
+    <span class="ui">SMTP</span> con el mismo correo: se actualiza la misma bandeja, con su
+    historial. <b>Solo admin de agencia:</b> encima de la tabla puede salir un aviso del cupo de
+    cuentas de Google; agotado, no entra ninguna bandeja de Gmail más.
+  </p>
+
+  <h3>Leer la tabla</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Columna</th><th>Qué te dice</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Email</b></td><td>La dirección, el Display name y el tipo de conexión. Si algo falla, el motivo va en rojo.</td></tr>
+        <tr><td><b>Provider</b></td><td>gmail, outlook o smtp.</td></tr>
+        <tr><td><b>Estado</b></td><td><b>Activa</b>: envía. <b>Pausada</b>: la pausaste tú, o el proveedor bloqueó la cuenta. <b>Error</b>: no puede enviar.</td></tr>
+        <tr><td><b>Cuota hoy</b></td><td>Lo que sale hoy (enviado más agendado con hora de hoy) frente al tope de hoy. En rampa, el tope es el de la rampa y debajo pone «En rampa: sube N al día hasta L». Se recalcula cada 10 minutos.</td></tr>
+        <tr><td><b>Límite diario</b></td><td>Se edita aquí: escribe el número (1 a 400) y pulsa el tic.</td></tr>
+        <tr><td><b>Token expira</b></td><td>Gmail y Outlook: cuándo caduca el permiso. Si no se puede renovar, la bandeja pasa a <b>Error</b>.</td></tr>
+        <tr><td><b>Health check</b></td><td>La última comprobación de que la bandeja responde. Se hace cada 10 minutos.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Pausar, activar y dar de baja</h3>
+  <ul>
+    <li><span class="ui">Pausar</span> saca la bandeja del reparto y <b>vacía su cola</b>: lo
+        agendado se cancela y esos contactos pasan a las otras bandejas. Se ofrece también en las
+        que están en error.</li>
+    <li><span class="ui">Activar</span> solo aparece en una bandeja pausada, y antes comprueba el
+        permiso: si falla, no la activa y muestra el motivo.</li>
+    <li><span class="ui">Dar de baja</span> quita la bandeja del cliente: deja de contar su
+        capacidad, se cancela su cola y desaparece de la lista; el historial se conserva. Pide
+        confirmación; para recuperarla hay que conectarla de nuevo. Solo admin del espacio o admin
+        de agencia (a los demás el botón les da error).</li>
+  </ul>
+
+  <div class="note note--warn">
+    <b class="tag">Cómo se recupera una bandeja en error</b>
+    <p>
+      Volviendo a <span class="ui">Conectar</span> y autorizando otra vez (en SMTP, con la
+      contraseña nueva); cambiarle el estado no renueva el permiso. Causas habituales: permiso
+      caducado, casilla de Gmail desmarcada, contraseña SMTP cambiada o cuenta de Google borrada.
+      Si el proveedor bloquea la cuenta, Outply la pausa sola con el motivo en rojo. En todos los
+      casos su cola se suelta al primer fallo y esos contactos salen por otras bandejas.
+      <a href="#s20">Ver §20</a>.
+    </p>
+  </div>
+
+  <h3>Ajustes de la bandeja</h3>
+  <p>
+    <span class="ui">Ajustes</span> en su fila. Nada se guarda hasta pulsar
+    <span class="ui">Guardar ajustes</span>.
+  </p>
+
+  <h4>General</h4>
+  <ul>
+    <li><b>Display name</b>: el nombre que ve quien recibe el correo, y el de
+        <code>{{SenderName}}</code>. Una bandeja activa sin nombre impide activar las campañas que
+        la usan.</li>
+    <li><b>Límite diario</b>: de fábrica, 40. Por encima de 50 la herramienta avisa: los
+        proveedores miran el comportamiento de la cuenta, no lo que configures. Si lo bajas, lo ya
+        agendado que no cabe pasa a días siguientes.</li>
+    <li><b>Dominio de envío</b> (solo admin de agencia): contra qué techo diario de dominio
+        cuenta la bandeja, o <span class="ui">Sin dominio (no cuenta contra ningún
+        techo)</span>.</li>
+  </ul>
+
+  <h4>Ritmo humano (jitter entre envíos)</h4>
+  <ul>
+    <li><b>Mínimo (segundos)</b> y <b>Máximo (segundos)</b>: cada correo espera un rato al azar
+        en ese rango; de fábrica, 300 a 450. Con eso, una bandeja coloca unos 86 correos en una
+        ventana de 9 horas (108 como mucho): la espera también es un tope. Subirla reparte de nuevo
+        lo ya agendado.</li>
+    <li><b>Máximo de correos por minuto</b>: el techo del proveedor (Outlook corta sobre 30).
+        Déjalo en <span class="ui">Sin tope</span> si no lo necesitas. La pantalla te dice si manda
+        este tope o tu espera mínima.</li>
+  </ul>
+
+  <h4>Calentamiento (warmup): en realidad, una rampa</h4>
+  <p>
+    Pese al nombre, <b>no envía correos de calentamiento</b>: solo limita cuántos salen mientras
+    la bandeja es nueva. Viene encendida (<span class="ui">Calentamiento activado</span>), con
+    <span class="ui">Inicio por día</span> en 10 e <span class="ui">Incremento por día</span> en 3.
+    Los días cuentan desde el alta: 10 ese día, 13 al siguiente, y así hasta el límite diario; con
+    40, llega a tope a los diez días. A una bandeja antigua ya no la frena. El calentamiento con
+    una red externa de buzones es otra cosa, y está apagado (<a href="#s17">§17</a>).
+  </p>
+
+  <h4>Firma</h4>
+  <ol class="steps">
+    <li><p>Escribe la firma (HTML o texto), o pulsa <span class="ui">Subir imagen</span> (PNG,
+        JPG, GIF o WEBP, máximo 300&nbsp;KB).</p></li>
+    <li><p>Ajusta el <span class="ui">Ancho de la imagen</span> con el deslizador.</p></li>
+    <li><p>Mira la <span class="ui">Vista previa · tamaño real</span>: el recuadro mide 600&nbsp;px,
+        el ancho de un correo. Si la imagen se sale por los lados, en Gmail también.</p></li>
+    <li><p>Pulsa <span class="ui">Guardar ajustes</span>. La firma va al final de todo correo de
+        esa bandeja.</p></li>
+  </ol>
+  <div class="note note--warn">
+    <b class="tag">La imagen solo viaja en campañas HTML</b>
+    <p>
+      En HTML, la imagen va dentro del correo y no depende de que el cliente de correo la
+      desbloquee. En texto plano, el formato de fábrica, no viaja: la firma sale como texto, y una
+      firma que es solo una imagen no sale.
+    </p>
+  </div>
+</section>
+
+      <section id="s5">
+  <h2><span class="num">05</span>Entregabilidad</h2>
+  <p class="purpose">
+    Si los correos llegan a spam, ninguna otra pantalla importa. Aquí se comprueba que los
+    dominios están bien montados.
+  </p>
+
+  <h3>Dominios del espacio</h3>
+  <p>
+    Cada tarjeta es un dominio de envío, con una puntuación de 0 a 100 y cuatro comprobaciones.
+    Cuando una falla, debajo aparece qué hacer.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Check</th><th>Qué comprueba</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>SPF</b></td><td>Que el dominio autorice a ese servidor a enviar en su nombre.</td></tr>
+        <tr><td><b>DKIM</b></td><td>Que los correos vayan firmados y no se puedan falsificar.</td></tr>
+        <tr><td><b>DMARC</b></td><td>Qué debe hacer el receptor si algo no cuadra.</td></tr>
+        <tr><td><b>MX</b></td><td>Que el dominio pueda <i>recibir</i> correo. Sin MX, las respuestas se pierden.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Debajo está la <b>cuota del dominio</b>: lo que sale hoy desde él frente a su techo diario. Ese
+    techo manda sobre el de las bandejas, pero de fábrica es tan alto que no frena (verás algo como
+    <code>35/1000000</code>): lo que limita de verdad es el tope de cada bandeja. La agencia puede
+    bajarlo para frenar un dominio concreto; no se cambia desde esta pantalla.
+  </p>
+
+  <h3>Generar los registros DNS</h3>
+  <ol class="steps">
+    <li><p>Escribe el dominio en el panel <span class="ui">Registros DNS</span>.</p></li>
+    <li><p>Elige el proveedor: <span class="ui">Google</span>, <span class="ui">Microsoft</span>
+        o <span class="ui">Custom</span>, y pulsa <span class="ui">Generar</span>.</p></li>
+    <li><p>Copia cada valor y pásaselos a quien administra el DNS. Los cambios tardan en
+        propagarse: vuelve al rato para ver las comprobaciones en verde.</p></li>
+  </ol>
+
+  <h3>Postmaster y test de entrega</h3>
+  <p>
+    <span class="ui">Postmaster</span> consulta la reputación que Google da al dominio y su tasa
+    de spam; requiere el dominio verificado en Google Postmaster Tools.
+    <span class="ui">Enviar test</span> manda un correo real desde la bandeja que elijas a la
+    dirección que escribas (mejor de otro proveedor). Hazlo con cada bandeja nueva antes de
+    meterla en un pool.
+  </p>
+
+  <h3>Vigilancia de listas negras <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Cada día, Outply mira si los dominios de envío aparecen en las listas negras públicas más
+    usadas (SURBL, Spamhaus DBL, URIBL y Sophos) y avisa a la agencia por Slack cuando uno entra o
+    sale. No se ve en esta pantalla. Para saber si un correo concreto llega a entrada, spam o
+    promociones, un admin de agencia puede lanzar una prueba de colocación
+    (<a href="#s17">§17</a>).
+  </p>
+</section>
+
+      <section id="s6">
+  <h2><span class="num">06</span>Campañas</h2>
+  <p class="purpose">
+    Una campaña es una secuencia con horario, bandejas y topes propios. Es la pantalla donde se
+    pasa más tiempo.
+  </p>
+
+  <h3>La lista de campañas</h3>
+  <p>
+    Las activas van primero y, dentro de cada grupo, la de <span class="ui">Última
+    actividad</span> más reciente. <span class="ui">Buscar campaña por nombre…</span> filtra
+    mientras escribes y <span class="ui">Por página</span> elige 50 o 100 (se recuerda en ese
+    navegador). La columna de la ventana muestra también los días de envío, y el icono de copiar
+    de cada fila la duplica.
+  </p>
+
+  <h3>Activar o pausar varias a la vez <span class="nuevo">Nuevo</span></h3>
+  <ol class="steps">
+    <li><p>Marca las casillas de las campañas, o la de la cabecera para toda la página.</p></li>
+    <li><p>En la barra que aparece, pulsa <span class="ui">Activar</span> o
+        <span class="ui">Pausar</span> y confirma.</p></li>
+    <li><p>Las que no se pudieron cambiar quedan marcadas, con el motivo (por ejemplo, a una le
+        falta configuración). <span class="ui">Limpiar</span> quita la selección.</p></li>
+  </ol>
+
+  <h3>Crear una campaña: el asistente <span class="nuevo">Nuevo</span></h3>
+  <p>
+    <span class="ui">Nueva campaña</span> abre <span class="ui">Montar una campaña</span>: cinco
+    pasos en el orden en que hacen falta, cada uno con una explicación. <span class="ui">Siguiente</span>
+    nunca se bloquea: si falta algo, un aviso ámbar lo dice y te deja seguir; solo activar exige
+    tenerlo todo. <span class="ui">Atrás</span> vuelve al paso anterior. La campaña se crea al
+    terminar el paso 1, y desde ahí <span class="ui">Guardar y salir</span> la deja en
+    <b>Borrador</b> para terminarla desde su detalle, que tiene los mismos paneles.
+  </p>
+
+  <h4>Paso 1 · Datos</h4>
+  <ul>
+    <li><b>Nombre</b>: solo lo ves tú; el destinatario nunca lo lee.</li>
+    <li><b>Zona horaria</b>: en la que se lee la ventana. Debajo, la hora que es allí ahora.</li>
+    <li><b>Desde / Hasta</b>: la ventana de envío; de entrada, de 09:00 a 18:00.</li>
+    <li><b>Días de envío</b>: las casillas <span class="ui">L M X J V S D</span>, de lunes a
+        viernes de entrada. Lo que vence otro día espera al siguiente día marcado. Hace falta al
+        menos uno.</li>
+    <li><b>Dominio de tracking</b> (opcional): el subdominio del cliente para medir aperturas y
+        clics, como <code>trk.tudominio.com</code>. Las campañas nuevas salen en texto plano y no
+        miden nada, así que solo se usa si la pasas a HTML.</li>
+  </ul>
+  <p>Pulsa <span class="ui">Crear y continuar</span>.</p>
+
+  <h4>Pasos 2, 3 y 4 · Secuencia, Bandejas y Contactos</h4>
+  <p>
+    El paso 2 es el panel <span class="ui">Pasos</span> y el 3, el
+    <span class="ui">Pool de mailboxes</span>; los dos se explican más abajo. En el paso 4 puedes
+    enrolar contactos de uno en uno con <span class="ui">Enrolar</span>. Su texto menciona
+    importar un CSV, pero ese botón no está en este panel: pulsa <span class="ui">Guardar y
+    salir</span>, ve a <span class="ui">Contactos</span> → <span class="ui">Importar CSV</span>
+    con esta campaña elegida y vuelve a ella para activarla. Sin contactos también se puede
+    activar: empieza a enviar en cuanto entra el primero.
+  </p>
+
+  <h4>Paso 5 · Revisar</h4>
+  <p>
+    Un resumen (<span class="ui">Pasos de la secuencia</span>, <span class="ui">Bandejas en el
+    pool</span>, <span class="ui">Contactos en la campaña</span>, <span class="ui">Formato</span>
+    y <span class="ui">Dominio de tracking</span>) y la misma comprobación que se hace al arrancar.
+    <span class="ui">Activar campaña</span> solo se puede pulsar si no falta nada en rojo;
+    <span class="ui">Dejarla en borrador</span> te lleva al detalle sin activarla.
+  </p>
+
+  <div class="note">
+    <b class="tag">La campaña no tiene remitente</b>
+    <p>
+      Cada correo firma con el <span class="ui">Display name</span> de la bandeja que lo envía:
+      con un pool de tres personas, cada una firma con su nombre. Por eso una bandeja activa del
+      pool sin nombre impide activar la campaña.
+    </p>
+  </div>
+
+  <h3>El detalle de la campaña <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Arriba, el nombre (el lápiz abre <span class="ui">Renombrar campaña</span>), la hora que es en
+    su zona y los botones <span class="ui">Activar</span> o <span class="ui">Pausar</span>,
+    <span class="ui">Duplicar</span> y <span class="ui">Eliminar</span>. Debajo,
+    <span class="ui">Correos enviados</span>, <span class="ui">Respuestas</span>,
+    <span class="ui">Rebotes</span> y <span class="ui">Tasa respuesta</span>: son correos, no
+    personas. El resto va en tres pestañas:
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Pestaña</th><th>Qué tiene</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="ui">Resumen</span></td><td>Los avisos de lo que falta, los pasos con sus variantes, el pool y los ajustes.</td></tr>
+        <tr><td><span class="ui">Contactos</span></td><td>Los contactos de esta campaña, con buscador (<a href="#s8">§08</a>).</td></tr>
+        <tr><td><span class="ui">Cola de envíos</span></td><td>Quién recibe correo hoy de esta campaña (<a href="#s7">§07</a>).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <span class="ui">Duplicar</span> crea una copia con pasos, variantes, ajustes y pool, sin
+    contactos, en borrador, como «X (copia)» y con el mismo formato que la original.
+  </p>
+
+  <h3>Qué falta para arrancar</h3>
+  <p>En la pestaña <span class="ui">Resumen</span>, encima de los pasos, hay dos paneles:</p>
+  <ul>
+    <li>
+      <b>En rojo, <span class="ui">Falta esto para poder activarla</span></b> (o
+      <span class="ui">Esto está frenando la campaña</span>, si ya está activa): no hay pasos; un
+      paso de correo no tiene asunto o contenido; el pool está vacío o ninguna bandeja puede
+      enviar; alguna bandeja activa del pool no tiene nombre de remitente (el aviso dice cuáles);
+      no hay días de envío.
+    </li>
+    <li>
+      <b>En ámbar, <span class="ui">Se puede enviar, pero conviene revisarlo</span></b>: una
+      bandeja del pool no puede enviar y se reparte entre las otras; una bandeja sin tope por
+      minuto podría pasar de 30 por minuto; una variable saldrá vacía en parte de los contactos que
+      aún recibirán correos; en las últimas 24 horas fallaron envíos (con el motivo más frecuente).
+    </li>
+  </ul>
+  <p>
+    Al pulsar <span class="ui">Activar</span> se comprueba otra vez. Con algo rojo no arranca
+    (<span class="ui">Falta configurar la campaña</span>); con solo ámbar, eliges entre
+    <span class="ui">Volver a revisar</span> y <span class="ui">Activar de todas formas</span>.
+  </p>
+
+  <h3>Pasos de la secuencia</h3>
+  <ol class="steps">
+    <li><p>En el panel <span class="ui">Pasos</span>, pulsa <span class="ui">Paso</span>.</p></li>
+    <li><p><b>Canal</b>: <code>email</code> envía solo; <code>call</code>,
+        <code>whatsapp</code>, <code>linkedin</code> y <code>manual</code> generan una tarea en
+        <span class="ui">Tareas</span> con la instrucción que escribas. No se cambia después.</p></li>
+    <li><p><b>Condición</b> (solo correo): <code>always</code>, o según si el contacto abrió o hizo
+        clic en el correo anterior (<code>if opened</code>, <code>if not opened</code>,
+        <code>if clicked</code>, <code>if not clicked</code>).</p></li>
+    <li><p><b>Espera (días)</b>: el paso 1 va en 0 y sale al enrolar. Los demás cuentan desde que
+        salió el correo anterior, no desde que enrolaste al contacto.</p></li>
+    <li><p><b>Asunto y cuerpo</b>: el cuerpo se escribe en HTML; en texto plano se convierte al
+        enviar (los enlaces quedan como su dirección y las imágenes desaparecen).</p></li>
+    <li><p>Pulsa <span class="ui">Vista previa</span> y luego <span class="ui">Agregar paso</span>.</p></li>
+  </ol>
+
+  <div class="note note--warn">
+    <b class="tag">Tres cosas que conviene saber</b>
+    <p>
+      <b>El asunto de los seguimientos</b> es «Re: » y el del paso 1, porque van en el mismo hilo.
+      Los pasos 2 y siguientes piden asunto igual, pero no es el que verá el contacto.<br>
+      <b>Sin medición</b> (texto plano o sin dominio de tracking) nadie «abre» ni «hace clic»:
+      <code>if opened</code> e <code>if clicked</code> no se cumplen nunca, y sus contrarios
+      siempre.<br>
+      <b>Cambiar la espera</b> de un paso solo afecta a quien todavía no ha llegado a él.
+    </p>
+  </div>
+
+  <h3>Borradores del editor <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Lo que escribes en un paso o una variante se guarda en el navegador. Si recargas o cierras sin
+    guardar, al volver aparece «Tienes cambios sin guardar en este paso, del …» con
+    <span class="ui">Recuperar</span> y <span class="ui">Descartar</span>. Solo vive en ese
+    navegador. Si al guardar Outply no responde, una banda ámbar lo avisa y el guardado se reintenta
+    solo: no cierres la ventana.
+  </p>
+
+  <h3>Personalizar el correo</h3>
+  <p>
+    Los datos del contacto van entre dobles llaves, y da igual cómo los escribas:
+    <code>{{FirstName}}</code>, <code>{{first_name}}</code> y <code>{{ First Name }}</code> son
+    el mismo campo.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Escribes</th><th>Sale</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>{{FirstName}}</code></td><td>El nombre del contacto.</td></tr>
+        <tr><td><code>{{LastName}}</code> <code>{{Company}}</code> <code>{{Title}}</code></td><td>Apellido, empresa, cargo.</td></tr>
+        <tr><td><code>{{SenderName}}</code></td><td>El Display name de la bandeja que envía ese correo.</td></tr>
+        <tr><td><code>{{referred_by}}</code></td><td>El campo <span class="ui">Referido por</span> del contacto.</td></tr>
+        <tr><td>Tus columnas del CSV</td><td>Cualquier campo personalizado que hayas mapeado al importar.</td></tr>
+        <tr><td><code>{{FirstName or 'ahí'}}</code></td><td>Un respaldo: si no hay nombre, escribe «ahí».</td></tr>
+        <tr><td><code>{hola|buenas|qué tal}</code></td><td>Spintax: cada correo elige una.</td></tr>
+        <tr><td><code>{{unsubscribe_link}}</code></td><td><b>No la uses.</b> Los correos no llevan enlace de baja: solo genera uno con un dominio de tracking propio del cliente y verificado, y si no sale vacía. Cierra mejor con «P. D.: si prefieres que no te escriba más, respóndeme «no»».</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Si usas una variable que no existe, un aviso ámbar te lo dice: saldría vacía («Hola ,»).
+    Debajo del editor, <span class="ui">Insertar campo del contacto</span> pega el campo donde
+    tengas el cursor.
+  </p>
+
+  <h3>Texto plano o HTML <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Se elige por campaña con el interruptor <span class="ui">Texto plano</span> de los ajustes.
+    Viene encendido en las campañas nuevas; las anteriores a este cambio siguen en HTML.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th></th><th>Texto plano (de fábrica)</th><th>HTML</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Cómo llega</b></td><td>Solo texto, como un correo escrito a mano.</td><td>Con formato e imágenes.</td></tr>
+        <tr><td><b>Imagen de la firma</b></td><td>No viaja.</td><td>Viaja dentro del correo.</td></tr>
+        <tr><td><b>Enlaces</b></td><td>Se ven como su dirección completa.</td><td>Con su texto.</td></tr>
+        <tr><td><b>Aperturas y clics</b></td><td>No se miden nunca.</td><td>Se miden si los activas y el dominio de tracking funciona.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Pasa a HTML solo si necesitas imágenes o medir: la señal que cuenta es la respuesta. Y un
+    dominio de tracking solo mide si de verdad lleva a Outply (quien administra el dominio del
+    cliente tiene que conectarlo); si no, el correo sale igual pero sin medir, y la pantalla no
+    avisa.
+  </p>
+
+  <h3>Vista previa</h3>
+  <p>
+    Arma el correo con un contacto real de la campaña (o uno de muestra) y la firma de una bandeja
+    del pool, en texto plano si la campaña lo está. Si un campo queda vacío con ese contacto, te lo
+    dice y sugiere un respaldo. Es la única forma de ver el correo como llega.
+  </p>
+
+  <h3>Variantes A/B</h3>
+  <ol class="steps">
+    <li><p>Pulsa <span class="ui">+ Variante</span> bajo un paso de correo.</p></li>
+    <li><p>Deja la <span class="ui">Etiqueta</span> que propone (B, C…) y pon su
+        <span class="ui">% de tráfico</span>. El reparto se cumple exacto, no al azar.</p></li>
+    <li><p>Escribe asunto y cuerpo, con las mismas ayudas que en el paso.</p></li>
+    <li><p>Compara en <span class="ui">Analítica</span> → <span class="ui">Desglose por paso y
+        variante</span>.</p></li>
+  </ol>
+  <p>
+    La <b>A</b> es el control: el asunto y el cuerpo del propio paso. Se edita con el lápiz del
+    paso y se queda con el porcentaje que no diste a las variantes; con el 100&nbsp;% repartido, deja
+    de enviarse. En los seguimientos una variante solo cambia el cuerpo, porque el asunto es el
+    «Re:» del control del paso 1, también para quien recibió otra variante.
+  </p>
+
+  <h3>Pool de mailboxes</h3>
+  <p>
+    Pulsa una bandeja de las que aparecen con un <b>+</b> para añadirla; la papelera la quita. Los
+    envíos rotan por orden de posición, y un punto rojo marca una bandeja en error. Sin al menos
+    una bandeja activa, la campaña no se activa. Recuerda que el cupo de cada bandeja se reparte
+    entre todas las campañas activas que la usan: una de 40 en cuatro campañas da unos 10 a cada
+    una (<a href="#s18">§18</a>).
+  </p>
+
+  <h3>Ajustes</h3>
+  <p>
+    Panel <span class="ui">Ajustes</span> de la pestaña <span class="ui">Resumen</span>. Nada se
+    guarda hasta pulsar <span class="ui">Guardar ajustes</span>.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Ajuste</th><th>Qué hace</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Dominio de tracking</b>, <b>Zona horaria</b>, <b>Desde / Hasta</b>, <b>Días de envío</b></td><td>Los mismos del paso 1. Un dominio nuevo se aplica a lo que salga desde ahora.</td></tr>
+        <tr><td><b>Umbral de rebote (%)</b></td><td>Entre 0,5 y 20; de fábrica, 3. Se mide sobre la ventana y se decide al cerrar cada día, no en cada rebote.</td></tr>
+        <tr><td><b>Muestra mínima (envíos)</b></td><td>La regla no se dispara hasta tener estos envíos en la ventana. De fábrica, 50.</td></tr>
+        <tr><td><b>Ventana (días)</b></td><td>Los días sobre los que se mide la tasa. De fábrica, 7.</td></tr>
+        <tr><td><b>Máx. contactos nuevos / día</b></td><td>Solo pasos 1. Vacío = sin límite; <b>0</b> = no entra nadie nuevo, pero los seguimientos siguen.</td></tr>
+        <tr><td><b>Máx. follow-ups / día</b></td><td>Solo pasos 2 en adelante. Obligatorio: se rellena como total − nuevos o lo escribes tú; <b>0</b> = pausar seguimientos. Vacío, el guardado da error.</td></tr>
+        <tr><td><b>Total de envíos / día (campaña)</b></td><td>Tope de toda la campaña. Vacío = lo limita el cupo de las bandejas.</td></tr>
+        <tr><td><b>Texto plano</b></td><td>Encendido, el correo sale solo como texto y no mide nada.</td></tr>
+        <tr><td><b>Rastrear aperturas</b> / <b>Rastrear clicks</b></td><td>Solo con Texto plano apagado. Sin dominio de tracking se apagan solos al guardar.</td></tr>
+        <tr><td><b>Auto-pausar por rebote</b></td><td>Aplica el umbral. Déjalo activado.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Si nuevos más follow-ups superan el total, la pista del campo avisa en ámbar y dice que los
+    follow-ups van primero. No es así: el cupo se reparte en la proporción de los dos topes y los
+    nuevos van primero dentro de su parte (<a href="#s18">§18</a>). La auto-pausa se decide al
+    cerrar cada día de la campaña (medianoche en su zona): con al menos la muestra mínima en la
+    ventana y la tasa por encima del umbral, la campaña se pausa y su cola se vacía.
+  </p>
+
+  <h3>Activar, pausar y eliminar</h3>
+  <ul>
+    <li><b>Activar</b>: empieza a enviar dentro de su ventana, tras comprobar que no falte nada.</li>
+    <li><b>Pausar</b>: para los envíos y vacía la cola; el cupo vuelve a las otras campañas que
+        comparten bandejas. Al reactivarla, sus contactos vuelven a recibir hora.</li>
+  </ul>
+  <div class="note note--stop">
+    <b class="tag">Eliminar no se deshace</b>
+    <p>
+      Borra la campaña con sus pasos, contactos y envíos. Si solo quieres que deje de enviar, usa
+      <span class="ui">Pausar</span>.
+    </p>
+  </div>
+</section>
+
+      <section id="s7">
+  <h2><span class="num">07</span>Cola de envíos <span class="nuevo">Nuevo</span></h2>
+  <p class="purpose">
+    Quién recibe correo hoy, a qué hora y desde qué bandeja. Y, si hace falta, cambiar el orden:
+    adelantar a alguien a hoy o sacarlo de hoy.
+  </p>
+  <p>
+    Está en el menú, <span class="ui">Prospección</span> → <span class="ui">Cola de envíos</span>,
+    y en la pestaña del mismo nombre de cada campaña. La pantalla tiene dos vistas:
+    <span class="ui">Cola de envíos</span>, con un desplegable para <span class="ui">Todas las
+    campañas</span> o una sola; y <span class="ui">Por campañas</span>, una fila por campaña activa
+    con <span class="ui">Próximo envío</span>, <span class="ui">Enviados hoy</span>,
+    <span class="ui">Pendientes hoy</span>, <span class="ui">Último de hoy</span>,
+    <span class="ui">En espera</span> y <span class="ui">Próximos</span> (pulsa una para ver su
+    cola).
+  </p>
+
+  <h3>Leer la cola</h3>
+  <p>
+    Una fila por correo, en el orden en que salen: <span class="ui">Hora</span>,
+    <span class="ui">Contacto</span>, <span class="ui">Campaña</span> (en la vista de todas),
+    <span class="ui">Paso</span> y <span class="ui">Bandeja</span>. Las horas van en tu hora local;
+    pasa el ratón para ver la de la campaña.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Tramo</th><th>Qué hay</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="ui">Anteriores · N enviados · M fijos</span></td><td>Plegado: lo que ya salió hoy y lo que sale en menos de una hora, con candado. Eso no se mueve.</td></tr>
+        <tr><td>Las filas de hoy</td><td>Los correos de hoy que aún se pueden mover.</td></tr>
+        <tr><td><span class="ui">Fin de hoy</span></td><td>La raya donde acaba el día de envío.</td></tr>
+        <tr><td><span class="ui">Mañana · N</span></td><td>Lo que ya tiene hora para días siguientes. Solo lectura.</td></tr>
+        <tr><td><span class="ui">En espera · N</span></td><td>Contactos a los que ya les toca y aún no tienen hora, en el orden en que la recibirán: primero quien más lleva esperando.</td></tr>
+        <tr><td><span class="ui">Próximos · N</span></td><td>Contactos a los que aún no les toca, con la fecha desde la que les tocará. Solo lectura.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Una lista larga en <span class="ui">En espera</span> no es un error: es lo que hoy no cupo. No
+    se pierde (<a href="#s18">§18</a>).
+  </p>
+
+  <h3>Reordenar la cola</h3>
+  <ol class="steps">
+    <li><p>Pulsa <span class="ui">Editar</span>. La cola se congela y trabajas sobre un borrador:
+        nada llega al servidor hasta que guardes.</p></li>
+    <li><p>Arrastra filas por el asa de la izquierda. Si marcas varias y arrastras una, se mueven
+        todas.</p></li>
+    <li><p>Con filas marcadas también tienes <span class="ui">Al principio</span>,
+        <span class="ui">Al final</span>, <span class="ui">Sacar de hoy</span> y
+        <span class="ui">Quitar selección</span>. Soltar sobre la raya <span class="ui">Fin de
+        hoy</span> es <i>al final</i>; soltar en <span class="ui">En espera</span>, <i>sacar de
+        hoy</i>.</p></li>
+    <li><p><span class="ui">Deshacer</span> quita el último cambio; <span class="ui">Cancelar</span>
+        los tira todos.</p></li>
+    <li><p>Pulsa <span class="ui">Guardar</span>. Es todo o nada: si un movimiento ya no vale (por
+        ejemplo, ese correo acaba de salir), no se guarda ninguno y una franja roja dice cuál y por
+        qué.</p></li>
+  </ol>
+
+  <h3>Las reglas del juego</h3>
+  <ul>
+    <li><b>No cambian ni las horas ni las bandejas</b>, solo quién ocupa cada hueco: si pones a C
+        delante de A, C sale a la hora y por la bandeja que tenía A.</li>
+    <li><b>Meter a alguien en hoy empuja la cola</b>: el último correo de hoy de esa campaña vuelve
+        a la espera. <b>Sacar de hoy</b> deja el hueco al primero que esperaba en esa campaña.</li>
+    <li><b>Lo que sale en menos de una hora no se mueve.</b></li>
+    <li><b>Cada campaña reparte sus propias horas</b>: en la vista de todas, un contacto solo puede
+        ocupar huecos de su campaña (las demás filas se atenúan al arrastrar).</li>
+    <li><b>Topes</b>: el máximo de nuevos por día de la campaña no impide adelantar a alguien; el
+        máximo de nuevos por empresa del espacio, sí. Tampoco entra quien está en la lista negra o
+        no cumple la condición de su paso.</li>
+  </ul>
+  <p>Ver la cola, todos. Guardar, operator y admin (a un viewer le da error).</p>
+</section>
+
+      <section id="s8">
+  <h2><span class="num">08</span>Contactos</h2>
+  <p class="purpose">
+    <span class="ui">Contactos</span> muestra quién está enrolado en cada campaña, en qué paso va
+    y qué le toca después. Arriba a la derecha eliges la campaña: todo lo que hagas aquí afecta a
+    sus contactos.
+  </p>
+
+  <h3>Importar un CSV</h3>
+  <ol class="steps">
+    <li><p>Elige la campaña destino (vale una en borrador) y pulsa
+        <span class="ui">Importar CSV</span>.</p></li>
+    <li><p>Selecciona el archivo. La herramienta lee las cabeceras y propone un mapeo.</p></li>
+    <li><p><b>Revisa el <span class="ui">Mapeo de columnas</span></b>: cada cabecera va a
+        <span class="ui">Email</span>, <span class="ui">Nombre</span>,
+        <span class="ui">Apellido</span>, <span class="ui">Empresa</span>, un campo
+        <span class="ui">Personalizado</span> o <span class="ui">Ignorar</span>.</p></li>
+    <li><p>Elige <span class="ui">Entrar al paso</span> (normalmente el 1) y mira la
+        <span class="ui">Muestra (primeras filas)</span> por si una columna está corrida.</p></li>
+    <li><p>Pulsa <span class="ui">Importar</span>. Corre en segundo plano: «En cola…» y luego
+        «Importando en segundo plano… N / M». Puedes cerrar la ventana; al terminar sale el
+        informe.</p></li>
+  </ol>
+  <p>
+    No hay límite de tamaño por la pantalla: el servidor procesa unos 45.000 contactos en 3
+    minutos. Si el proceso deja de responder más de 3 minutos, la importación se marca como
+    fallida con el motivo y basta con subir el archivo otra vez: no entra ninguna fila a medias.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>En el informe</th><th>Significa</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Importados</b></td><td>Contactos nuevos, ya enrolados.</td></tr>
+        <tr><td><b>Movidos</b></td><td>Ya existían en el espacio y se movieron a esta campaña y paso.</td></tr>
+        <tr><td><b>Duplicados</b></td><td>Repetidos en el archivo o ya presentes aquí.</td></tr>
+        <tr><td><b>Suprimidos</b></td><td>Están en la lista negra del espacio o en la global (por ejemplo, porque rebotaron con otro cliente). Bien excluidos.</td></tr>
+        <tr><td><b>Inválidos</b></td><td>Sin email válido, incluidos los que terminan en una sola letra (<code>.a</code>). El detalle, en la lista de errores.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Una columna mapeada como <span class="ui">Personalizado</span> queda en las plantillas con su
+    nombre: si mapeas <code>Última ronda</code>, escribes <code>{{UltimaRonda}}</code>, y la paleta
+    del editor te lo ofrece.
+  </p>
+
+  <h3>Enrolar un contacto suelto</h3>
+  <ol class="steps">
+    <li><p>Pulsa <span class="ui">Enrolar</span>.</p></li>
+    <li><p>Escribe el email y, si los tienes, nombre, apellido, empresa y
+        <span class="ui">Referido por</span>.</p></li>
+    <li><p>Elige el paso de entrada y confirma.</p></li>
+  </ol>
+  <p>
+    Si ya existía en el espacio, se actualiza y se mueve aquí: no se duplica. No entra si está en la
+    lista negra, ni si ya respondió en otra campaña (quien responde sale de la automatización; para
+    reengancharlo, usa <span class="ui">Mover</span>).
+  </p>
+
+  <h3>Editar un contacto <span class="nuevo">Nuevo</span></h3>
+  <p>
+    <span class="ui">Editar</span>, en su fila (aquí y en <span class="ui">Explorador</span>) o en
+    el menú <b>⋯</b> de la pestaña <span class="ui">Contactos</span> de la campaña, corrige
+    nombre, apellido, empresa, cargo, ciudad, país y LinkedIn. Pulsa <span class="ui">Guardar
+    cambios</span>: solo se guarda lo que tocaste, y un campo vacío se borra. El correo no se puede
+    cambiar, porque por él se reconocen respuestas y rebotes: si está mal, detén al contacto y
+    añádelo de nuevo. Editar no reinicia la secuencia ni reenvía nada.
+  </p>
+
+  <h3>Pausar, detener y mover</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Acción</th><th>Qué le pasa al contacto</th><th>¿Se deshace?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Pausar</b></td><td>Deja de recibir pasos, pero conserva su paso y su programación.</td><td>Sí, con <span class="ui">Reanudar</span>.</td></tr>
+        <tr><td><b>Detener</b></td><td>Sale de la campaña para siempre, aunque la reactives.</td><td><b>No.</b></td></tr>
+        <tr><td><b>Mover</b></td><td>Se cancelan sus envíos futuros y entra en la secuencia y el paso que elijas. Sus datos se conservan.</td><td>Moviéndolo otra vez.</td></tr>
+        <tr><td><b>Tarea</b></td><td>Le creas una acción manual sin tocar su secuencia.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Solo se pausan los <b>Pendiente</b> y <b>En secuencia</b>. Si ninguno de la página se puede
+    pausar, un aviso ámbar explica por qué las casillas están grises.
+  </p>
+
+  <h3>Trabajar con muchos a la vez</h3>
+  <ol class="steps">
+    <li><p>Marca filas, o la casilla de la cabecera para toda la página; para más,
+        <span class="ui">Seleccionar los N de la campaña</span>.</p></li>
+    <li><p>En la barra azul: <span class="ui">Mover</span>, <span class="ui">Pausar</span>,
+        <span class="ui">Reanudar</span>, <span class="ui">Detener</span> (en rojo, con
+        confirmación) o <span class="ui">Limpiar</span>.</p></li>
+  </ol>
+
+  <h3>Mover en bloque <span class="nuevo">Nuevo</span></h3>
+  <p>
+    <span class="ui">Mover</span> en la barra azul abre <span class="ui">Mover N contactos</span>:
+    elige <span class="ui">Secuencia destino</span> y <span class="ui">Paso destino</span>. Solo se
+    mueven los pendientes o en secuencia; quien respondió, rebotó o fue detenido se queda. Al
+    terminar, Outply dice cuántos se movieron y cuántos se omitieron.
+  </p>
+
+  <h3>Los contactos dentro de la campaña</h3>
+  <p>
+    La pestaña <span class="ui">Contactos</span> de cada campaña tiene la misma lista con buscador
+    (<span class="ui">Buscar por email, nombre o empresa…</span>), <span class="ui">Enrolar</span>,
+    pausa en bloque y un menú <b>⋯</b> por fila con <span class="ui">Editar</span>,
+    <span class="ui">Pausar</span> o <span class="ui">Reanudar</span>, y
+    <span class="ui">Detener</span>.
+  </p>
+  <div class="note note--stop">
+    <b class="tag">Ahí Detener no pregunta</b>
+    <p>
+      En la pestaña <span class="ui">Contactos</span> de la campaña, <span class="ui">Detener</span>
+      actúa al momento, sin confirmación, y no se deshace. Para un freno temporal, usa
+      <span class="ui">Pausar</span>.
+    </p>
+  </div>
+
+  <h3>Los estados</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Estado</th><th>Significa</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Pendiente</b></td><td>Enrolado, aún no ha recibido nada.</td></tr>
+        <tr><td><b>En secuencia</b></td><td>Ya recibió algo y le quedan pasos.</td></tr>
+        <tr><td><b>Terminado</b></td><td>Terminó la secuencia sin responder.</td></tr>
+        <tr><td><b>Respondió</b></td><td>Contestó, y sus pasos siguientes se cancelaron. También quien pide la baja respondiendo.</td></tr>
+        <tr><td><b>Rebotó</b></td><td>Su correo rebotó. Cualquier rebote es definitivo.</td></tr>
+        <tr><td><b>Baja</b></td><td>Usó un enlace de baja. Los correos ya no lo llevan, así que casi no se ve.</td></tr>
+        <tr><td><b>Detenido</b></td><td>Lo detuviste tú; su dirección no puede existir (y queda bloqueada en todos los clientes); o entró en la lista negra cuando ya tenía hora, y ese correo no salió.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Dos marcas más: <span class="ui">pausado</span> (lo pausaste tú o la regla «Cuando alguien
+    responde») y <span class="ui">OOO</span> (contestó un mensaje automático de ausencia; no es una
+    respuesta y la secuencia sigue).
+  </p>
+</section>
+
+      <section id="s9">
+  <h2><span class="num">09</span>Respuestas</h2>
+  <p class="purpose">Quién contestó y qué dijo, en una sola lista.</p>
+
+  <p>
+    Aquí solo hay respuestas de personas. Las automáticas de ausencia marcan al contacto como
+    ausente y los rebotes tienen su propia pantalla (<a href="#s10">§10</a>): ni unas ni otros
+    cuentan en la tasa de respuesta. El desplegable de arriba filtra por campaña; cada respuesta
+    dice quién, de qué empresa, campaña y paso viene y a qué bandeja llegó, y
+    <span class="ui">más</span> despliega las largas.
+  </p>
+
+  <h3>Quien pide la baja respondiendo <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Los correos no llevan enlace de baja: quien no quiere más correos, responde. Si la respuesta lo
+    pide de forma explícita, Outply mete su dirección en la lista negra del espacio con el motivo
+    <code>unsubscribe</code>, y ninguna otra campaña de ese cliente le vuelve a escribir. No tienes
+    que hacer nada.
+  </p>
+  <ul>
+    <li><b>Cuenta como baja:</b> «dame de baja», «no me escribas más», «quítame de la lista»,
+        «unsubscribe», «remove me», «descadastrar», o una respuesta que se limita a «no» («no,
+        gracias», «stop», «baja»). Se mira solo lo que escribió el contacto, no el correo citado.</li>
+    <li><b>No cuenta:</b> «no me interesa». Si el cliente quiere volver a intentarlo más adelante,
+        eso lo decides tú.</li>
+  </ul>
+  <p>Para la campaña es una respuesta más: el contacto queda como <b>Respondió</b>.</p>
+
+  <div class="note">
+    <b class="tag">Contestar se hace en el buzón</b>
+    <p>
+      Outply detecta la respuesta y para la secuencia en minutos (en Outlook, hasta 15). La
+      conversación sigue en Gmail, Outlook o donde esté la bandeja. Qué pasa con esa persona en
+      otras campañas del espacio depende del ajuste <span class="ui">Cuando alguien
+      responde</span> (<a href="#s17">§17</a>).
+    </p>
+  </div>
+</section>
+
+      <section id="s10">
+  <h2><span class="num">10</span>Rebotes <span class="nuevo">Nuevo</span></h2>
+  <p class="purpose">
+    Por qué rebotó cada correo, con el código y el aviso completo del servidor del destinatario.
+    Son exactamente los rebotes que suman a la tasa: se pueden contar y comprobar uno por uno.
+  </p>
+
+  <p>
+    Cada rebote muestra la persona, su empresa, cuándo pasó, la campaña, el paso y la bandeja; una
+    chapa <span class="ui">Duro</span> o <span class="ui">Blando</span>; el código (por ejemplo,
+    <code>550 · 5.1.1</code>) con una lectura en una frase; el diagnóstico tal cual; y
+    <span class="ui">Ver el DSN completo</span>, el aviso entero como llegó al buzón. El desplegable
+    filtra por campaña. Algunos rebotes antiguos dicen que el motivo no se guardó: el aviso sigue
+    en el buzón que lo recibió, como un correo de MAILER-DAEMON.
+  </p>
+
+  <h3>Cómo leer el código</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Empieza por</th><th>Lectura en pantalla y qué suele significar</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>5.1.</code></td><td>«El buzón no existe: dado de baja o mal escrito». La lista envejece.</td></tr>
+        <tr><td><code>5.2.</code></td><td>«Buzón lleno o deshabilitado». Cuentas abandonadas.</td></tr>
+        <tr><td><code>5.4.</code></td><td>«El servidor del destinatario no responde».</td></tr>
+        <tr><td><code>5.7.</code></td><td>«Rechazado por política o reputación del remitente». El problema es quien envía: si se repite, para y revisa el dominio.</td></tr>
+        <tr><td>Otro <code>5.</code></td><td>«Rechazo permanente».</td></tr>
+        <tr><td><code>4.</code></td><td>«Fallo temporal: se reintenta en 24 h». Ese texto está desfasado: no se reintenta, cualquier rebote es definitivo a la primera.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Qué hace Outply con un rebote</h3>
+  <p>
+    Cualquier rebote, permanente o temporal, es definitivo a la primera: el contacto pasa a
+    <b>Rebotó</b>, su secuencia se corta, suma a la tasa de la campaña y la dirección entra en la
+    lista negra del espacio <b>y en la global</b>, así que ningún cliente le vuelve a escribir. Hay
+    tres excepciones:
+  </p>
+  <ul>
+    <li><b>Rechazo por la reputación del dominio que envía.</b> El destinatario rechaza por el
+        dominio o la IP de quien envía, no por la dirección. Cuenta como rebote en su campaña, pero
+        la dirección no entra en ninguna lista negra.</li>
+    <li><b>La cuenta que envía está bloqueada.</b> No es un rebote del contacto: no se le toca ni
+        cuenta en la tasa. Outply pausa la bandeja con el motivo en rojo en
+        <span class="ui">Mailboxes</span>.</li>
+    <li><b>El reenvío del destinatario se bloqueó.</b> Su buzón reenvía a otra dirección y su
+        organización lo frena; el original ya le llegó. Se ignora.</li>
+  </ul>
+  <p>
+    La chapa <span class="ui">Blando</span> solo aparece en rebotes anteriores a octubre de 2026;
+    hoy todo rebote nuevo es <span class="ui">Duro</span>. Debajo, <span class="ui">Sin
+    atribuir</span> recoge avisos que no casan con ningún envío: no suman a la tasa. Si aparecen
+    muchos, avisa a tu admin de agencia: la tasa se estaría quedando corta.
+  </p>
+</section>
+
+      <section id="s11">
+  <h2><span class="num">11</span>Tareas</h2>
+  <p class="purpose">
+    Los pasos que no envía la máquina: llamadas, WhatsApp, LinkedIn y cualquier acción manual.
+  </p>
+  <p>
+    Cuando una secuencia llega a un paso que no es de correo, aparece aquí una tarea con el
+    contacto y la instrucción que escribiste en el paso.
+  </p>
+
+  <h3>Trabajar la bandeja de tareas</h3>
+  <ol class="steps">
+    <li><p>Filtra por <span class="ui">Pendientes</span>, <span class="ui">Hechas</span> u
+        <span class="ui">Omitidas</span>, por <span class="ui">Operador asignado</span> y por
+        vencimiento (<span class="ui">Vence desde</span> / <span class="ui">Vence
+        hasta</span>).</p></li>
+    <li><p>Haz la llamada o el mensaje y marca <span class="ui">Hecho</span>; si no procede,
+        <span class="ui">Omitir</span>.</p></li>
+  </ol>
+
+  <h3>Crear una tarea a mano</h3>
+  <ol class="steps">
+    <li><p>Pulsa <span class="ui">Nueva tarea</span> y elige campaña y contacto.</p></li>
+    <li><p>Escribe el <span class="ui">Título</span> en imperativo («Llamar para agendar demo») y
+        el canal.</p></li>
+    <li><p>Si hace falta, <span class="ui">Asignar a</span>, <span class="ui">Vence
+        (opcional)</span> y <span class="ui">Notas (opcional)</span> con el contexto.</p></li>
+  </ol>
+  <p>
+    También desde la fila de un contacto, en <span class="ui">Contactos</span> o en
+    <span class="ui">Explorador</span>, con <span class="ui">Tarea</span>.
+  </p>
+
+  <h3>Avisos de tareas <span class="nuevo">Nuevo</span></h3>
+  <ul>
+    <li><b>Asignada a alguien:</b> le llega solo a esa persona, por mensaje directo de Slack (o por
+        correo si no está en el Slack de la agencia), con qué hay que hacer, con quién y para
+        cuándo.</li>
+    <li><b>Sin asignar</b> (las que crea la secuencia): se avisa en el canal de Slack del espacio,
+        o en el de la agencia si el espacio no tiene.</li>
+    <li><b>Recordatorios</b> por Slack de las asignadas y pendientes: el día anterior al vencimiento
+        y el mismo día, a las 9:00 en la zona de tu perfil de Slack.</li>
+  </ul>
+  <p>
+    El canal de cada espacio lo configura un admin de agencia en <span class="ui">Aviso de tareas
+    nuevas</span> (<a href="#s17">§17</a>).
+  </p>
+</section>
+
+      <section id="s12">
+  <h2><span class="num">12</span>Analítica</h2>
+  <p class="purpose">Cómo va el espacio, y qué cuenta exactamente cada número.</p>
+
+  <h3>Elegir el periodo <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Sin rango, ves el acumulado de cada campaña. Con <span class="ui">Desde</span> y
+    <span class="ui">Hasta</span>, envíos, aperturas, clics, respuestas y rebotes se cuentan por su
+    fecha; los contactos por estado son siempre a día de hoy. <span class="ui">Todo el
+    histórico</span> quita el rango, y <span class="ui">Descargar CSV</span> baja exactamente lo
+    que ves.
+  </p>
+
+  <h3>Las cifras</h3>
+  <p>
+    <span class="ui">Correos enviados</span>, aperturas, clics, respuestas y rebote. Son correos,
+    no personas. Aperturas y clics solo existen en campañas HTML con rastreo y un dominio de
+    tracking que funcione: las de texto plano, que es lo de fábrica, no miden nunca, y la tabla lo
+    indica en vez de enseñar un cero.
+  </p>
+
+  <h3>Tasa por contacto y tasa por correo</h3>
+  <p>Están juntas en el panel <span class="ui">Respuestas, ausencias y rebotes</span>:</p>
+  <ul>
+    <li><b>Por contacto</b>: de las personas a las que escribiste, cuántas contestaron. Es la
+        lectura natural, y la que dan otras herramientas.</li>
+    <li><b>Por correo</b>: divide entre todos los envíos, seguimientos incluidos, así que siempre
+        sale más baja.</li>
+  </ul>
+  <p>
+    Fuera de esa cuenta van los ausentes, los rebotes y las bajas. <span class="ui">Rebote
+    blando</span> solo recoge rebotes anteriores a octubre de 2026: hoy todo cuenta como
+    <span class="ui">Rebote duro</span>. Los contactados que aún no han recibido nada se muestran
+    aparte, porque todavía no pueden contestar.
+  </p>
+
+  <h3>Desglose por paso y variante</h3>
+  <p>
+    Elige la campaña en el panel <span class="ui">Detalle</span>. <b>Rendimiento por paso</b> dice
+    en qué toque se cae la gente; <b>Variantes A/B</b> compara el control con sus variantes. La
+    etiqueta <span class="ui">líder</span> solo aparece cuando una variante responde estrictamente
+    mejor que todas las demás de ese paso.
+  </p>
+</section>
+
+      <section id="s13">
+  <h2><span class="num">13</span>Explorador</h2>
+  <p class="purpose">
+    Buscar entre todos los contactos del espacio cruzando campañas, y actuar sobre los que
+    encuentres: «¿a quién de Acme le estamos escribiendo, en qué campaña y desde qué bandeja?».
+  </p>
+
+  <h3>Filtros</h3>
+  <ul>
+    <li><b>Empresa</b>: parcial y sin distinguir mayúsculas («acme» encuentra «Acme Inc.»). Debajo,
+        <span class="ui">Solo los que no tienen empresa</span> encuentra a quien le falta ese dato,
+        para corregirlo con <span class="ui">Editar</span>.</li>
+    <li><b>Dominio del correo</b>: exacto; <code>acme.com</code> no incluye
+        <code>ventas.acme.com</code>.</li>
+    <li><b>País</b>, <b>Industria</b>, <b>Secuencia</b>, <b>Bandeja</b>, <b>Estado</b>, <b>Paso</b>
+        y <b>Cargado desde / hasta</b>.</li>
+    <li><b>Proveedor del contacto</b>: con qué proveedor recibe correo la persona.</li>
+  </ul>
+
+  <h3>El proveedor del contacto</h3>
+  <p>
+    Se deduce de los registros MX de su dominio. Enviar desde el mismo proveedor con el que recibe
+    (Google a Google) entra mejor, y sirve para detectar a quien no puede recibir correo.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Etiqueta</th><th>Significa</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Google</b> / <b>Microsoft</b></td><td>Recibe en Google Workspace o en Microsoft 365.</td></tr>
+        <tr><td><b>Otro</b></td><td>Zoho, Proton, servidor propio…</td></tr>
+        <tr><td><b>No recibe correo</b></td><td>Su dominio no tiene MX: escribirle es un rebote casi seguro.</td></tr>
+        <tr><td><b>Sin determinar</b></td><td>No se pudo consultar el DNS. Se reintenta solo.</td></tr>
+        <tr><td>Guion (filtro <b>Sin consultar</b>)</td><td>Su dominio aún no se ha consultado.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Con una secuencia elegida aparece <span class="ui">Detectar proveedores</span>, que consulta
+    los dominios de esa secuencia que aún no se han mirado.
+  </p>
+
+  <h3>Actuar sobre el resultado</h3>
+  <p>
+    Cada fila tiene <span class="ui">Editar</span>, <span class="ui">Tarea</span>,
+    <span class="ui">Mover</span> y <span class="ui">Pausar</span> (o
+    <span class="ui">Reanudar</span>). Con la página entera marcada puedes ampliar a
+    <span class="ui">Seleccionar los N que coinciden con el filtro</span>, aunque sean miles.
+    Con <b>Dominio del correo</b>, eso pausa o detiene a todos los contactos de una empresa en
+    todas las secuencias; con <b>Empresa</b> y una <b>Secuencia</b>, dentro de una sola.
+  </p>
+  <div class="note note--stop">
+    <b class="tag">Cuidado con Detener en masa</b>
+    <p>
+      <span class="ui">Detener</span> saca a los contactos de la campaña para siempre y no se
+      deshace. Para un freno temporal, usa <span class="ui">Pausar</span>.
+    </p>
+  </div>
+
+  <h3>Descargar en CSV <span class="nuevo">Nuevo</span></h3>
+  <p>
+    <span class="ui">Descargar CSV</span> baja todo lo que casa con el filtro, no solo la página:
+    contactos o empresas, según la pestaña. La pestaña <span class="ui">Empresas</span> agrupa por
+    empresa: cuántos contactos, en cuántas secuencias y cuándo se cargaron.
+  </p>
+</section>
+
+      <section id="s14">
+  <h2><span class="num">14</span>Lista negra</h2>
+  <p class="purpose">Direcciones y dominios que nunca deben recibir correo.</p>
+
+  <ul>
+    <li><span class="ui">Este espacio</span>: bloquea solo dentro del cliente actual.</li>
+    <li><span class="ui">Global (agencia)</span>: bloquea en todos los espacios. Para competidores,
+        clientes propios o direcciones que rebotaron. Solo admin de agencia puede consultarla y
+        cambiarla.</li>
+  </ul>
+  <p>
+    Se comprueba al darle hora a un correo y otra vez justo antes de enviarlo: si una dirección
+    entra cuando ya tenía un correo agendado, ese correo no sale y el contacto queda
+    <b>Detenido</b>. Un dominio bloquea todas sus direcciones.
+  </p>
+
+  <h3>Cómo se llena sola</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Qué pasa</th><th>Dónde entra</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Un correo rebota</td><td>Este espacio y Global (<code>bounce hard</code>).</td></tr>
+        <tr><td>Al enviar, la dirección resulta no poder existir</td><td>Global.</td></tr>
+        <tr><td>Una respuesta pide la baja</td><td>Este espacio (<code>unsubscribe</code>).</td></tr>
+        <tr><td>Rechazo por la reputación del dominio que envía</td><td>Ninguna: la dirección no tiene la culpa.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Agregar una entrada o una lista</h3>
+  <ol class="steps">
+    <li><p>Elige primero la pestaña: espacio o global.</p></li>
+    <li><p><span class="ui">Agregar</span> → <span class="ui">Contacto</span> o
+        <span class="ui">Dominio</span>, o <span class="ui">Cargar lista</span> para pegar varias
+        (una por línea o separadas por comas; para un dominio vale <code>@competidor.com</code> o
+        <code>competidor.com</code>).</p></li>
+    <li><p>Elige el <span class="ui">Motivo</span> (<code>manual</code>, <code>bounce hard</code>,
+        <code>spam complaint</code> o <code>unsubscribe</code>) y confirma. Una carga te dice
+        cuántas entraron.</p></li>
+  </ol>
+
+  <div class="note note--warn">
+    <b class="tag">Antes de quitar una entrada</b>
+    <p>
+      <span class="ui">Quitar</span> devuelve a esa dirección la posibilidad de recibir correo:
+      hazlo solo si sabes por qué entró. Si también está en la global, hay que quitarla de las dos
+      (la global, un admin de agencia).
+    </p>
+  </div>
+</section>
+
+      <section id="s15">
+  <h2><span class="num">15</span>Webhooks</h2>
+  <p class="purpose">
+    Avisar a otro sistema (un CRM, una automatización) cada vez que pasa algo en el envío.
+  </p>
+
+  <ol class="steps">
+    <li><p>Pulsa <span class="ui">Nuevo webhook</span> y escribe la URL de destino.</p></li>
+    <li><p>Marca los eventos, o <span class="ui">Todos los eventos (*)</span>.</p></li>
+    <li><p>Pulsa <span class="ui">Crear webhook</span> y <b>copia el secret</b>: no se vuelve a
+        mostrar completo, y sirve para verificar que la llamada viene de Outply.</p></li>
+  </ol>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Evento</th><th>Cuándo se dispara</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>sent</code></td><td>Salió un correo.</td></tr>
+        <tr><td><code>opened</code> / <code>clicked</code></td><td>Apertura o clic. Solo en campañas HTML con tracking.</td></tr>
+        <tr><td><code>replied</code></td><td>Un contacto respondió, con el asunto y el texto. También cuando la respuesta pide la baja.</td></tr>
+        <tr><td><code>bounced</code></td><td>Un correo rebotó.</td></tr>
+        <tr><td><code>unsubscribed</code></td><td>Alguien usó un enlace de baja. Como los correos ya no lo llevan, casi no salta.</td></tr>
+        <tr><td><code>sequence_finished</code></td><td>Un contacto terminó la secuencia sin responder.</td></tr>
+        <tr><td><code>mailbox_error</code> / <code>mailbox_recovered</code></td><td>Una bandeja dejó de enviar, o volvió.</td></tr>
+        <tr><td><code>contacts_paused_on_reply</code></td><td>Se pausaron contactos porque alguien respondió.</td></tr>
+        <tr><td><code>task_created</code></td><td>Se creó una tarea. No está en las casillas: llega solo con <span class="ui">Todos los eventos (*)</span>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Cada entrega lleva un identificador único en <code>id</code> y en la cabecera
+    <code>X-Outply-Event-Id</code>. Si tu endpoint no responde hay reintentos, así que una entrega
+    puede repetirse: descarta los identificadores ya procesados. <span class="ui">Pausar</span> deja
+    de enviar eventos sin borrar la configuración; <span class="ui">Quitar</span> elimina el
+    webhook.
+  </p>
+</section>
+
+      <section id="s16">
+  <h2><span class="num">16</span>Visibilidad: qué puede enviar hoy <span class="nuevo">Nuevo</span></h2>
+  <p class="purpose">
+    Una foto de toda la agencia en una pantalla: cuánto se puede enviar hoy, cuánto sale de verdad
+    y qué lo frena. Es una herramienta del admin de agencia.
+  </p>
+  <p>
+    Está en el primer grupo del menú, bajo <span class="ui">Resumen</span>, con el título
+    <span class="ui">Qué puede enviar hoy</span>, y solo en español. El enlace aparece en el menú
+    de todos, pero sus datos solo se cargan para un admin de agencia. Para tu campaña, usa la
+    <a href="#s7">Cola de envíos</a> y <span class="ui">Mailboxes</span>.
+  </p>
+
+  <h3>La foto de arriba</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Cifra</th><th>Qué es</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Capacidad real</b></td><td>La suma del tope diario de las bandejas que funcionan.</td></tr>
+        <tr><td><b>Capacidad dormida</b></td><td>La de las bandejas que no pueden enviar (sin autorizar, con el permiso caducado o pausadas). Se recupera conectándolas.</td></tr>
+        <tr><td><b>Salen hoy</b></td><td>Lo enviado más lo que está en cola con hora de hoy, y su porcentaje sobre la capacidad real.</td></tr>
+        <tr><td><b>Ya enviados</b></td><td>Lo que ya salió hoy.</td></tr>
+        <tr><td><b>New hoy</b> / <b>Follow ups hoy</b></td><td>Primeros contactos y seguimientos de hoy, frente a la suma de sus topes en las campañas activas.</td></tr>
+        <tr><td><b>Campañas activas</b> / <b>Retrasados</b></td><td>Campañas activas y en cuántos clientes. Si hay correos con hora de un día ya pasado sin salir, pasa a <b>Retrasados</b>, en rojo: revisa sus bandejas.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Las tres pestañas</h3>
+  <ul>
+    <li><b>Clientes</b>: capacidad real y dormida, bandejas que funcionan, lo que sale hoy y su uso
+        de la capacidad, nuevos y seguimientos frente a sus topes, campañas activas, contactos en
+        secuencia y cuántos ya deberían haber salido.</li>
+    <li><b>Campañas</b>: horario (en la zona de la campaña o la que elijas en
+        <span class="ui">Horario en:</span>), sus tres topes, la capacidad asignada por el reparto,
+        la que permite la espera entre correos, lo que sale hoy, lo disponible y los contactos en
+        secuencia. Filtros: <span class="ui">Solo activas</span>, por nombre y con o sin contactos.
+        Arriba avisa de las campañas activas sin contactos, para que las revises.</li>
+    <li><b>Bandejas</b>: cliente, estado, tope diario, enviados hoy, en cuántas campañas está y
+        <span class="ui">Qué le pasa</span>. <span class="ui">Solo las que no envían</span> deja
+        las caídas.</li>
+  </ul>
+  <p>
+    El «?» de cada cabecera explica su cálculo. Dos usos típicos: «¿por qué este cliente envía la
+    mitad de lo que podría?» (capacidad dormida, bandejas que no envían) y «¿por qué esta campaña
+    no llega a su tope?» (capacidad asignada frente a la que permite la espera y lo que sale hoy).
+  </p>
+</section>
+
+      <section id="s17">
+  <h2><span class="num">17</span>Panel de agencia</h2>
+  <p class="purpose">
+    Las seis pantallas que están por encima de un solo cliente. Solo admin de agencia: la sección
+    <span class="ui">Agencia</span> del menú no le aparece a nadie más.
+  </p>
+
+  <h3>Dashboard <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Qué funciona y cómo se usa Outply. Un filtro arriba para toda la página:
+    <span class="ui">Periodo</span> (últimos 7, 30 o 90 días, esta semana, semana pasada, este mes,
+    mes pasado, un mes concreto o fechas a medida) y <span class="ui">Cliente</span>. Los días se
+    cuentan en hora de Lima (UTC−5), y cada cifra se compara con el periodo anterior.
+  </p>
+  <ul>
+    <li><span class="ui">Qué funciona</span>: correos enviados, tasa de respuesta, personas
+        contactadas, tasa de rebote y campañas enviando; gráficos por día o semana y rankings por
+        cliente, campaña, paso, día de la semana, hora de envío, asunto del primer correo y bandeja.
+        Las tasas con poca muestra salen más claras: no te fíes de ellas.</li>
+    <li><span class="ui">Uso de la plataforma</span>: contactos nuevos (y cuántos llegaron del
+        AI-SDR), importaciones, correos, respuestas, tareas y «Quién está usando Outply».</li>
+  </ul>
+  <p>
+    Cada gráfico tiene <span class="ui">Ver tabla</span> / <span class="ui">Ver gráfico</span>.
+    Una respuesta cuenta para el correo que la provocó: en los últimos días del periodo aún pueden
+    llegar más.
+  </p>
+
+  <h3>Vista agencia</h3>
+  <p>
+    El agregado de todos los espacios y una fila por cliente. <span class="ui">Abrir</span> cambia
+    a ese espacio y te lleva a su resumen.
+  </p>
+
+  <h3>Espacios</h3>
+  <p>
+    <span class="ui">Nuevo espacio</span> pide solo el nombre; el <i>slug</i> se genera solo. La
+    <b>API key</b> de cada espacio se puede ver, copiar y rotar: al rotarla, la anterior deja de
+    funcionar al momento. En <span class="ui">Ajustes</span> de cada espacio:
+  </p>
+  <ul>
+    <li><b>Nombre del espacio</b>: corrige el nombre visible. El slug no cambia.</li>
+    <li><b>Tracking del cliente</b>: interruptor maestro. Apagado, <b>todas</b> las campañas del
+        espacio salen sin píxel de apertura ni reescritura de enlaces, diga lo que diga cada
+        una.</li>
+    <li><b>Máximo de contactos nuevos por empresa al día</b>: con 2, si Acme tiene cinco contactos,
+        hoy salen dos y el resto mañana. Solo cuenta el primer correo a cada persona. La empresa se
+        reconoce por el campo Empresa o, si está vacío, por el dominio del correo; los correos
+        personales (gmail, hotmail…) no cuentan. Vacío, sin tope.</li>
+    <li><b>Cuando alguien responde</b>: qué se pausa solo. <b>Nada</b> (si la persona está en dos
+        campañas, la otra le sigue escribiendo); <b>A esa persona, en tus demás campañas</b> (lo
+        habitual); o <b>A esa persona y al resto de su empresa</b> (útil en cuentas grandes). Se
+        pausan, no se detienen.</li>
+    <li><b>Aviso de tareas nuevas</b> → <b>Webhook de Slack</b>: el canal de Slack del cliente para
+        las tareas sin asignar (en Slack: Apps → Incoming Webhooks → Add to Slack → canal → copiar
+        la URL). Vacío, se usa el de la agencia.</li>
+    <li><b>Archivar espacio</b>: no borra nada. Queda marcado «(archivado)», su slug termina en
+        «-archivado» y sus bandejas se pausan. Antes hay que pausar sus campañas.</li>
+  </ul>
+  <p>
+    El ritmo y la rampa no se configuran aquí, aunque el subtítulo de la pantalla aún los mencione:
+    viven en cada bandeja (<a href="#s4">§04</a>).
+  </p>
+
+  <h3>Baja y cumplimiento legal <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Panel bajo la tabla de espacios. Gmail pide que sea fácil dejar de recibir correos; si no, el
+    contacto marca spam, y con más del 0,3&nbsp;% de quejas los correos van a spam. Como no hay
+    enlace de baja, se recomienda cerrar cada correo con una de estas líneas (con botón de copiar).
+    Quien responda «no» entra solo en la lista negra del espacio.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Idioma</th><th>Línea</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Español</td><td>P. D.: si prefieres que no te escriba más, respóndeme «no».</td></tr>
+        <tr><td>Português</td><td>P.S.: se preferir que eu não escreva mais, é só responder «não».</td></tr>
+        <tr><td>English</td><td>P.S. If you'd rather I didn't write again, just reply "no".</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Debajo resume requisitos legales de Perú, Estados Unidos, la Unión Europea y Brasil. No es
+    asesoría legal: revísalo con cada cliente antes de enviar a esos países.
+  </p>
+
+  <h3>Accesos</h3>
+  <ol class="steps">
+    <li><p>Elige el espacio en el desplegable.</p></li>
+    <li><p>Pulsa <span class="ui">Invitar</span>, escribe el email y elige el rol.</p></li>
+    <li><p>El rol se cambia en la propia fila; <span class="ui">Quitar</span> retira el acceso a
+        ese espacio.</p></li>
+  </ol>
+  <p>
+    El interruptor de la columna <span class="ui">Agencia</span> (<span class="ui">Admin de
+    agencia</span> / <span class="ui">Solo este espacio</span>) da o quita el permiso sobre toda la
+    agencia: crear espacios, ver y rotar sus API keys y dar accesos. Pide confirmación, y nadie
+    puede quitárselo a sí mismo.
+  </p>
+
+  <h3>Revisiones</h3>
+  <p>
+    Lo que el sistema se comprueba a sí mismo cada hora: <b>envíos duplicados</b>, <b>cola de envío
+    atascada</b>, <b>contadores desviados</b>, <b>cuota retenida sin envíos</b>, <b>bandejas en
+    error</b>, <b>contactos atascados</b>, el cupo de cuentas de Google y los envíos que se quedaron
+    a medio salir (estas dos aparecen con su nombre técnico, <code>cupo_oauth_google</code> y
+    <code>envios_a_medias</code>). Lo que tiene hallazgos va primero, con ejemplos y desde cuándo.
+    <b>Sin revisar</b> no es lo mismo que limpio: esa comprobación no ha corrido.
+  </p>
+
+  <h3>Calentamiento: solo pruebas de colocación <span class="nuevo">Nuevo</span></h3>
+  <p>
+    Outply no calienta ninguna bandeja. El calentamiento sintético (una red de buzones que se
+    escriben entre sí, como Mailivery) lleva a las listas negras a los dominios que prospectan, así
+    que está apagado; lo que frena a una bandeja nueva es su rampa (<a href="#s4">§04</a>). Esta
+    pantalla queda para:
+  </p>
+  <ul>
+    <li><b>Pruebas de colocación</b>: elige una <span class="ui">Campaña del espacio actual</span> y
+        pulsa <span class="ui">Lanzar prueba</span>. Outply manda su paso 1, tal como saldría, a
+        buzones de prueba de Gmail, Outlook y Yahoo, y dice qué parte llegó a
+        <span class="ui">Entrada</span>, <span class="ui">Spam</span> y
+        <span class="ui">Promociones</span>. Sale desde una bandeja de la campaña que siga
+        conectada a Mailivery.</li>
+    <li><b>Bandejas conectadas a Mailivery</b>: todas en pausa allí. Cada mañana Outply las mantiene
+        así; <span class="ui">Aplicar ahora</span> lo hace al momento.</li>
+  </ul>
+</section>
+
+      <section id="s18">
+  <h2><span class="num">18</span>Cómo se decide qué sale</h2>
+  <p class="purpose">
+    Por qué a veces se envía menos de lo que esperabas. Cuatro niveles, en este orden.
+  </p>
+
+  <div class="flow">
+    <div class="lvl">
+      <div class="lvl-head"><em>Nivel 1</em> <strong>El tope de cada bandeja</strong></div>
+      <p>
+        Cada bandeja tiene su tope de hoy: su límite diario o, mientras dura la rampa, el de la
+        rampa. La suma de los topes es el techo absoluto del día: tres bandejas a 40 son 120 correos.
+        El cupo cuenta lo enviado más lo agendado con hora de hoy. El techo del dominio manda sobre
+        el de sus bandejas, pero de fábrica no frena.
+      </p>
+    </div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div class="lvl">
+      <div class="lvl-head"><em>Nivel 2</em> <strong>El reparto entre campañas</strong></div>
+      <p>
+        El cupo de cada bandeja se divide a partes iguales entre las campañas activas que la usan:
+        una de 40 en cuatro campañas da 10 a cada una. Lo que una no consume se ofrece a las demás
+        del mismo cliente que tienen cola (nunca sale del cliente), y se turnan para que no se lo
+        lleven siempre las mismas. Una campaña que se activa o recibe contactos con las bandejas ya
+        reservadas recupera su parte el mismo día, poco a poco, de las que van por encima de la
+        suya. Encima, cada campaña respeta su <b>Total de envíos / día</b>.
+      </p>
+    </div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div class="lvl">
+      <div class="lvl-head"><em>Nivel 3</em> <strong>Nuevos y seguimientos</strong></div>
+      <p>
+        El cupo de la campaña se reparte entre nuevos y seguimientos en la proporción de sus dos
+        topes: con 20 y 60, una cuarta parte es para nuevos. Los nuevos van primero dentro de su
+        parte; los seguimientos usan la suya más lo que los nuevos no llenaron, y lo que sobre vuelve
+        a los nuevos. Sin ninguno de los dos topes, mitad y mitad; con uno en 0, el otro se lo lleva
+        todo. Aquí frena también el máximo de nuevos por empresa del espacio.
+      </p>
+    </div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div class="lvl">
+      <div class="lvl-head"><em>Nivel 4</em> <strong>Cada correo, uno por uno</strong></div>
+      <p>
+        Solo sale dentro de la ventana y en los días de envío; fuera de ahí, o si se atrasó por una
+        parada, espera a la siguiente apertura. Cada correo respeta la espera de su bandeja (300–450
+        segundos de fábrica) y su tope por minuto, y las bandejas del pool se turnan. El siguiente
+        paso se cuenta desde <b>cuando se envió de verdad</b>: si el paso 1 salió tarde, el paso 2
+        también.
+      </p>
+    </div>
+  </div>
+
+  <div class="note note--ok">
+    <b class="tag">Un correo sin cupo no se pierde</b>
+    <p>
+      Queda en <span class="ui">En espera</span> (lo ves en la Cola de envíos) y sale en cuanto hay
+      hueco; dentro de nuevos o de seguimientos, primero quien más lleva esperando. Nunca se cancela
+      un envío por falta de cupo. Solo cuando una campaña recupera su parte vuelven a la espera
+      algunos correos de otras, los de hora más tardía, nunca los que están a punto de salir.
+    </p>
+  </div>
+  <p>
+    Dónde mirarlo: la <a href="#s7">Cola de envíos</a> de tu campaña, la columna
+    <span class="ui">Cuota hoy</span> de <span class="ui">Mailboxes</span> y, si eres admin de
+    agencia, <a href="#s16">Visibilidad</a>.
+  </p>
+</section>
+
+      <section id="s19">
+  <h2><span class="num">19</span>Buenas prácticas</h2>
+  <p class="purpose">
+    Las reglas con las que se monta un cliente en Outply. Son los valores con los que nacen las
+    bandejas y las campañas, y están detrás de los avisos que verás en pantalla.
+  </p>
+
+  <h3>La regla de oro de los dominios</h3>
+  <p>
+    <b>El dominio principal del cliente nunca se usa para correo en frío.</b> Se envía desde
+    dominios variantes dedicados (<code>trytucliente.com</code>, <code>gettucliente.com</code>): si
+    uno se daña, no arrastra al principal ni a los otros.
+  </p>
+
+  <h3>Los valores de fábrica</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Medida</th><th class="n">Valor</th><th>Por qué</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Correos por bandeja al día</b></td><td class="n">40</td><td>El límite con el que nace cada bandeja. El tope de cada cliente lo decide su equipo de entregabilidad; por encima de 50, la herramienta avisa.</td></tr>
+        <tr><td><b>Bandejas por dominio</b></td><td class="n">3</td><td>Reparte el riesgo: un dominio quemado se lleva tres bandejas, no diez.</td></tr>
+        <tr><td><b>Espera entre correos</b></td><td class="n">300–450 s</td><td>Al azar, como escribe una persona.</td></tr>
+        <tr><td><b>Rampa de bandejas nuevas</b></td><td class="n">10 + 3/día</td><td>Pasar de cero a cuarenta correos de golpe es justo lo que buscan los filtros.</td></tr>
+        <tr><td><b>Umbral de rebote</b></td><td class="n">3&nbsp;%</td><td>Sobre 7 días y con al menos 50 envíos. Pasado, la campaña se pausa sola antes de que el daño sea caro.</td></tr>
+        <tr><td><b>Formato</b></td><td class="n">Texto plano</td><td>Parece un correo escrito a mano, sin píxeles ni enlaces reescritos.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Subir el límite diario no hace que salgan más correos: los proveedores miran el comportamiento
+    de la cuenta, y la espera y el reparto también limitan. <b>Para más volumen, más
+    bandejas.</b>
+  </p>
+
+  <h3>Antes de lanzar</h3>
+  <ul>
+    <li>SPF, DKIM, DMARC y MX en verde.</li>
+    <li>Un <span class="ui">Display name</span> con nombre de persona en cada bandeja del pool.</li>
+    <li>La rampa encendida en toda bandeja nueva (viene así) y nada de calentamiento sintético.</li>
+    <li>Un test de entrega por bandeja, a un buzón de otro proveedor.</li>
+    <li>Vista previa del paso 1 con un contacto real.</li>
+    <li>Una línea de baja por respuesta al final de cada correo, en lugar de un enlace.</li>
+  </ul>
+
+  <h3>Mientras corre</h3>
+  <ul>
+    <li>Mira <span class="ui">Resumen</span> cada mañana: el aviso «Una bandeja no está enviando»
+        significa que las campañas que dependen de ella envían menos de lo que crees.</li>
+    <li>Mira <span class="ui">Rebotes</span>: muchos <code>5.1.</code> dicen que la lista está
+        vieja; un <code>5.7.</code> que se repite dice que hay que parar y revisar el dominio.</li>
+    <li>Lee las respuestas aunque sean pocas: es la única señal que no se puede falsear.</li>
+    <li>Limita los contactos nuevos por empresa al día: cinco correos el mismo martes a la misma
+        empresa es la forma más rápida de que te marquen como spam.</li>
+    <li>Cada campaña activa se lleva su parte de las bandejas: pausa las que ya no tienen a quién
+        escribir.</li>
+    <li>Deja que las variantes A/B acumulen envíos antes de elegir: con veinte correos por variante
+        no hay nada que leer.</li>
+  </ul>
+</section>
+
+      <section id="s20">
+  <h2><span class="num">20</span>Solución de problemas</h2>
+  <p class="purpose">Lo que más se pregunta, con la causa real y qué hacer.</p>
+
+  <div class="trouble">
+
+    <div>
+      <h3>No puedo activar la campaña</h3>
+      <p><b>Por qué</b> Falta algo: pasos, asunto o contenido en un paso de correo, bandejas que
+      puedan enviar, nombre de remitente en alguna bandeja del pool, o días de envío.</p>
+      <p><b>Qué hacer</b> El panel <span class="ui">Falta esto para poder activarla</span> los
+      enumera todos. A las bandejas sin nombre, ponles <span class="ui">Display name</span> en
+      <span class="ui">Mailboxes</span> → <span class="ui">Ajustes</span>.</p>
+    </div>
+
+    <div>
+      <h3>«Una bandeja no está enviando» en el resumen</h3>
+      <p><b>Por qué</b> Está en <b>Error</b> o el proveedor bloqueó la cuenta: permiso caducado,
+      casilla de Gmail desmarcada, contraseña SMTP cambiada o cuenta de Google borrada. El motivo va
+      en rojo bajo su correo, en <span class="ui">Mailboxes</span>.</p>
+      <p><b>Qué hacer</b> Reconéctala con <span class="ui">Conectar</span> (en Gmail, con todas las
+      casillas; en SMTP, con el mismo correo y la contraseña nueva). Cambiarle el estado no la
+      arregla. Si el proveedor bloqueó la cuenta, primero hay que resolverlo con él.</p>
+    </div>
+
+    <div>
+      <h3>Se envía mucho menos de lo que esperaba</h3>
+      <p><b>Por qué</b> Casi siempre es uno de estos frenos: la rampa de una bandeja nueva; la
+      espera entre correos (unos 86 al día como mucho en 9 horas); otras campañas que usan las
+      mismas bandejas; los topes de la campaña o el de nuevos por empresa; la ventana o los días de
+      envío; o bandejas caídas.</p>
+      <p><b>Qué hacer</b> Mira la <span class="ui">Cola de envíos</span> y la columna
+      <span class="ui">Cuota hoy</span> de <span class="ui">Mailboxes</span>; un admin de agencia lo
+      ve todo junto en <span class="ui">Visibilidad</span>. Lo que no salió hoy no se pierde.</p>
+    </div>
+
+    <div>
+      <h3>Activé una campaña nueva y hoy casi no sale nada</h3>
+      <p><b>Por qué</b> Comparte bandejas con campañas que ya habían reservado el día. Solo tiene
+      derecho a su parte y la recupera poco a poco. Sin contactos, no envía nada.</p>
+      <p><b>Qué hacer</b> Comprueba que tiene contactos y bandejas activas. Para más volumen, añade
+      bandejas o pausa campañas que ya no tienen a quién escribir.</p>
+    </div>
+
+    <div>
+      <h3>El correo llegó con un hueco: «Hola ,»</h3>
+      <p><b>Por qué</b> Una variable sin dato en ese contacto. Sale vacía y en silencio.</p>
+      <p><b>Qué hacer</b> Carga o corrige el dato con <span class="ui">Editar</span>, o escribe un
+      respaldo: <code>{{FirstName or 'ahí'}}</code>. Si pasa en muchos, revisa el mapeo del
+      CSV.</p>
+    </div>
+
+    <div>
+      <h3>No veo aperturas ni clics</h3>
+      <p><b>Por qué</b> Lo más probable: la campaña está en <b>Texto plano</b>, que no mide nada. En
+      HTML: el rastreo está apagado, no hay dominio de tracking, el dominio no lleva a Outply, o el
+      tracking del espacio está apagado.</p>
+      <p><b>Qué hacer</b> Decide si de verdad necesitas medir. Si sí: apaga
+      <span class="ui">Texto plano</span>, activa el rastreo, confirma con quien administra el
+      dominio que está conectado y revisa <span class="ui">Tracking activado (aperturas y
+      clics)</span> en los ajustes del espacio.</p>
+    </div>
+
+    <div>
+      <h3>La firma sale sin imagen, o cortada</h3>
+      <p><b>Por qué</b> Sin imagen: la campaña está en texto plano. Cortada: la imagen es más ancha
+      que un correo, y Gmail la recorta.</p>
+      <p><b>Qué hacer</b> Para la imagen, pasa la campaña a HTML. Si se corta, baja el
+      <span class="ui">Ancho de la imagen</span> hasta que quepa en el recuadro de 600&nbsp;px.</p>
+    </div>
+
+    <div>
+      <h3>La tasa de respuesta parece bajísima</h3>
+      <p><b>Por qué</b> Seguramente lees la tasa <b>por correo</b>, que cuenta los seguimientos.</p>
+      <p><b>Qué hacer</b> Mira la <b>tasa por contacto</b> en <span class="ui">Analítica</span>.</p>
+    </div>
+
+    <div>
+      <h3>Importé un CSV y entraron menos contactos</h3>
+      <p><b>Por qué</b> Duplicados, suprimidos (en la lista negra del espacio o en la global, por
+      ejemplo porque rebotaron con otro cliente) o inválidos.</p>
+      <p><b>Qué hacer</b> No fuerces los suprimidos. Para los inválidos, la lista de errores dice
+      qué fila falló.</p>
+    </div>
+
+    <div>
+      <h3>Alguien que ya respondió sigue recibiendo correos de otra campaña</h3>
+      <p><b>Por qué</b> La pausa al responder está en <b>Nada</b> para ese espacio.</p>
+      <p><b>Qué hacer</b> En los ajustes del espacio, <span class="ui">Cuando alguien
+      responde</span> → al menos «A esa persona, en tus demás campañas».</p>
+    </div>
+
+    <div>
+      <h3>Alguien pidió la baja y no sé si quedó bloqueado</h3>
+      <p><b>Por qué</b> Solo cuentan las peticiones explícitas; «no me interesa» no es una baja.</p>
+      <p><b>Qué hacer</b> Búscalo en <span class="ui">Lista negra</span> → <span class="ui">Este
+      espacio</span>, con motivo <code>unsubscribe</code>. Si no está y quieres bloquearlo,
+      agrégalo a mano.</p>
+    </div>
+
+    <div>
+      <h3>Un contacto aparece como Detenido y nadie lo tocó</h3>
+      <p><b>Por qué</b> Su dirección no puede existir (y quedó bloqueada en todos los clientes), o
+      entró en la lista negra cuando ya tenía un correo agendado.</p>
+      <p><b>Qué hacer</b> Si el correo estaba mal escrito, añádelo de nuevo con el bueno. Si está en
+      la lista negra, averigua por qué antes de quitarlo.</p>
+    </div>
+
+    <div>
+      <h3>Detuve contactos sin querer</h3>
+      <p><b>Por qué</b> <span class="ui">Detener</span> es definitivo, y en la pestaña
+      <span class="ui">Contactos</span> de la campaña no pide confirmación.</p>
+      <p><b>Qué hacer</b> No se deshace: vuelve a enrolarlos o impórtalos de nuevo. Para frenos
+      temporales, <span class="ui">Pausar</span>.</p>
+    </div>
+
+    <div>
+      <h3>Al guardar la cola me dice que no se puede</h3>
+      <p><b>Por qué</b> El guardado es todo o nada y un movimiento ya no valía: el correo sale en
+      menos de una hora, el contacto recibió hora mientras editabas, está en la lista negra o su
+      empresa llegó a su tope.</p>
+      <p><b>Qué hacer</b> La franja roja dice cuál. <span class="ui">Cancelar</span>,
+      <span class="ui">Editar</span> otra vez y repite lo que siga teniendo sentido.</p>
+    </div>
+
+    <div>
+      <h3>Una campaña se pausó sola</h3>
+      <p><b>Por qué</b> Al cerrar el día, su tasa de rebote en la ventana pasó del umbral, con la
+      muestra mínima cumplida.</p>
+      <p><b>Qué hacer</b> Mira <span class="ui">Rebotes</span> de esa campaña: direcciones que no
+      existen piden limpiar la lista; rechazos por reputación apuntan al dominio.</p>
+    </div>
+
+    <div>
+      <h3>Veo «Acceso restringido», o Visibilidad no me muestra datos</h3>
+      <p><b>Por qué</b> Son pantallas del admin de agencia, con datos de todos los espacios.</p>
+      <p><b>Qué hacer</b> Si las necesitas, pide el permiso a un admin de agencia. Para tu campaña,
+      usa la <span class="ui">Cola de envíos</span> y <span class="ui">Mailboxes</span>.</p>
+    </div>
+
+    <div>
+      <h3>El indicador dice «API offline»</h3>
+      <p><b>Por qué</b> El navegador no habla con el motor de Outply, a menudo por una
+      actualización.</p>
+      <p><b>Qué hacer</b> Espera un minuto y recarga. Si sigue en rojo, no tomes decisiones con lo
+      que ves y avisa al equipo técnico. Si ves la banda ámbar de guardado, no cierres la
+      ventana.</p>
+    </div>
+
+  </div>
+</section>
+
+      <section id="s21">
+  <h2><span class="num">21</span>Glosario</h2>
+
+  <dl class="glossary">
+    <div><dt>Bandeja / mailbox</dt><dd>Buzón real conectado a Outply desde el que salen los correos.</dd></div>
+    <div><dt>Baja por respuesta</dt><dd>Una respuesta que pide no recibir más correos. Lleva la dirección a la lista negra del espacio.</dd></div>
+    <div><dt>Borrador</dt><dd>Una campaña que aún no se ha activado. Acepta contactos y no envía nada.</dd></div>
+    <div><dt>Calentamiento sintético</dt><dd>Correos automáticos entre una red de buzones para «calentar» una cuenta. Está apagado. No confundir con la rampa.</dd></div>
+    <div><dt>Cola de envíos</dt><dd>Quién recibe correo hoy, a qué hora y desde qué bandeja, con lo que espera y lo que viene.</dd></div>
+    <div><dt>Control (variante A)</dt><dd>El asunto y el cuerpo del propio paso: la versión contra la que compiten las variantes.</dd></div>
+    <div><dt>Cuota / cupo</dt><dd>Los correos que puede enviar hoy una bandeja o un dominio. Cuenta lo enviado más lo agendado con hora de hoy.</dd></div>
+    <div><dt>Display name</dt><dd>El nombre de la bandeja que ve quien recibe el correo. Es el remitente.</dd></div>
+    <div><dt>Dominio de tracking</dt><dd>Subdominio del cliente (<code>trk.tudominio.com</code>) para medir aperturas y clics. Solo en campañas HTML y si lleva a Outply.</dd></div>
+    <div><dt>DSN</dt><dd>El aviso de rebote que devuelve el servidor del destinatario, con el código y el motivo.</dd></div>
+    <div><dt>En espera</dt><dd>Contactos a los que ya les toca un correo y hoy no cupieron. No se pierden.</dd></div>
+    <div><dt>Enrolar</dt><dd>Meter a un contacto en una campaña, en un paso concreto.</dd></div>
+    <div><dt>Espacio</dt><dd>Un cliente, con sus campañas, contactos, bandejas y métricas aislados del resto.</dd></div>
+    <div><dt>Jitter</dt><dd>La espera al azar entre dos correos de la misma bandeja. De fábrica, 300–450 segundos.</dd></div>
+    <div><dt>Lista negra / supresión</dt><dd>Direcciones y dominios que nunca reciben correo. La global bloquea en todos los espacios y se llena sola con los rebotes.</dd></div>
+    <div><dt>Muestra mínima / Ventana</dt><dd>Las guardas de la regla de rebote: no se juzga una campaña hasta tener 50 envíos en los últimos 7 días.</dd></div>
+    <div><dt>OOO</dt><dd>Respuesta automática de ausencia. No cuenta como respuesta y la secuencia sigue.</dd></div>
+    <div><dt>Paso</dt><dd>Cada toque de la secuencia: un correo automático o una tarea manual.</dd></div>
+    <div><dt>Pool</dt><dd>Las bandejas asignadas a una campaña.</dd></div>
+    <div><dt>Prueba de colocación</dt><dd>Enviar el paso 1 a buzones de prueba de Gmail, Outlook y Yahoo para ver si llega a entrada, spam o promociones.</dd></div>
+    <div><dt>Rampa</dt><dd>El tope que sube cada día en una bandeja nueva: 10 el día del alta y 3 más cada día. En pantalla, «Calentamiento (warmup)».</dd></div>
+    <div><dt>Rebote</dt><dd>Un correo devuelto por el servidor del destinatario. Definitivo a la primera; bloquea la dirección en todos los clientes salvo si es un rechazo por reputación.</dd></div>
+    <div><dt>Rechazo por reputación</dt><dd>Un rebote causado por el dominio o la IP de quien envía. Cuenta en la campaña, pero la dirección no se bloquea.</dd></div>
+    <div><dt>Reparto</dt><dd>Cómo se divide el cupo de una bandeja entre las campañas activas que la usan.</dd></div>
+    <div><dt>Round-robin</dt><dd>El turno de los envíos entre las bandejas del pool.</dd></div>
+    <div><dt>SPF · DKIM · DMARC</dt><dd>Los tres registros DNS que demuestran que tus correos son legítimos.</dd></div>
+    <div><dt>Spintax</dt><dd>Varias redacciones para un fragmento: <code>{hola|buenas}</code>. Cada correo elige una.</dd></div>
+    <div><dt>Texto plano</dt><dd>El formato de fábrica: solo texto, sin imágenes y sin medir aperturas ni clics.</dd></div>
+    <div><dt>Variable / merge field</dt><dd>Un dato del contacto insertado en el correo: <code>{{FirstName}}</code>.</dd></div>
+    <div><dt>Ventana de envío</dt><dd>La franja horaria y los días en que la campaña puede enviar.</dd></div>
+    <div><dt>Webhook</dt><dd>Un aviso automático que Outply manda a otro sistema cuando ocurre un evento.</dd></div>
+  </dl>
+</section>
+
+      <footer>
+  <p>
+    Outply · Manual de usuario · Octubre de 2026. Las cifras de entregabilidad (40 correos por
+    bandeja al día, 3 bandejas por dominio, 300–450 segundos entre correos y una rampa de 10 + 3 al
+    día) son los valores con los que nacen las bandejas. El tope de cada cliente lo decide su
+    equipo de entregabilidad; la herramienta avisa por encima de 50 correos al día por bandeja.
+  </p>
+</footer>
+    </main>
+  </div>
+</div>
+
+<script src="../assets/manual.js" defer></script>
+</body>
+</html>

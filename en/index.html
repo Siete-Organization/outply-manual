@@ -1,0 +1,1936 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outply user guide</title>
+<meta name="description" content="How to use Outply, screen by screen: mailboxes, campaigns, contacts, replies and deliverability.">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="pt-BR" href="../pt/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="../assets/manual.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="brandline" href="#">
+      <span class="mark" aria-hidden="true">O</span>
+      <b>Outply</b>
+      <span>by Siete</span>
+    </a>
+    <div class="search" role="search">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="m10.4 10.4 3.4 3.4"/></svg>
+      <input id="buscar" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search the guide (press /)" aria-label="Search the guide"
+             aria-controls="resultados" aria-expanded="false">
+      <div id="resultados" class="results" role="listbox" hidden></div>
+    </div>
+    <nav class="langs" aria-label="Language">
+        <a href="../es/" hreflang="es" lang="es">ES</a>
+        <a href="../en/" hreflang="en" lang="en" aria-current="true">EN</a>
+        <a href="../pt/" hreflang="pt" lang="pt-BR">PT</a>
+    </nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <header class="cover">
+  <p class="eyebrow">User guide</p>
+  <h1>How to use Outply</h1>
+  <p class="lede">
+    Outply sends cold email from your clients' mailboxes, paced so the domain doesn't get
+    burned, and tells you who replied. This guide walks through the tool screen by screen, in
+    the order you use it.
+  </p>
+  <div class="covermeta">
+    <span><b>Version</b> October 2026</span>
+    <span><b>For</b> SDRs, operators and agency admins</span>
+    <span><b>Languages</b> Español, English, Português</span>
+  </div>
+  <div class="legend">
+    <div>
+      <b>Screen names</b>
+      Text that appears in the tool looks like this:
+      <span class="ui">Campaigns</span> → <span class="ui">New campaign</span>.
+    </div>
+    <div>
+      <b>Values and variables</b>
+      Text you type exactly as shown looks like this: <code>{{FirstName}}</code>, <code>trk.tudominio.com</code>.
+    </div>
+    <div>
+      <b>Notices</b>
+      Amber means something worth checking. Red means something that can't be undone.
+      <span class="nuevo">New</span> marks what has arrived since September.
+    </div>
+  </div>
+</header>
+
+  <div class="body">
+
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#s1"><i>01</i> What Outply is</a></li>
+        <li><a href="#s2"><i>02</i> Signing in, choosing a workspace and finding your way around</a></li>
+        <li><a href="#s3"><i>03</i> Getting started</a></li>
+        <li><a href="#s4"><i>04</i> Sending mailboxes</a></li>
+        <li><a href="#s5"><i>05</i> Deliverability</a></li>
+        <li><a href="#s6"><i>06</i> Campaigns</a></li>
+        <li><a href="#s7"><i>07</i> Send queue</a></li>
+        <li><a href="#s8"><i>08</i> Contacts</a></li>
+        <li><a href="#s9"><i>09</i> Replies</a></li>
+        <li><a href="#s10"><i>10</i> Bounces</a></li>
+        <li><a href="#s11"><i>11</i> Tasks</a></li>
+        <li><a href="#s12"><i>12</i> Analytics</a></li>
+        <li><a href="#s13"><i>13</i> Explorer</a></li>
+        <li><a href="#s14"><i>14</i> Blocklist</a></li>
+        <li><a href="#s15"><i>15</i> Webhooks</a></li>
+        <li><a href="#s16"><i>16</i> Visibility: what can be sent today</a></li>
+        <li><a href="#s17"><i>17</i> Agency panel</a></li>
+        <li><a href="#s18"><i>18</i> How Outply decides what goes out</a></li>
+        <li><a href="#s19"><i>19</i> Best practices</a></li>
+        <li><a href="#s20"><i>20</i> Troubleshooting</a></li>
+        <li><a href="#s21"><i>21</i> Glossary</a></li>
+      </ol>
+    </nav>
+
+    <main>
+
+      <details class="mobiletoc">
+        <summary>Contents</summary>
+        <ol>
+          <li><a href="#s1">What Outply is</a></li>
+          <li><a href="#s2">Signing in, choosing a workspace and finding your way around</a></li>
+          <li><a href="#s3">Getting started</a></li>
+          <li><a href="#s4">Sending mailboxes</a></li>
+          <li><a href="#s5">Deliverability</a></li>
+          <li><a href="#s6">Campaigns</a></li>
+          <li><a href="#s7">Send queue</a></li>
+          <li><a href="#s8">Contacts</a></li>
+          <li><a href="#s9">Replies</a></li>
+          <li><a href="#s10">Bounces</a></li>
+          <li><a href="#s11">Tasks</a></li>
+          <li><a href="#s12">Analytics</a></li>
+          <li><a href="#s13">Explorer</a></li>
+          <li><a href="#s14">Blocklist</a></li>
+          <li><a href="#s15">Webhooks</a></li>
+          <li><a href="#s16">Visibility: what can be sent today</a></li>
+          <li><a href="#s17">Agency panel</a></li>
+          <li><a href="#s18">How Outply decides what goes out</a></li>
+          <li><a href="#s19">Best practices</a></li>
+          <li><a href="#s20">Troubleshooting</a></li>
+          <li><a href="#s21">Glossary</a></li>
+        </ol>
+      </details>
+
+      <section id="s1">
+  <h2><span class="num">01</span>What Outply is</h2>
+  <p class="purpose">
+    An email prospecting tool for agencies: several sequences running at once, for several
+    clients, without any of them burning another's reputation.
+  </p>
+
+  <p>
+    Emails don't go out from a shared server: they go out from the client's own mailboxes
+    (Gmail, Outlook or the client's own SMTP). The domain's reputation belongs to the client and
+    isn't shared with anyone, which is why the tool takes so much care not to spend it.
+  </p>
+
+  <h3>The six pieces you need to understand</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Piece</th><th>What it is</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Workspace</b></td><td>A client. Its campaigns, contacts, mailboxes and metrics live inside it and never mix with another workspace's.</td></tr>
+        <tr><td><b>Mailbox</b> (sending account)</td><td>A real, connected email account, with its own daily limit, pace, sender name and signature.</td></tr>
+        <tr><td><b>Campaign</b></td><td>A sequence: the steps a contact receives, the schedule, the mailbox pool and the sending caps.</td></tr>
+        <tr><td><b>Step</b></td><td>One touch in the sequence: an automatic email or a manual task (call, WhatsApp, LinkedIn).</td></tr>
+        <tr><td><b>Contact</b></td><td>A person enrolled in a campaign, with their status and their next scheduled step.</td></tr>
+        <tr><td><b>Pool</b></td><td>A campaign's mailboxes. Sends rotate among them (<i>round-robin</i>), and each mailbox splits its quota among the active campaigns that use it.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>How an email goes out by default <span class="nuevo">New</span></h3>
+  <ul>
+    <li><b>In plain text</b>: no images (not even the signature's) and no open or click
+        tracking. Each campaign can be switched to HTML (<a href="#s6">§06</a>).</li>
+    <li><b>No unsubscribe link or footer</b>: people who don't want more emails reply, and if
+        they ask to unsubscribe they go onto the workspace blocklist automatically (<a href="#s9">§09</a>).</li>
+    <li><b>Signed by the mailbox</b>: the sender is the <span class="ui">Display name</span> of
+        the mailbox that sends. The campaign has no sender of its own.</li>
+    <li><b>Follow-ups go in the same thread</b>, with the subject “Re: ” plus step 1's subject.</li>
+    <li><b>With brakes on new mailboxes</b>: a limit of 40 a day, 300 to 450 seconds between
+        emails and a ramp that starts at 10 on the day the mailbox is added and rises by 3 each day.</li>
+  </ul>
+
+  <div class="note">
+    <b class="tag">What it does on its own</b>
+    <p>
+      It stops the sequence as soon as someone replies (within minutes; up to 15 in Outlook). It
+      blocks anyone who bounced across all clients, unless the rejection is about the reputation of
+      the sending domain. At the close of each day, it pauses any campaign whose bounces exceed the
+      threshold. And it spreads sends across mailboxes, campaigns and hours so they don't look like
+      an automated burst.
+    </p>
+  </div>
+</section>
+
+      <section id="s2">
+  <h2><span class="num">02</span>Signing in, choosing a workspace and finding your way around</h2>
+  <p class="purpose">
+    Everything you see on screen belongs to the active workspace. If the numbers don't add up,
+    first check which workspace is open in the top-left corner.
+  </p>
+
+  <h3>Sign in</h3>
+  <ol class="steps">
+    <li><p>Open the Outply address you were given.</p></li>
+    <li><p>Enter your email and password and click <span class="ui">Sign in</span>, or use
+        <span class="ui">Continue with Google</span>.</p></li>
+    <li><p>If you don't have an account, ask an agency admin to invite you: access is by
+        invitation only.</p></li>
+  </ol>
+
+  <h3>Switch workspace</h3>
+  <ol class="steps">
+    <li><p>Click the selector under the logo: it shows the client's name and its
+        <i>slug</i>.</p></li>
+    <li><p>Choose the workspace. The list is sorted A to Z; with more than seven,
+        <span class="ui">Search workspace…</span> appears and searches by name or slug (if only one
+        is left, <code>Enter</code> opens it). Outply takes you to its <span class="ui">Overview</span>.</p></li>
+  </ol>
+  <p>
+    If the selector says <span class="ui">No workspaces assigned</span>, nobody has given you access
+    to any client yet: ask an agency admin.
+  </p>
+
+  <h3>The menu <span class="nuevo">New</span></h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Group</th><th>Screens</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>(no heading)</td><td><span class="ui">Overview</span> and <span class="ui">Visibility</span>.</td></tr>
+        <tr><td><b>Prospecting</b></td><td><span class="ui">Campaigns</span>, <span class="ui">Send queue</span>, <span class="ui">Contacts</span> and <span class="ui">Tasks</span>.</td></tr>
+        <tr><td><b>Results</b></td><td><span class="ui">Replies</span>, <span class="ui">Bounces</span> and <span class="ui">Analytics</span>.</td></tr>
+        <tr><td><b>Sending</b></td><td><span class="ui">Mailboxes</span>, <span class="ui">Deliverability</span> and <span class="ui">Blocklist</span>.</td></tr>
+        <tr><td><b>Tools</b></td><td><span class="ui">Explorer</span> and <span class="ui">Webhooks</span>.</td></tr>
+        <tr><td><b>Agency</b></td><td><span class="ui">Dashboard</span>, <span class="ui">Agency view</span>, <span class="ui">Workspaces</span>, <span class="ui">Access</span>, <span class="ui">Checks</span> and <span class="ui">Warm-up</span>. Agency admins only.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Collapse the sidebar with the round button on its edge or with the <code>[</code> key (outside
+    a text field). Collapsed, only the icons remain, and Outply remembers it in that browser. On
+    mobile, a header with icons for the first screens replaces the sidebar.
+  </p>
+
+  <h3>Interface language <span class="nuevo">New</span></h3>
+  <p>
+    Outply is available in Spanish, English and Portuguese. The selector (<span class="ui">ES</span>,
+    <span class="ui">EN</span>, <span class="ui">PT</span>) is at the bottom of the sidebar, when the
+    sidebar is expanded, and it changes the screens and the server messages. The first time, it
+    uses your browser's language; whatever you choose is remembered in that browser. Some agency
+    screens, such as <span class="ui">Visibility</span>, and some buttons are still in Spanish.
+  </p>
+
+  <h3>Help: the “?” button <span class="nuevo">New</span></h3>
+  <p>
+    At the bottom of the sidebar, next to the theme button, there is a question-mark icon (also
+    when the sidebar is collapsed; on mobile, in the header). It opens this guide in a new tab, in
+    the language your interface is set to. At the top of the guide there is a search box: press the
+    <code>/</code> key to jump to it and type what you're looking for (<i>bounce</i>, <i>ramp</i>,
+    <i>queue</i>).
+  </p>
+
+  <h3>The sidebar footer and the banners at the top</h3>
+  <ul>
+    <li><b>Status dot</b>: <span class="ui">API online</span> in green, the engine is responding;
+        <span class="ui">API offline</span> in red, what you see may be out of date. Next to it:
+        the language, the “?” button and light or dark mode.</li>
+    <li><b>Your account</b>: your initials, your name and the email you signed in with, so you
+        don't work under the wrong account. <span class="ui">Sign out</span> ends the session after
+        asking “Sign out of …?”.</li>
+    <li><b>New version</b>: a banner tells you a new version has been published and this tab is
+        still on the previous one. Click <span class="ui">Reload</span> when you finish what you were doing.</li>
+    <li><b>Outply is not responding</b>: an amber banner says your change will be saved
+        automatically as soon as it comes back. Don't close the window or reload.</li>
+    <li><b>Deliverability notices</b> (agency admins only): a temporary amber banner about some
+        domains. <span class="ui">Got it</span> hides it in that browser.</li>
+  </ul>
+
+  <h3>What each role can do</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Role</th><th>What it's for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>admin</b></td><td>Runs the workspace: configures, invites, operates and can remove mailboxes.</td></tr>
+        <tr><td><b>operator</b></td><td>The day-to-day work: campaigns, contacts, send queue, tasks, replies.</td></tr>
+        <tr><td><b>viewer</b></td><td>View only: can't create campaigns, and anything they try to save returns an error.</td></tr>
+        <tr><td><b>Agency admin</b></td><td>A permission over the whole agency, not a workspace role: sees the <span class="ui">Agency</span> section, creates workspaces, grants access and manages the global blocklist.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Roles are per workspace: you can be <b>admin</b> for one client and <b>viewer</b> for another.
+    Anyone who isn't an agency admin doesn't see the <span class="ui">Agency</span> section; if they
+    reach one of those screens by pasting its address, they see <span class="ui">Restricted access</span>.
+  </p>
+</section>
+
+      <section id="s3">
+  <h2><span class="num">03</span>Getting started</h2>
+  <p class="purpose">
+    The shortest path from a new client to the first email sent. Each step has its own chapter
+    later on.
+  </p>
+
+  <ol class="steps">
+    <li><p><b>Create the client's workspace.</b> <span class="ui">Agency</span> →
+        <span class="ui">Workspaces</span> → <span class="ui">New workspace</span>. Only the name
+        is required. An agency admin does this. <a href="#s17">See §17</a>.</p></li>
+    <li><p><b>Connect the mailboxes.</b> <span class="ui">Mailboxes</span> →
+        <span class="ui">Connect</span>. Use dedicated domains, never the client's main domain, and
+        no more than three mailboxes per domain. Each mailbox needs a
+        <span class="ui">Display name</span>. <a href="#s4">See §04</a>.</p></li>
+    <li><p><b>Check authentication.</b> <span class="ui">Deliverability</span>: SPF, DKIM,
+        DMARC and MX in green. <a href="#s5">See §05</a>.</p></li>
+    <li><p><b>Send a delivery test</b> from <span class="ui">Deliverability</span> →
+        <span class="ui">Send test</span> to an address of yours on another provider, and check
+        that it doesn't land in spam.</p></li>
+    <li><p><b>Set up the campaign.</b> <span class="ui">Campaigns</span> →
+        <span class="ui">New campaign</span> opens the five-step wizard:
+        <span class="ui">Data</span>, <span class="ui">Sequence</span>,
+        <span class="ui">Mailboxes</span>, <span class="ui">Contacts</span> and
+        <span class="ui">Review</span>. <a href="#s6">See §06</a>.</p></li>
+    <li><p><b>Load the contacts.</b> In the wizard, one at a time; for a list, use
+        <span class="ui">Contacts</span> → <span class="ui">Import CSV</span> with that campaign
+        selected. A draft campaign accepts contacts and sends nothing.
+        <a href="#s8">See §08</a>.</p></li>
+    <li><p><b>Activate</b> with <span class="ui">Activate campaign</span> in the
+        <span class="ui">Review</span> step, or later with <span class="ui">Activate</span> on the
+        campaign page. If anything is missing, the tool tells you everything at once.</p></li>
+    <li><p><b>Check the queue.</b> <span class="ui">Send queue</span> shows who goes out today, at
+        what time and from which mailbox. <a href="#s7">See §07</a>.</p></li>
+  </ol>
+
+  <div class="note note--warn">
+    <b class="tag">New mailboxes come with the brakes on, and that's fine</b>
+    <p>
+      A newly connected mailbox comes with a ramp by default (10 emails on the day it's added and
+      3 more each day), a wait of 300 to 450 seconds between emails and a limit of 40 a day. You
+      don't need to turn anything on. Each client's cap is decided by their deliverability team:
+      don't raise it on your own to go faster. <a href="#s19">See §19</a>.
+    </p>
+  </div>
+</section>
+
+      <section id="s4">
+  <h2><span class="num">04</span>Sending mailboxes</h2>
+  <p class="purpose">
+    <span class="ui">Mailboxes</span> is the list of connected email accounts: how much each one
+    sends today, whether they're healthy, how fast they write and what name they sign with.
+  </p>
+
+  <h3>Connect a mailbox</h3>
+  <ol class="steps">
+    <li><p>Click <span class="ui">Connect</span> and choose <span class="ui">gmail</span>,
+        <span class="ui">outlook</span> or <span class="ui">SMTP</span>.</p></li>
+    <li><p><b>Gmail or Outlook</b> (recommended): <span class="ui">Authorize with Google</span>
+        or <span class="ui">Authorize with Microsoft</span>, grant the permissions and you're
+        brought back automatically. The account name comes from the provider as the
+        <span class="ui">Display name</span>.</p></li>
+    <li><p><b>In Gmail, tick every box</b>, as the dialog reminds you. The essential one is
+        “Read, compose, send, and permanently delete all your email from Gmail”: without it,
+        Outply doesn't add the mailbox and you come back to a red notice. Try again with it ticked.</p></li>
+    <li><p><b>SMTP</b>: email, <span class="ui">Display name</span>, SMTP server and port
+        (usually 587), user, password, and IMAP server and port (usually 993). IMAP is
+        required: without it, replies aren't detected. Connecting checks both.</p></li>
+  </ol>
+  <p>
+    Outlook doesn't need IMAP, but its replies can take up to 15 minutes to appear. If an SMTP
+    mailbox's password was changed, go back to <span class="ui">Connect</span> →
+    <span class="ui">SMTP</span> with the same email: the same mailbox is updated, with its
+    history. <b>Agency admins only:</b> a notice about the Google account quota may appear above
+    the table; once it runs out, no more Gmail mailboxes can be added.
+  </p>
+
+  <h3>Reading the table</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Column</th><th>What it tells you</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Email</b></td><td>The address, the Display name and the connection type. If something fails, the reason shows in red.</td></tr>
+        <tr><td><b>Provider</b></td><td>gmail, outlook or smtp.</td></tr>
+        <tr><td><b>Status</b></td><td><b>Active</b>: sends. <b>Paused</b>: you paused it, or the provider blocked the account. <b>Error</b>: can't send.</td></tr>
+        <tr><td><b>Quota today</b></td><td>What goes out today (sent plus scheduled for today) against today's cap. During the ramp, the cap is the ramp's, and below it reads “Ramping up: +N a day up to L”. Recalculated every 10 minutes.</td></tr>
+        <tr><td><b>Daily limit</b></td><td>Edit it here: type the number (1 to 400) and click the check mark.</td></tr>
+        <tr><td><b>Token expires</b></td><td>Gmail and Outlook: when the permission expires. If it can't be renewed, the mailbox goes to <b>Error</b>.</td></tr>
+        <tr><td><b>Health check</b></td><td>The last check that the mailbox responds. It runs every 10 minutes.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Pause, activate and remove</h3>
+  <ul>
+    <li><span class="ui">Pausar</span> (Pause) takes the mailbox out of rotation and <b>empties its
+        queue</b>: anything scheduled is cancelled and those contacts move to the other mailboxes.
+        It's also offered on mailboxes in error.</li>
+    <li><span class="ui">Activar</span> (Activate) only appears on a paused mailbox, and it checks the
+        permission first: if that fails, it doesn't activate it and shows the reason.</li>
+    <li><span class="ui">Dar de baja</span> (Remove mailbox) removes the mailbox from the client: its
+        capacity stops counting, its queue is cancelled and it disappears from the list; the history
+        is kept. It asks for confirmation; to get it back you have to connect it again. Workspace
+        admins or agency admins only (for anyone else the button returns an error).</li>
+  </ul>
+
+  <div class="note note--warn">
+    <b class="tag">How to recover a mailbox in error</b>
+    <p>
+      Go back to <span class="ui">Connect</span> and authorize again (for SMTP, with the new
+      password); changing its status doesn't renew the permission. Common causes: an expired
+      permission, a Gmail box left unticked, a changed SMTP password or a deleted Google account.
+      If the provider blocks the account, Outply pauses it automatically with the reason in red. In
+      every case, its queue is released at the first failure and those contacts go out through
+      other mailboxes. <a href="#s20">See §20</a>.
+    </p>
+  </div>
+
+  <h3>Mailbox settings</h3>
+  <p>
+    <span class="ui">Settings</span> on its row. Nothing is saved until you click
+    <span class="ui">Guardar ajustes</span> (Save settings).
+  </p>
+
+  <h4>General</h4>
+  <ul>
+    <li><b>Display name</b>: the name the recipient sees, and the value of
+        <code>{{SenderName}}</code>. An active mailbox without a name prevents activating the
+        campaigns that use it.</li>
+    <li><b>Daily limit</b>: 40 by default. Above 50 the tool warns you: providers look at how the
+        account behaves, not at what you configure. If you lower it, anything already scheduled that
+        no longer fits moves to the following days.</li>
+    <li><b>Sending domain</b> (agency admins only): which daily domain cap the mailbox counts
+        against, or <span class="ui">No domain (doesn't count against any
+        cap)</span>.</li>
+  </ul>
+
+  <h4>Human pace (jitter between sends)</h4>
+  <ul>
+    <li><b>Minimum (seconds)</b> and <b>Maximum (seconds)</b>: each email waits a random time in
+        that range; 300 to 450 by default. With that, a mailbox fits about 86 emails into a 9-hour
+        window (108 at most): the wait is also a cap. Raising it reschedules what's already
+        scheduled.</li>
+    <li><b>Maximum emails per minute</b>: the provider's ceiling (Outlook cuts off at around 30).
+        Leave it at <span class="ui">No cap</span> if you don't need it. The screen tells you whether
+        this cap or your minimum wait is the one that applies.</li>
+  </ul>
+
+  <h4>Warmup: actually a ramp</h4>
+  <p>
+    Despite the name, <b>it doesn't send warm-up emails</b>: it only limits how many go out while
+    the mailbox is new. It comes on (<span class="ui">Warmup on</span>), with
+    <span class="ui">Start per day</span> at 10 and <span class="ui">Increase per day</span> at 3.
+    Days count from when the mailbox was added: 10 that day, 13 the next, and so on up to the daily
+    limit; with 40, it reaches the cap after ten days. It no longer holds back an older mailbox.
+    Warm-up with an external network of mailboxes is something else, and it's turned off
+    (<a href="#s17">§17</a>).
+  </p>
+
+  <h4>Signature</h4>
+  <ol class="steps">
+    <li><p>Write the signature (HTML or text), or click <span class="ui">Subir imagen</span> (Upload
+        image) to add a PNG, JPG, GIF or WEBP of up to 300&nbsp;KB.</p></li>
+    <li><p>Adjust the <span class="ui">Image width</span> with the slider.</p></li>
+    <li><p>Look at <span class="ui">Preview · actual size</span>: the box is 600&nbsp;px wide,
+        the width of an email. If the image spills over the sides, it will in Gmail too.</p></li>
+    <li><p>Click <span class="ui">Guardar ajustes</span>. The signature goes at the end of every
+        email from that mailbox.</p></li>
+  </ol>
+  <div class="note note--warn">
+    <b class="tag">The image only travels in HTML campaigns</b>
+    <p>
+      In HTML, the image is embedded in the email and doesn't depend on the email client
+      unblocking it. In plain text, the default format, it doesn't travel: the signature goes out
+      as text, and a signature that is only an image doesn't go out at all.
+    </p>
+  </div>
+</section>
+
+      <section id="s5">
+  <h2><span class="num">05</span>Deliverability</h2>
+  <p class="purpose">
+    If emails land in spam, no other screen matters. This is where you check that the domains are
+    set up correctly.
+  </p>
+
+  <h3>Workspace domains</h3>
+  <p>
+    Each card is a sending domain, with a score from 0 to 100 and four checks. When one fails,
+    what to do appears below it.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Check</th><th>What it checks</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>SPF</b></td><td>That the domain authorizes that server to send on its behalf.</td></tr>
+        <tr><td><b>DKIM</b></td><td>That emails are signed and can't be forged.</td></tr>
+        <tr><td><b>DMARC</b></td><td>What the receiving server should do if something doesn't match.</td></tr>
+        <tr><td><b>MX</b></td><td>That the domain can <i>receive</i> email. Without MX, replies are lost.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Below is the <b>domain quota</b>: what goes out from it today against its daily cap. That cap
+    overrides the mailboxes' caps, but by default it's so high it doesn't slow anything down (you'll
+    see something like <code>35/1000000</code>): what really limits sending is each mailbox's cap.
+    The agency can lower it to slow down a specific domain; it isn't changed from this screen.
+  </p>
+
+  <h3>Generate the DNS records</h3>
+  <ol class="steps">
+    <li><p>Type the domain in the <span class="ui">DNS records</span> panel.</p></li>
+    <li><p>Choose the provider: <span class="ui">Google</span>, <span class="ui">Microsoft</span>
+        or <span class="ui">Custom</span>, and click <span class="ui">Generate</span>.</p></li>
+    <li><p>Copy each value and send them to whoever manages the DNS. Changes take time to
+        propagate: come back later to see the checks in green.</p></li>
+  </ol>
+
+  <h3>Postmaster and delivery test</h3>
+  <p>
+    <span class="ui">Postmaster</span> looks up the reputation Google gives the domain and its spam
+    rate; it requires the domain to be verified in Google Postmaster Tools.
+    <span class="ui">Send test</span> sends a real email from the mailbox you choose to the address
+    you type (preferably on another provider). Do it with every new mailbox before adding it to a
+    pool.
+  </p>
+
+  <h3>Blocklist monitoring <span class="nuevo">New</span></h3>
+  <p>
+    Every day, Outply checks whether the sending domains appear on the most widely used public
+    blocklists (SURBL, Spamhaus DBL, URIBL and Sophos) and alerts the agency on Slack when one is
+    added or removed. It isn't shown on this screen. To find out whether a specific email lands in
+    the inbox, spam or promotions, an agency admin can run a placement test
+    (<a href="#s17">§17</a>).
+  </p>
+</section>
+
+      <section id="s6">
+  <h2><span class="num">06</span>Campaigns</h2>
+  <p class="purpose">
+    A campaign is a sequence with its own schedule, mailboxes and caps. It's the screen where you
+    spend the most time.
+  </p>
+
+  <h3>The campaign list</h3>
+  <p>
+    Active campaigns come first and, within each group, the one with the most recent <span class="ui">Last
+    activity</span>. <span class="ui">Search campaigns by name…</span> filters as you type and
+    <span class="ui">Per page</span> chooses 50 or 100 (remembered in that browser). The window
+    column also shows the sending days, and the copy icon on each row duplicates the campaign.
+  </p>
+
+  <h3>Activate or pause several at once <span class="nuevo">New</span></h3>
+  <ol class="steps">
+    <li><p>Tick the campaigns' boxes, or the header box for the whole page.</p></li>
+    <li><p>In the bar that appears, click <span class="ui">Activate</span> or
+        <span class="ui">Pause</span> and confirm.</p></li>
+    <li><p>Any that couldn't be changed stay ticked, with the reason (for example, one is missing
+        configuration). <span class="ui">Clear</span> removes the selection.</p></li>
+  </ol>
+
+  <h3>Create a campaign: the wizard <span class="nuevo">New</span></h3>
+  <p>
+    <span class="ui">New campaign</span> opens <span class="ui">Set up a campaign</span>: five
+    steps in the order you need them, each with an explanation. <span class="ui">Next</span>
+    is never blocked: if something is missing, an amber notice says so and lets you continue; only
+    activating requires everything. <span class="ui">Back</span> returns to the previous step. The
+    campaign is created when you finish step 1, and from then on <span class="ui">Save and
+    exit</span> leaves it as a <b>Draft</b> so you can finish it from the campaign page, which has
+    the same panels.
+  </p>
+
+  <h4>Step 1 · Data</h4>
+  <ul>
+    <li><b>Name</b>: only you see it; the recipient never reads it.</li>
+    <li><b>Time zone</b>: the one the window is read in. Below it, the current time there.</li>
+    <li><b>From / To</b>: the sending window; 09:00 to 18:00 to start with.</li>
+    <li><b>Sending days</b>: the day boxes <span class="ui">L M X J V S D</span> (Monday to Sunday;
+        X is Wednesday), Monday to Friday to start with. Anything due on another day waits for the
+        next ticked day. At least one is required.</li>
+    <li><b>Tracking domain</b> (optional): the client's subdomain for measuring opens and
+        clicks, such as <code>trk.tudominio.com</code>. New campaigns go out in plain text and don't
+        measure anything, so it's only used if you switch the campaign to HTML.</li>
+  </ul>
+  <p>Click <span class="ui">Create and continue</span>.</p>
+
+  <h4>Steps 2, 3 and 4 · Sequence, Mailboxes and Contacts</h4>
+  <p>
+    Step 2 is the <span class="ui">Steps</span> panel and step 3 the
+    <span class="ui">Mailbox pool</span>; both are explained below. In step 4 you can enroll
+    contacts one at a time with <span class="ui">Enroll</span>. Its text mentions importing a CSV,
+    but that button isn't in this panel: click <span class="ui">Save and
+    exit</span>, go to <span class="ui">Contacts</span> → <span class="ui">Import CSV</span>
+    with this campaign selected and come back to it to activate it. It can also be activated
+    without contacts: it starts sending as soon as the first one comes in.
+  </p>
+
+  <h4>Step 5 · Review</h4>
+  <p>
+    A summary (<span class="ui">Sequence steps</span>, <span class="ui">Mailboxes in the
+    pool</span>, <span class="ui">Contacts in the campaign</span>, <span class="ui">Format</span>
+    and <span class="ui">Tracking domain</span>) and the same check that runs at launch.
+    <span class="ui">Activate campaign</span> can only be clicked if nothing is missing in red;
+    <span class="ui">Leave it as a draft</span> takes you to the campaign page without activating it.
+  </p>
+
+  <div class="note">
+    <b class="tag">The campaign has no sender</b>
+    <p>
+      Each email is signed with the <span class="ui">Display name</span> of the mailbox that sends
+      it: with a pool of three people, each one signs with their own name. That's why an active
+      mailbox in the pool without a name prevents activating the campaign.
+    </p>
+  </div>
+
+  <h3>The campaign page <span class="nuevo">New</span></h3>
+  <p>
+    At the top, the name (the pencil opens <span class="ui">Rename campaign</span>), the current
+    time in its time zone and the <span class="ui">Activate</span> or <span class="ui">Pause</span>,
+    <span class="ui">Duplicate</span> and <span class="ui">Delete</span> buttons. Below,
+    <span class="ui">Emails sent</span>, <span class="ui">Replies</span>,
+    <span class="ui">Bounces</span> and <span class="ui">Reply rate</span>: these count emails, not
+    people. The rest is in three tabs:
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Tab</th><th>What it contains</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="ui">Overview</span></td><td>Notices about what's missing, the steps with their variants, the pool and the settings.</td></tr>
+        <tr><td><span class="ui">Contacts</span></td><td>This campaign's contacts, with a search box (<a href="#s8">§08</a>).</td></tr>
+        <tr><td><span class="ui">Send queue</span></td><td>Who gets an email from this campaign today (<a href="#s7">§07</a>).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <span class="ui">Duplicate</span> creates a copy with steps, variants, settings and pool, without
+    contacts, as a draft, named “X (copia)” and with the same format as the original.
+  </p>
+
+  <h3>What's missing before launch</h3>
+  <p>In the <span class="ui">Overview</span> tab, above the steps, there are two panels:</p>
+  <ul>
+    <li>
+      <b>In red, <span class="ui">This is missing before it can be activated</span></b> (or
+      <span class="ui">This is holding the campaign back</span>, if it's already active): there are
+      no steps; an email step has no subject or content; the pool is empty or no mailbox can send;
+      some active mailbox in the pool has no sender name (the notice says which); there are no
+      sending days.
+    </li>
+    <li>
+      <b>In amber, <span class="ui">It can send, but it's worth reviewing</span></b>: a mailbox in
+      the pool can't send and its share is spread across the others; a mailbox with no per-minute
+      cap could go over 30 per minute; a variable will come out empty for some of the contacts who
+      still have emails to receive; sends failed in the last 24 hours (with the most frequent
+      reason).
+    </li>
+  </ul>
+  <p>
+    When you click <span class="ui">Activate</span> it checks again. With anything in red it doesn't
+    start (<span class="ui">The campaign is not set up yet</span>); with only amber, you choose
+    between <span class="ui">Review again</span> and <span class="ui">Activate anyway</span>.
+  </p>
+
+  <h3>Sequence steps</h3>
+  <ol class="steps">
+    <li><p>In the <span class="ui">Steps</span> panel, click <span class="ui">Step</span>.</p></li>
+    <li><p><b>Channel</b>: <code>email</code> sends automatically; <code>call</code>,
+        <code>whatsapp</code>, <code>linkedin</code> and <code>manual</code> create a task in
+        <span class="ui">Tasks</span> with the instruction you write. It can't be changed later.</p></li>
+    <li><p><b>Condition</b> (email only): <code>always</code>, or depending on whether the contact
+        opened or clicked the previous email (<code>if opened</code>, <code>if not opened</code>,
+        <code>if clicked</code>, <code>if not clicked</code>).</p></li>
+    <li><p><b>Wait (days)</b>: step 1 is set to 0 and goes out on enrollment. The others count
+        from when the previous email went out, not from when you enrolled the contact.</p></li>
+    <li><p><b>Subject and body</b>: the body is written in HTML; in plain text it's converted when
+        sending (links appear as their address and images disappear).</p></li>
+    <li><p>Click <span class="ui">Preview</span> and then <span class="ui">Add step</span>.</p></li>
+  </ol>
+
+  <div class="note note--warn">
+    <b class="tag">Three things worth knowing</b>
+    <p>
+      <b>The follow-ups' subject</b> is “Re: ” plus step 1's subject, because they go in the same
+      thread. Steps 2 and later still ask for a subject, but it isn't the one the contact will see.<br>
+      <b>Without tracking</b> (plain text or no tracking domain) nobody “opens” or “clicks”:
+      <code>if opened</code> and <code>if clicked</code> are never met, and their opposites always
+      are.<br>
+      <b>Changing a step's wait</b> only affects contacts who haven't reached it yet.
+    </p>
+  </div>
+
+  <h3>Editor drafts <span class="nuevo">New</span></h3>
+  <p>
+    What you write in a step or a variant is saved in the browser. If you reload or close without
+    saving, when you come back you see “You have unsaved changes in this step, from …” with
+    <span class="ui">Restore</span> and <span class="ui">Discard</span>. It only lives in that
+    browser. If Outply doesn't respond when you save, an amber banner tells you and the save is
+    retried automatically: don't close the window.
+  </p>
+
+  <h3>Personalize the email</h3>
+  <p>
+    Contact data goes between double curly braces, and it doesn't matter how you write it:
+    <code>{{FirstName}}</code>, <code>{{first_name}}</code> and <code>{{ First Name }}</code> are
+    the same field.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>You write</th><th>It shows</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>{{FirstName}}</code></td><td>The contact's first name.</td></tr>
+        <tr><td><code>{{LastName}}</code> <code>{{Company}}</code> <code>{{Title}}</code></td><td>Last name, company, job title.</td></tr>
+        <tr><td><code>{{SenderName}}</code></td><td>The Display name of the mailbox that sends that email.</td></tr>
+        <tr><td><code>{{referred_by}}</code></td><td>The contact's <span class="ui">Referred by</span> field.</td></tr>
+        <tr><td>Your CSV columns</td><td>Any custom field you mapped when importing.</td></tr>
+        <tr><td><code>{{FirstName or 'ahí'}}</code></td><td>A fallback: if there's no first name, it writes “ahí” instead.</td></tr>
+        <tr><td><code>{hola|buenas|qué tal}</code></td><td>Spintax: each email picks one.</td></tr>
+        <tr><td><code>{{unsubscribe_link}}</code></td><td><b>Don't use it.</b> Emails carry no unsubscribe link: it only generates one with the client's own verified tracking domain, and otherwise comes out empty. A better close is “P.S. If you'd rather I didn't write again, just reply ‘no’.”</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    If you use a variable that doesn't exist, an amber notice tells you: it would come out empty
+    (“Hi ,”). Below the editor, <span class="ui">Insert contact field</span> pastes the field where
+    your cursor is.
+  </p>
+
+  <h3>Plain text or HTML <span class="nuevo">New</span></h3>
+  <p>
+    You choose it per campaign with the <span class="ui">Plain text</span> switch in the settings.
+    It's on for new campaigns; campaigns created before this change stay in HTML.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th></th><th>Plain text (default)</th><th>HTML</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>How it arrives</b></td><td>Text only, like an email written by hand.</td><td>With formatting and images.</td></tr>
+        <tr><td><b>Signature image</b></td><td>Doesn't travel.</td><td>Travels inside the email.</td></tr>
+        <tr><td><b>Links</b></td><td>Shown as their full address.</td><td>With their text.</td></tr>
+        <tr><td><b>Opens and clicks</b></td><td>Never measured.</td><td>Measured if you turn them on and the tracking domain works.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Switch to HTML only if you need images or tracking: the signal that counts is the reply. And a
+    tracking domain only measures if it really points to Outply (whoever manages the client's
+    domain has to connect it); otherwise the email still goes out but without tracking, and the
+    screen doesn't warn you.
+  </p>
+
+  <h3>Preview</h3>
+  <p>
+    It builds the email with a real contact from the campaign (or a sample one) and the signature
+    of a mailbox in the pool, in plain text if the campaign is. If a field is empty for that
+    contact, it tells you and suggests a fallback. It's the only way to see the email as it
+    arrives.
+  </p>
+
+  <h3>A/B variants</h3>
+  <ol class="steps">
+    <li><p>Click <span class="ui">+ Variant</span> under an email step.</p></li>
+    <li><p>Keep the <span class="ui">Label</span> it suggests (B, C…) and set its
+        <span class="ui">% of traffic</span>. The split is applied exactly, not at random.</p></li>
+    <li><p>Write the subject and body, with the same helpers as in the step.</p></li>
+    <li><p>Compare them in <span class="ui">Analytics</span> → <span class="ui">Breakdown by step and
+        variant</span>.</p></li>
+  </ol>
+  <p>
+    <b>A</b> is the control: the step's own subject and body. You edit it with the step's pencil,
+    and it gets whatever percentage you didn't give to the variants; with 100% allocated, it stops
+    being sent. In follow-ups a variant only changes the body, because the subject is the “Re:” of
+    step 1's control, also for contacts who received another variant.
+  </p>
+
+  <h3>Mailbox pool</h3>
+  <p>
+    Click one of the mailboxes shown with a <b>+</b> to add it; the trash can removes it. Sends
+    rotate in order of position, and a red dot marks a mailbox in error. Without at least one
+    active mailbox, the campaign can't be activated. Remember that each mailbox's quota is split
+    among all the active campaigns that use it: a mailbox of 40 in four campaigns gives about 10 to
+    each (<a href="#s18">§18</a>).
+  </p>
+
+  <h3>Settings</h3>
+  <p>
+    The <span class="ui">Settings</span> panel in the <span class="ui">Overview</span> tab. Nothing
+    is saved until you click <span class="ui">Guardar ajustes</span>.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Setting</th><th>What it does</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Tracking domain</b>, <b>Time zone</b>, <b>From / To</b>, <b>Sending days</b></td><td>The same as in step 1. A new domain applies to whatever goes out from then on.</td></tr>
+        <tr><td><b>Bounce threshold (%)</b></td><td>Between 0.5 and 20; 3 by default. It's measured over the window and decided at the close of each day, not on every bounce.</td></tr>
+        <tr><td><b>Minimum sample (sends)</b></td><td>The rule doesn't trigger until the window has this many sends. 50 by default.</td></tr>
+        <tr><td><b>Window (days)</b></td><td>The days over which the rate is measured. 7 by default.</td></tr>
+        <tr><td><b>Max. new contacts / day</b></td><td>Step 1 only. Empty = no limit; <b>0</b> = no new contacts come in, but follow-ups continue.</td></tr>
+        <tr><td><b>Max. follow-ups / day</b></td><td>Steps 2 onwards only. Required: it's filled in as total − new, or you type it; <b>0</b> = pause follow-ups. If it's empty, saving returns an error.</td></tr>
+        <tr><td><b>Total sends / day (campaign)</b></td><td>Cap for the whole campaign. Empty = limited by the mailboxes' quota.</td></tr>
+        <tr><td><b>Plain text</b></td><td>When on, the email goes out as text only and nothing is tracked.</td></tr>
+        <tr><td><b>Track opens</b> / <b>Track clicks</b></td><td>Only with Plain text off. Without a tracking domain they switch off automatically when you save.</td></tr>
+        <tr><td><b>Auto-pause on bounces</b></td><td>Applies the threshold. Leave it on.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    If new contacts plus follow-ups exceed the total, the field hint warns in amber and says
+    follow-ups go first. That isn't the case: the quota is split in proportion to the two caps, and
+    new contacts go first within their share (<a href="#s18">§18</a>). Auto-pause is decided at the
+    close of each campaign day (midnight in its time zone): with at least the minimum sample in the
+    window and the rate above the threshold, the campaign is paused and its queue is emptied.
+  </p>
+
+  <h3>Activate, pause and delete</h3>
+  <ul>
+    <li><b>Activate</b>: starts sending within its window, after checking that nothing is missing.</li>
+    <li><b>Pause</b>: stops sending and empties the queue; the quota goes back to the other
+        campaigns that share mailboxes. When you reactivate it, its contacts get send times again.</li>
+  </ul>
+  <div class="note note--stop">
+    <b class="tag">Delete can't be undone</b>
+    <p>
+      It deletes the campaign with its steps, contacts and sends. If you only want it to stop
+      sending, use <span class="ui">Pause</span>.
+    </p>
+  </div>
+</section>
+
+      <section id="s7">
+  <h2><span class="num">07</span>Send queue <span class="nuevo">New</span></h2>
+  <p class="purpose">
+    Who gets an email today, at what time and from which mailbox. And, when needed, change the
+    order: bring someone forward to today or take them out of today.
+  </p>
+  <p>
+    It's in the menu, <span class="ui">Prospecting</span> → <span class="ui">Send queue</span>,
+    and in the tab of the same name on each campaign. The screen has two views:
+    <span class="ui">Send queue</span>, with a dropdown for <span class="ui">All
+    campaigns</span> or a single one; and <span class="ui">By campaign</span>, one row per active
+    campaign with <span class="ui">Next send</span>, <span class="ui">Sent today</span>,
+    <span class="ui">Pending today</span>, <span class="ui">Last one today</span>,
+    <span class="ui">Waiting</span> and <span class="ui">Upcoming</span> (click a row to see its
+    queue).
+  </p>
+
+  <h3>Reading the queue</h3>
+  <p>
+    One row per email, in the order they go out: <span class="ui">Time</span>,
+    <span class="ui">Contact</span>, <span class="ui">Campaign</span> (in the all-campaigns view),
+    <span class="ui">Step</span> and <span class="ui">Mailbox</span>. Times are in your local time;
+    hover to see the campaign's.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Section</th><th>What's there</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="ui">Earlier · N sent · M locked</span></td><td>Collapsed: what already went out today and what goes out in less than an hour, with a padlock. That can't be moved.</td></tr>
+        <tr><td>Today's rows</td><td>Today's emails that can still be moved.</td></tr>
+        <tr><td><span class="ui">End of today</span></td><td>The line where the sending day ends.</td></tr>
+        <tr><td><span class="ui">Tomorrow · N</span></td><td>What already has a time on later days. Read-only.</td></tr>
+        <tr><td><span class="ui">Waiting · N</span></td><td>Contacts who are due and don't have a time yet, in the order they'll get one: whoever has waited longest goes first.</td></tr>
+        <tr><td><span class="ui">Upcoming · N</span></td><td>Contacts who aren't due yet, with the date from which they will be. Read-only.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    A long list in <span class="ui">Waiting</span> isn't an error: it's what didn't fit today. It
+    isn't lost (<a href="#s18">§18</a>).
+  </p>
+
+  <h3>Reorder the queue</h3>
+  <ol class="steps">
+    <li><p>Click <span class="ui">Edit</span>. The queue freezes and you work on a draft: nothing
+        reaches the server until you save.</p></li>
+    <li><p>Drag rows by the handle on the left. If you tick several and drag one, they all
+        move.</p></li>
+    <li><p>With rows ticked you also have <span class="ui">To the top</span>,
+        <span class="ui">To the end</span>, <span class="ui">Remove from today</span> and
+        <span class="ui">Clear selection</span>. Dropping on the <span class="ui">End of
+        today</span> line means <i>to the end</i>; dropping in <span class="ui">Waiting</span> means
+        <i>remove from today</i>.</p></li>
+    <li><p><span class="ui">Undo</span> reverts the last change; <span class="ui">Cancel</span>
+        discards them all.</p></li>
+    <li><p>Click <span class="ui">Save</span>. It's all or nothing: if a move is no longer valid
+        (for example, that email has just gone out), none is saved and a red strip says which one
+        and why.</p></li>
+  </ol>
+
+  <h3>The rules of the game</h3>
+  <ul>
+    <li><b>Neither times nor mailboxes change</b>, only who fills each slot: if you put C ahead of
+        A, C goes out at the time and through the mailbox A had.</li>
+    <li><b>Adding someone to today pushes the queue</b>: that campaign's last email today goes back
+        to waiting. <b>Removing someone from today</b> gives the slot to the first person waiting in
+        that campaign.</li>
+    <li><b>Anything going out in less than an hour can't be moved.</b></li>
+    <li><b>Each campaign allocates its own times</b>: in the all-campaigns view, a contact can only
+        take slots from their own campaign (the other rows dim while you drag).</li>
+    <li><b>Caps</b>: the campaign's maximum new contacts per day doesn't stop you bringing someone
+        forward; the workspace's maximum new contacts per company does. Nor can anyone get in who is
+        on the blocklist or doesn't meet their step's condition.</li>
+  </ul>
+  <p>Everyone can view the queue. Operators and admins can save (for a viewer it returns an error).</p>
+</section>
+
+      <section id="s8">
+  <h2><span class="num">08</span>Contacts</h2>
+  <p class="purpose">
+    <span class="ui">Contacts</span> shows who is enrolled in each campaign, which step they're on
+    and what comes next for them. You choose the campaign in the top-right corner: everything you
+    do here affects its contacts.
+  </p>
+
+  <h3>Import a CSV</h3>
+  <ol class="steps">
+    <li><p>Choose the target campaign (a draft one works) and click
+        <span class="ui">Import CSV</span>.</p></li>
+    <li><p>Select the file. The tool reads the headers and suggests a mapping.</p></li>
+    <li><p><b>Check the <span class="ui">Column mapping</span></b>: each header goes to
+        <span class="ui">Email</span>, <span class="ui">Nombre</span> (First name),
+        <span class="ui">Apellido</span> (Last name), <span class="ui">Empresa</span> (Company), a
+        <span class="ui">Personalizado</span> (Custom) field or <span class="ui">Ignorar</span> (Ignore).</p></li>
+    <li><p>Choose <span class="ui">Enter at step</span> (usually 1) and look at the
+        <span class="ui">Sample (first rows)</span> in case a column is shifted.</p></li>
+    <li><p>Click <span class="ui">Importar</span> (Import). It runs in the background: “Queued…” and
+        then “Importing in the background… N / M”. You can close the window; the report appears
+        when it finishes.</p></li>
+  </ol>
+  <p>
+    The screen sets no size limit: the server processes about 45,000 contacts in 3 minutes. If the
+    process stops responding for more than 3 minutes, the import is marked as failed with the
+    reason, and you just upload the file again: no row is left half-imported.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>In the report</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Imported</b></td><td>New contacts, already enrolled.</td></tr>
+        <tr><td><b>Moved</b></td><td>They already existed in the workspace and were moved to this campaign and step.</td></tr>
+        <tr><td><b>Duplicates</b></td><td>Repeated in the file or already present here.</td></tr>
+        <tr><td><b>Suppressed</b></td><td>They're on the workspace blocklist or the global one (for example, because they bounced with another client). Rightly excluded.</td></tr>
+        <tr><td><b>Invalid</b></td><td>No valid email, including addresses that end in a single letter (<code>.a</code>). The details are in the error list.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    A column mapped as <span class="ui">Personalizado</span> is available in templates under its
+    name: if you map <code>Última ronda</code>, you write <code>{{UltimaRonda}}</code>, and the
+    editor's palette offers it to you.
+  </p>
+
+  <h3>Enroll a single contact</h3>
+  <ol class="steps">
+    <li><p>Click <span class="ui">Enroll</span>.</p></li>
+    <li><p>Type the email and, if you have them, first name, last name, company and
+        <span class="ui">Referred by</span>.</p></li>
+    <li><p>Choose the entry step and confirm.</p></li>
+  </ol>
+  <p>
+    If the contact already existed in the workspace, it's updated and moved here: it isn't
+    duplicated. It doesn't get in if it's on the blocklist, or if it already replied in another
+    campaign (anyone who replies leaves the automation; to re-engage them, use
+    <span class="ui">Move</span>).
+  </p>
+
+  <h3>Edit a contact <span class="nuevo">New</span></h3>
+  <p>
+    <span class="ui">Edit</span>, on the contact's row (here and in <span class="ui">Explorer</span>) or
+    in the <b>⋯</b> menu of the campaign's <span class="ui">Contacts</span> tab, corrects first name,
+    last name, company, job title, city, country and LinkedIn. Click <span class="ui">Save
+    changes</span>: only what you touched is saved, and an empty field is cleared. The email can't be
+    changed, because replies and bounces are matched by it: if it's wrong, stop the contact and add
+    it again. Editing doesn't restart the sequence or resend anything.
+  </p>
+
+  <h3>Pause, stop and move</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Action</th><th>What happens to the contact</th><th>Can it be undone?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Pause</b></td><td>Stops receiving steps, but keeps its step and its schedule.</td><td>Yes, with <span class="ui">Resume</span>.</td></tr>
+        <tr><td><b>Stop</b></td><td>Leaves the campaign for good, even if you reactivate the campaign.</td><td><b>No.</b></td></tr>
+        <tr><td><b>Move</b></td><td>Its future sends are cancelled and it enters the sequence and step you choose. Its data is kept.</td><td>By moving it again.</td></tr>
+        <tr><td><b>Task</b></td><td>You create a manual action for it without touching its sequence.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Only <b>Pending</b> and <b>In sequence</b> contacts can be paused. If none on the page can be
+    paused, an amber notice explains why the boxes are greyed out.
+  </p>
+
+  <h3>Working with many at once</h3>
+  <ol class="steps">
+    <li><p>Tick rows, or the header box for the whole page; for more,
+        <span class="ui">Select all N in the campaign</span>.</p></li>
+    <li><p>In the blue bar: <span class="ui">Move</span>, <span class="ui">Pause</span>,
+        <span class="ui">Resume</span>, <span class="ui">Stop</span> (in red, with
+        confirmation) or <span class="ui">Clear</span>.</p></li>
+  </ol>
+
+  <h3>Bulk move <span class="nuevo">New</span></h3>
+  <p>
+    <span class="ui">Move</span> in the blue bar opens <span class="ui">Move N contacts</span>:
+    choose <span class="ui">Target sequence</span> and <span class="ui">Target step</span>. Only
+    pending or in-sequence contacts are moved; anyone who replied, bounced or was stopped stays.
+    When it finishes, Outply says how many were moved and how many were skipped.
+  </p>
+
+  <h3>Contacts inside the campaign</h3>
+  <p>
+    Each campaign's <span class="ui">Contacts</span> tab has the same list with a search box
+    (<span class="ui">Search by email, name or company…</span>), <span class="ui">Enroll</span>,
+    bulk pause and a <b>⋯</b> menu per row with <span class="ui">Edit</span>,
+    <span class="ui">Pause</span> or <span class="ui">Resume</span>, and
+    <span class="ui">Stop</span>.
+  </p>
+  <div class="note note--stop">
+    <b class="tag">There, Stop doesn't ask</b>
+    <p>
+      In the campaign's <span class="ui">Contacts</span> tab, <span class="ui">Stop</span>
+      acts immediately, without confirmation, and can't be undone. For a temporary hold, use
+      <span class="ui">Pause</span>.
+    </p>
+  </div>
+
+  <h3>The statuses</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Status</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Pending</b></td><td>Enrolled, hasn't received anything yet.</td></tr>
+        <tr><td><b>In sequence</b></td><td>Has already received something and has steps left.</td></tr>
+        <tr><td><b>Finished</b></td><td>Finished the sequence without replying.</td></tr>
+        <tr><td><b>Replied</b></td><td>Replied, and their next steps were cancelled. This includes anyone who asks to unsubscribe by replying.</td></tr>
+        <tr><td><b>Bounced</b></td><td>Their email bounced. Any bounce is final.</td></tr>
+        <tr><td><b>Unsubscribed</b></td><td>Used an unsubscribe link. Emails no longer carry one, so you'll rarely see it.</td></tr>
+        <tr><td><b>Stopped</b></td><td>You stopped them; their address can't exist (and it's blocked across all clients); or they were added to the blocklist when they already had a send time, and that email didn't go out.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Two more markers: <span class="ui">paused</span> (you paused them, or the “When someone
+    replies” rule did) and <span class="ui">OOO</span> (they answered with an automatic
+    out-of-office message; it isn't a reply and the sequence continues).
+  </p>
+</section>
+
+      <section id="s9">
+  <h2><span class="num">09</span>Replies</h2>
+  <p class="purpose">Who replied and what they said, in a single list.</p>
+
+  <p>
+    Only replies from people appear here. Automatic out-of-office replies mark the contact as
+    away, and bounces have their own screen (<a href="#s10">§10</a>): neither counts toward the
+    reply rate. The dropdown at the top filters by campaign; each reply shows who it's from, their
+    company, the campaign and step it comes from and which mailbox it reached, and
+    <span class="ui">more</span> expands long ones.
+  </p>
+
+  <h3>Unsubscribing by reply <span class="nuevo">New</span></h3>
+  <p>
+    Emails carry no unsubscribe link: people who don't want more emails reply. If the reply asks
+    for it explicitly, Outply adds their address to the workspace blocklist with the reason
+    <code>unsubscribe</code>, and no other campaign for that client writes to them again. You don't
+    have to do anything.
+  </p>
+  <ul>
+    <li><b>Counts as unsubscribing:</b> “unsubscribe”, “remove me”, “take me off”, “do not
+        contact”, their Spanish and Portuguese equivalents (“dame de baja”, “descadastrar”…), or a
+        reply that is just “no” (“no thanks”, “stop”). Only what the contact wrote is checked, not
+        the quoted email.</li>
+    <li><b>Doesn't count:</b> “not interested”. If the client wants to try again later, that's your
+        call.</li>
+  </ul>
+  <p>For the campaign it's just another reply: the contact is marked <b>Replied</b>.</p>
+
+  <div class="note">
+    <b class="tag">You reply from the mailbox</b>
+    <p>
+      Outply detects the reply and stops the sequence within minutes (up to 15 in Outlook). The
+      conversation continues in Gmail, Outlook or wherever the mailbox lives. What happens to that
+      person in other campaigns in the workspace depends on the <span class="ui">When someone
+      replies</span> setting (<a href="#s17">§17</a>).
+    </p>
+  </div>
+</section>
+
+      <section id="s10">
+  <h2><span class="num">10</span>Bounces <span class="nuevo">New</span></h2>
+  <p class="purpose">
+    Why each email bounced, with the code and the full notice from the recipient's server. These
+    are exactly the bounces that count toward the rate: you can count and check them one by one.
+  </p>
+
+  <p>
+    Each bounce shows the person, their company, when it happened, the campaign, the step and the
+    mailbox; a <span class="ui">Duro</span> (Hard) or <span class="ui">Blando</span> (Soft) badge;
+    the code (for example, <code>550 · 5.1.1</code>) with a one-sentence reading; the diagnostic as
+    is; and <span class="ui">See the full DSN</span>, the whole notice as it reached the mailbox. The
+    dropdown filters by campaign. Some older bounces say the reason wasn't saved: the notice is
+    still in the mailbox that received it, as an email from MAILER-DAEMON.
+  </p>
+
+  <h3>How to read the code</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Starts with</th><th>Reading on screen and what it usually means</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>5.1.</code></td><td>“The mailbox doesn't exist: closed or misspelled”. The list is getting old.</td></tr>
+        <tr><td><code>5.2.</code></td><td>“Mailbox full or disabled”. Abandoned accounts.</td></tr>
+        <tr><td><code>5.4.</code></td><td>“The recipient's server isn't responding”.</td></tr>
+        <tr><td><code>5.7.</code></td><td>“Rejected by policy or sender reputation”. The problem is the sender: if it repeats, stop and review the domain.</td></tr>
+        <tr><td>Other <code>5.</code></td><td>“Permanent rejection”.</td></tr>
+        <tr><td><code>4.</code></td><td>“Temporary failure: retried in 24 h”. That text is outdated: nothing is retried, and any bounce is final the first time.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>What Outply does with a bounce</h3>
+  <p>
+    Any bounce, permanent or temporary, is final the first time: the contact becomes
+    <b>Bounced</b>, their sequence stops, it counts toward the campaign's rate and the address goes
+    onto the workspace blocklist <b>and the global one</b>, so no client writes to them again. There
+    are three exceptions:
+  </p>
+  <ul>
+    <li><b>Rejection because of the sending domain's reputation.</b> The recipient rejects because
+        of the sender's domain or IP, not because of the address. It counts as a bounce in its
+        campaign, but the address doesn't go onto any blocklist.</li>
+    <li><b>The sending account is blocked.</b> It isn't the contact's bounce: the contact isn't
+        touched and it doesn't count toward the rate. Outply pauses the mailbox with the reason in
+        red in <span class="ui">Mailboxes</span>.</li>
+    <li><b>The recipient's forwarding was blocked.</b> Their mailbox forwards to another address
+        and their organization blocks it; the original already reached them. It's ignored.</li>
+  </ul>
+  <p>
+    The <span class="ui">Blando</span> badge only appears on bounces from before October 2026;
+    today every new bounce is <span class="ui">Duro</span>. Below, <span class="ui">Unattributed</span>
+    collects notices that don't match any send: they don't count toward the rate. If many appear,
+    tell your agency admin: the rate would be coming out too low.
+  </p>
+</section>
+
+      <section id="s11">
+  <h2><span class="num">11</span>Tasks</h2>
+  <p class="purpose">
+    The steps the machine doesn't send: calls, WhatsApp, LinkedIn and any manual action.
+  </p>
+  <p>
+    When a sequence reaches a step that isn't an email, a task appears here with the contact and
+    the instruction you wrote in the step.
+  </p>
+
+  <h3>Working through your tasks</h3>
+  <ol class="steps">
+    <li><p>Filter by <span class="ui">Pending</span>, <span class="ui">Done</span> or
+        <span class="ui">Skipped</span>, by <span class="ui">Assigned operator</span> and by due
+        date (<span class="ui">Due from</span> / <span class="ui">Due
+        until</span>).</p></li>
+    <li><p>Make the call or send the message and mark it <span class="ui">Done</span>; if it doesn't
+        apply, <span class="ui">Skip</span>.</p></li>
+  </ol>
+
+  <h3>Create a task by hand</h3>
+  <ol class="steps">
+    <li><p>Click <span class="ui">New task</span> and choose the campaign and the contact.</p></li>
+    <li><p>Write the <span class="ui">Title</span> as an instruction (“Call to book a demo”) and
+        choose the channel.</p></li>
+    <li><p>If needed, fill in <span class="ui">Assign to</span>, <span class="ui">Due
+        (optional)</span> and <span class="ui">Notes (optional)</span> with the context.</p></li>
+  </ol>
+  <p>
+    You can also do it from a contact's row, in <span class="ui">Contacts</span> or in
+    <span class="ui">Explorer</span>, with <span class="ui">Task</span>.
+  </p>
+
+  <h3>Task notifications <span class="nuevo">New</span></h3>
+  <ul>
+    <li><b>Assigned to someone:</b> only that person is notified, by Slack direct message (or by
+        email if they aren't in the agency's Slack), with what needs doing, with whom and by
+        when.</li>
+    <li><b>Unassigned</b> (the ones the sequence creates): posted in the workspace's Slack channel,
+        or in the agency's if the workspace doesn't have one.</li>
+    <li><b>Reminders</b> on Slack for assigned, pending tasks: the day before the due date and on
+        the day itself, at 9:00 in the time zone of your Slack profile.</li>
+  </ul>
+  <p>
+    Each workspace's channel is set by an agency admin in <span class="ui">New task
+    alerts</span> (<a href="#s17">§17</a>).
+  </p>
+</section>
+
+      <section id="s12">
+  <h2><span class="num">12</span>Analytics</h2>
+  <p class="purpose">How the workspace is doing, and exactly what each number counts.</p>
+
+  <h3>Choose the period <span class="nuevo">New</span></h3>
+  <p>
+    Without a range, you see each campaign's running total. With <span class="ui">From</span> and
+    <span class="ui">To</span>, sends, opens, clicks, replies and bounces are counted by their
+    date; contacts by status are always as of today. <span class="ui">All
+    time</span> removes the range, and <span class="ui">Download CSV</span> downloads exactly what
+    you see.
+  </p>
+
+  <h3>The figures</h3>
+  <p>
+    <span class="ui">Emails sent</span>, opens, clicks, replies and bounce. These are emails, not
+    people. Opens and clicks only exist in HTML campaigns with tracking and a working tracking
+    domain: plain-text campaigns, the default, never measure them, and the table says so instead
+    of showing a zero.
+  </p>
+
+  <h3>Rate per contact and rate per email</h3>
+  <p>They appear together in the <span class="ui">Replies, out-of-office and bounces</span> panel:</p>
+  <ul>
+    <li><b>Per contact</b>: of the people you wrote to, how many replied. It's the natural reading,
+        and the one other tools give.</li>
+    <li><b>Per email</b>: divides by all sends, follow-ups included, so it always comes out
+        lower.</li>
+  </ul>
+  <p>
+    Out-of-office replies, bounces and unsubscribes are left out of that calculation.
+    <span class="ui">Soft bounce</span> only includes bounces from before October 2026: today
+    everything counts as <span class="ui">Hard bounce</span>. Contacts who haven't received anything
+    yet are shown separately, because they can't reply yet.
+  </p>
+
+  <h3>Breakdown by step and variant</h3>
+  <p>
+    Choose the campaign in the <span class="ui">Detail</span> panel. <b>Performance per step</b>
+    shows at which touch people drop off; <b>A/B variants</b> compares the control with its
+    variants. The <span class="ui">leader</span> label only appears when one variant's reply rate is
+    strictly higher than that of every other variant in that step.
+  </p>
+</section>
+
+      <section id="s13">
+  <h2><span class="num">13</span>Explorer</h2>
+  <p class="purpose">
+    Search all the workspace's contacts across campaigns, and act on the ones you find: “who at
+    Acme are we writing to, in which campaign and from which mailbox?”.
+  </p>
+
+  <h3>Filters</h3>
+  <ul>
+    <li><b>Company</b>: partial and case-insensitive (“acme” finds “Acme Inc.”). Below it,
+        <span class="ui">Only those without a company</span> finds contacts missing that field, so
+        you can fix them with <span class="ui">Edit</span>.</li>
+    <li><b>Email domain</b>: exact; <code>acme.com</code> doesn't include
+        <code>ventas.acme.com</code>.</li>
+    <li><b>Country</b>, <b>Industry</b>, <b>Sequence</b>, <b>Mailbox</b>, <b>Status</b>, <b>Step</b>
+        and <b>Loaded from / until</b>.</li>
+    <li><b>Contact's provider</b>: which provider the person receives email with.</li>
+  </ul>
+
+  <h3>The contact's provider</h3>
+  <p>
+    It's inferred from the MX records of their domain. Sending from the same provider they receive
+    with (Google to Google) lands better, and it helps you spot people who can't receive email.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Label</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Google</b> / <b>Microsoft</b></td><td>Receives in Google Workspace or Microsoft 365.</td></tr>
+        <tr><td><b>Other</b></td><td>Zoho, Proton, their own server…</td></tr>
+        <tr><td><b>Doesn't receive email</b></td><td>Their domain has no MX: writing to them is an almost certain bounce.</td></tr>
+        <tr><td><b>Undetermined</b></td><td>The DNS couldn't be queried. It retries automatically.</td></tr>
+        <tr><td>Dash (<b>Not checked</b> filter)</td><td>Their domain hasn't been checked yet.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    With a sequence selected, <span class="ui">Detectar proveedores</span> (Detect providers)
+    appears; it checks the domains in that sequence that haven't been looked up yet.
+  </p>
+
+  <h3>Acting on the results</h3>
+  <p>
+    Each row has <span class="ui">Edit</span>, <span class="ui">Task</span>,
+    <span class="ui">Move</span> and <span class="ui">Pause</span> (or
+    <span class="ui">Resume</span>). With the whole page ticked you can extend the selection to
+    <span class="ui">Select all N matching the filter</span>, even if there are thousands.
+    With <b>Email domain</b>, that pauses or stops every contact at a company across all
+    sequences; with <b>Company</b> and a <b>Sequence</b>, within just one.
+  </p>
+  <div class="note note--stop">
+    <b class="tag">Careful with bulk Stop</b>
+    <p>
+      <span class="ui">Stop</span> takes contacts out of the campaign for good and can't be
+      undone. For a temporary hold, use <span class="ui">Pause</span>.
+    </p>
+  </div>
+
+  <h3>Download as CSV <span class="nuevo">New</span></h3>
+  <p>
+    <span class="ui">Download CSV</span> downloads everything that matches the filter, not just the
+    page: contacts or companies, depending on the tab. The <span class="ui">Companies</span> tab
+    groups by company: how many contacts, in how many sequences and when they were loaded.
+  </p>
+</section>
+
+      <section id="s14">
+  <h2><span class="num">14</span>Blocklist</h2>
+  <p class="purpose">Addresses and domains that must never receive email.</p>
+
+  <ul>
+    <li><span class="ui">This workspace</span>: blocks only within the current client.</li>
+    <li><span class="ui">Global (agency)</span>: blocks in all workspaces. For competitors, the
+        agency's own clients or addresses that bounced. Only agency admins can view and change
+        it.</li>
+  </ul>
+  <p>
+    It's checked when an email is given a send time and again just before it's sent: if an address
+    is added while it already had an email scheduled, that email doesn't go out and the contact
+    becomes <b>Stopped</b>. A domain blocks all its addresses.
+  </p>
+
+  <h3>How it fills itself</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>What happens</th><th>Where it goes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>An email bounces</td><td>This workspace and Global (<code>bounce hard</code>).</td></tr>
+        <tr><td>On sending, the address turns out to be one that can't exist</td><td>Global.</td></tr>
+        <tr><td>A reply asks to unsubscribe</td><td>This workspace (<code>unsubscribe</code>).</td></tr>
+        <tr><td>Rejection because of the sending domain's reputation</td><td>Nowhere: the address isn't to blame.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Add an entry or a list</h3>
+  <ol class="steps">
+    <li><p>First choose the tab: workspace or global.</p></li>
+    <li><p><span class="ui">Add</span> → <span class="ui">Contacto</span> (Contact) or
+        <span class="ui">Dominio</span> (Domain), or <span class="ui">Upload list</span> to paste
+        several (one per line or separated by commas; for a domain, both <code>@competidor.com</code>
+        and <code>competidor.com</code> work).</p></li>
+    <li><p>Choose the <span class="ui">Reason</span> (<code>manual</code>, <code>bounce hard</code>,
+        <code>spam complaint</code> or <code>unsubscribe</code>) and confirm. A list upload tells you
+        how many were added.</p></li>
+  </ol>
+
+  <div class="note note--warn">
+    <b class="tag">Before removing an entry</b>
+    <p>
+      <span class="ui">Remove</span> lets that address receive email again: only do it if you know
+      why it was added. If it's also on the global list, it has to be removed from both (the global
+      one, by an agency admin).
+    </p>
+  </div>
+</section>
+
+      <section id="s15">
+  <h2><span class="num">15</span>Webhooks</h2>
+  <p class="purpose">
+    Notify another system (a CRM, an automation) every time something happens in sending.
+  </p>
+
+  <ol class="steps">
+    <li><p>Click <span class="ui">New webhook</span> and type the destination URL.</p></li>
+    <li><p>Tick the events, or <span class="ui">All events (*)</span>.</p></li>
+    <li><p>Click <span class="ui">Create webhook</span> and <b>copy the secret</b>: it isn't shown in
+        full again, and it lets you verify that the call comes from Outply.</p></li>
+  </ol>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Event</th><th>When it fires</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>sent</code></td><td>An email went out.</td></tr>
+        <tr><td><code>opened</code> / <code>clicked</code></td><td>An open or a click. Only in HTML campaigns with tracking.</td></tr>
+        <tr><td><code>replied</code></td><td>A contact replied, with the subject and the text. Also when the reply asks to unsubscribe.</td></tr>
+        <tr><td><code>bounced</code></td><td>An email bounced.</td></tr>
+        <tr><td><code>unsubscribed</code></td><td>Someone used an unsubscribe link. Since emails no longer carry one, it hardly ever fires.</td></tr>
+        <tr><td><code>sequence_finished</code></td><td>A contact finished the sequence without replying.</td></tr>
+        <tr><td><code>mailbox_error</code> / <code>mailbox_recovered</code></td><td>A mailbox stopped sending, or came back.</td></tr>
+        <tr><td><code>contacts_paused_on_reply</code></td><td>Contacts were paused because someone replied.</td></tr>
+        <tr><td><code>task_created</code></td><td>A task was created. It isn't among the checkboxes: it only arrives with <span class="ui">All events (*)</span>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Each delivery carries a unique identifier in <code>id</code> and in the
+    <code>X-Outply-Event-Id</code> header. If your endpoint doesn't respond there are retries, so a
+    delivery can be repeated: discard identifiers you've already processed. <span class="ui">Pausar</span>
+    stops sending events without deleting the configuration; <span class="ui">Remove</span> deletes
+    the webhook.
+  </p>
+</section>
+
+      <section id="s16">
+  <h2><span class="num">16</span>Visibility: what can be sent today <span class="nuevo">New</span></h2>
+  <p class="purpose">
+    A snapshot of the whole agency on one screen: how much can be sent today, how much actually
+    goes out and what is holding it back. It's an agency admin tool.
+  </p>
+  <p>
+    It's in the first menu group, under <span class="ui">Overview</span>, titled
+    <span class="ui">Qué puede enviar hoy</span> (What can be sent today), and it's only in Spanish.
+    The link appears in everyone's menu, but its data only loads for an agency admin. For your
+    campaign, use the <a href="#s7">Send queue</a> and <span class="ui">Mailboxes</span>.
+  </p>
+
+  <h3>The snapshot at the top</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Figure</th><th>What it is</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Capacidad real</b> (actual capacity)</td><td>The sum of the daily caps of the mailboxes that work.</td></tr>
+        <tr><td><b>Capacidad dormida</b> (dormant capacity)</td><td>The capacity of the mailboxes that can't send (not authorized, with an expired permission or paused). You get it back by connecting them.</td></tr>
+        <tr><td><b>Salen hoy</b> (going out today)</td><td>What was sent plus what is queued with a time today, and its percentage of the actual capacity.</td></tr>
+        <tr><td><b>Ya enviados</b> (already sent)</td><td>What has already gone out today.</td></tr>
+        <tr><td><b>New hoy</b> / <b>Follow ups hoy</b> (new / follow-ups today)</td><td>First contacts and follow-ups today, against the sum of their caps in the active campaigns.</td></tr>
+        <tr><td><b>Campañas activas</b> / <b>Retrasados</b> (active campaigns / delayed)</td><td>Active campaigns and across how many clients. If there are emails with a time on a past day that haven't gone out, it switches to <b>Retrasados</b>, in red: check their mailboxes.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The three tabs</h3>
+  <ul>
+    <li><b>Clientes</b> (Clients): actual and dormant capacity, mailboxes that work, what goes out
+        today and its use of the capacity, new contacts and follow-ups against their caps, active
+        campaigns, contacts in sequence and how many should already have gone out.</li>
+    <li><b>Campañas</b> (Campaigns): the schedule, in the campaign's time zone or the one you choose
+        in <span class="ui">Horario en:</span> (Schedule in:); its three caps; the capacity assigned
+        by the split; the capacity the wait between emails allows; what goes out today; what's
+        available; and the contacts in sequence. Filters: <span class="ui">Solo activas</span>
+        (Active only), by name, and with or without contacts. At the top it flags active campaigns
+        without contacts, so you can review them.</li>
+    <li><b>Bandejas</b> (Mailboxes): client, status, daily cap, sent today, how many campaigns it's
+        in and <span class="ui">Qué le pasa</span> (What's wrong).
+        <span class="ui">Solo las que no envían</span> (Only those not sending) leaves only the ones
+        that are down.</li>
+  </ul>
+  <p>
+    The “?” on each column header explains its calculation. Two typical uses: “why does this client
+    send half of what it could?” (dormant capacity, mailboxes not sending) and “why doesn't this
+    campaign reach its cap?” (assigned capacity against what the wait allows and what goes out
+    today).
+  </p>
+</section>
+
+      <section id="s17">
+  <h2><span class="num">17</span>Agency panel</h2>
+  <p class="purpose">
+    The six screens that sit above any single client. Agency admins only: the menu's
+    <span class="ui">Agency</span> section doesn't appear for anyone else.
+  </p>
+
+  <h3>Dashboard <span class="nuevo">New</span></h3>
+  <p>
+    What works and how Outply is being used. One filter at the top for the whole page:
+    <span class="ui">Period</span> (last 7, 30 or 90 days, this week, last week, this month,
+    last month, a specific month or custom dates) and <span class="ui">Client</span>. Days are
+    counted in Lima time (UTC−5), and each figure is compared with the previous period.
+  </p>
+  <ul>
+    <li><span class="ui">What works</span>: emails sent, reply rate, people contacted, bounce rate
+        and campaigns sending; charts by day or week, and rankings by client, campaign, step, day
+        of the week, send time, first-email subject and mailbox. Rates with a small sample are shown
+        lighter: don't trust them.</li>
+    <li><span class="ui">Platform usage</span>: new contacts (and how many came from the
+        AI-SDR), imports, emails, replies, tasks and “Who is using Outply”.</li>
+  </ul>
+  <p>
+    Each chart has <span class="ui">Show table</span> / <span class="ui">Show chart</span>.
+    A reply counts toward the email that triggered it: for the last days of the period, more may
+    still arrive.
+  </p>
+
+  <h3>Agency view</h3>
+  <p>
+    The total across all workspaces and one row per client. <span class="ui">Open</span> switches
+    to that workspace and takes you to its overview.
+  </p>
+
+  <h3>Workspaces</h3>
+  <p>
+    <span class="ui">New workspace</span> only asks for the name; the <i>slug</i> is generated
+    automatically. Each workspace's <b>API key</b> can be viewed, copied and rotated: when you rotate
+    it, the previous one stops working immediately. In each workspace's <span class="ui">Settings</span>:
+  </p>
+  <ul>
+    <li><b>Workspace name</b>: corrects the visible name. The slug doesn't change.</li>
+    <li><b>Client tracking</b>: master switch. When it's off, <b>all</b> the workspace's campaigns
+        go out without an open pixel or link rewriting, whatever each one says.</li>
+    <li><b>Maximum new contacts per company per day</b>: with 2, if Acme has five contacts, two go
+        out today and the rest tomorrow. Only the first email to each person counts. The company is
+        recognized by the Company field or, if it's empty, by the email domain; personal addresses
+        (gmail, hotmail…) don't count. Empty means no cap.</li>
+    <li><b>When someone replies</b>: what gets paused automatically. <b>Nothing</b> (if the person
+        is in two campaigns, the other one keeps writing to them); <b>That person, in your other
+        campaigns</b> (the usual choice); or <b>That person and the rest of their company</b>
+        (useful for large accounts). They're paused, not stopped.</li>
+    <li><b>New task alerts</b> → <b>Slack webhook</b>: the client's Slack channel for unassigned
+        tasks (in Slack: Apps → Incoming Webhooks → Add to Slack → channel → copy the URL). If it's
+        empty, the agency's is used.</li>
+    <li><b>Archive workspace</b>: deletes nothing. The workspace is marked “(archivado)”, its slug
+        ends in “-archivado” and its mailboxes are paused. You have to pause its campaigns first.</li>
+  </ul>
+  <p>
+    Pace and ramp aren't configured here, even though the screen's subtitle still mentions them:
+    they live in each mailbox (<a href="#s4">§04</a>).
+  </p>
+
+  <h3>Unsubscribe and legal compliance <span class="nuevo">New</span></h3>
+  <p>
+    A panel below the workspace table. Gmail requires that it be easy to stop receiving emails;
+    otherwise the contact marks it as spam, and with more than 0.3% complaints emails go to spam.
+    Since there's no unsubscribe link, we recommend closing every email with one of these lines
+    (each has a copy button). Anyone who replies “no” goes onto the workspace blocklist
+    automatically.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Language</th><th>Line</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Spanish</td><td>P. D.: si prefieres que no te escriba más, respóndeme «no».</td></tr>
+        <tr><td>Portuguese</td><td>P.S.: se preferir que eu não escreva mais, é só responder «não».</td></tr>
+        <tr><td>English</td><td>P.S. If you'd rather I didn't write again, just reply "no".</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Below, it summarizes the legal requirements for Peru, the United States, the European Union
+    and Brazil. It isn't legal advice: review it with each client before sending to those
+    countries.
+  </p>
+
+  <h3>Access</h3>
+  <ol class="steps">
+    <li><p>Choose the workspace in the dropdown.</p></li>
+    <li><p>Click <span class="ui">Invite</span>, type the email and choose the role.</p></li>
+    <li><p>The role is changed on the row itself; <span class="ui">Remove</span> revokes access to
+        that workspace.</p></li>
+  </ol>
+  <p>
+    The switch in the <span class="ui">Agency</span> column (<span class="ui">Agency
+    admin</span> / <span class="ui">This workspace only</span>) grants or removes the permission
+    over the whole agency: creating workspaces, viewing and rotating their API keys and granting
+    access. It asks for confirmation, and nobody can remove it from themselves.
+  </p>
+
+  <h3>Checks</h3>
+  <p>
+    What the system checks on itself every hour: <b>Duplicate sends</b>, <b>Sending queue
+    stuck</b>, <b>Counters off</b>, <b>Quota held without sends</b>, <b>Mailboxes in
+    error</b>, <b>Stuck contacts</b>, the Google account quota and sends left half-done (these two
+    appear under their technical names, <code>cupo_oauth_google</code> and
+    <code>envios_a_medias</code>). Anything with findings comes first, with examples and since
+    when. <b>Not checked</b> isn't the same as clean: it means that check hasn't run.
+  </p>
+
+  <h3>Warm-up: placement tests only <span class="nuevo">New</span></h3>
+  <p>
+    Outply doesn't warm up any mailbox. Synthetic warm-up (a network of mailboxes that write to
+    each other, like Mailivery) gets prospecting domains onto blocklists, so it's turned off; what
+    holds back a new mailbox is its ramp (<a href="#s4">§04</a>). This screen remains for:
+  </p>
+  <ul>
+    <li><b>Placement tests</b>: choose a <span class="ui">Campaign in the current workspace</span> and
+        click <span class="ui">Run test</span>. Outply sends its step 1, exactly as it would go out,
+        to test inboxes at Gmail, Outlook and Yahoo, and tells you what share landed in
+        <span class="ui">Inbox</span>, <span class="ui">Spam</span> and
+        <span class="ui">Promotions</span>. It's sent from a mailbox in the campaign that is still
+        connected to Mailivery.</li>
+    <li><b>Mailboxes connected to Mailivery</b>: all paused there. Every morning Outply keeps them
+        that way; <span class="ui">Apply now</span> does it immediately.</li>
+  </ul>
+</section>
+
+      <section id="s18">
+  <h2><span class="num">18</span>How Outply decides what goes out</h2>
+  <p class="purpose">
+    Why less is sometimes sent than you expected. Four levels, in this order.
+  </p>
+
+  <div class="flow">
+    <div class="lvl">
+      <div class="lvl-head"><em>Level 1</em> <strong>Each mailbox's cap</strong></div>
+      <p>
+        Each mailbox has its cap for today: its daily limit or, while the ramp lasts, the ramp's.
+        The sum of the caps is the absolute ceiling for the day: three mailboxes at 40 make 120
+        emails. The quota counts what was sent plus what is scheduled for today. The domain cap
+        overrides its mailboxes' caps, but by default it doesn't slow anything down.
+      </p>
+    </div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div class="lvl">
+      <div class="lvl-head"><em>Level 2</em> <strong>The split between campaigns</strong></div>
+      <p>
+        Each mailbox's quota is divided equally among the active campaigns that use it: a mailbox
+        of 40 in four campaigns gives 10 to each. Whatever one campaign doesn't use is offered to the
+        same client's other campaigns that have a queue (it never leaves the client), and they take
+        turns so it doesn't always go to the same ones. A campaign that is activated, or receives
+        contacts, when the mailboxes are already booked gets its share back the same day, little by
+        little, from the campaigns running above theirs. On top of that, each campaign respects its
+        <b>Total sends / day</b>.
+      </p>
+    </div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div class="lvl">
+      <div class="lvl-head"><em>Level 3</em> <strong>New contacts and follow-ups</strong></div>
+      <p>
+        The campaign's quota is split between new contacts and follow-ups in proportion to their two
+        caps: with 20 and 60, a quarter is for new contacts. New contacts go first within their
+        share; follow-ups use theirs plus whatever new contacts didn't fill, and anything left over
+        goes back to new contacts. With neither cap set, it's half and half; with one at 0, the
+        other takes everything. The workspace's maximum new contacts per company also applies here.
+      </p>
+    </div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div class="lvl">
+      <div class="lvl-head"><em>Level 4</em> <strong>Each email, one by one</strong></div>
+      <p>
+        It only goes out within the window and on sending days; outside them, or if it was delayed
+        by a stoppage, it waits for the next opening. Each email respects its mailbox's wait
+        (300–450 seconds by default) and its per-minute cap, and the pool's mailboxes take turns.
+        The next step is counted from <b>when the email was actually sent</b>: if step 1 went out
+        late, so does step 2.
+      </p>
+    </div>
+  </div>
+
+  <div class="note note--ok">
+    <b class="tag">An email without quota isn't lost</b>
+    <p>
+      It stays in <span class="ui">Waiting</span> (you can see it in the Send queue) and goes out
+      as soon as there's room; within new contacts or follow-ups, whoever has waited longest goes
+      first. A send is never cancelled for lack of quota. Only when a campaign gets its share back
+      do some emails from other campaigns go back to waiting: the ones with the latest times, never
+      the ones about to go out.
+    </p>
+  </div>
+  <p>
+    Where to look: your campaign's <a href="#s7">Send queue</a>, the
+    <span class="ui">Quota today</span> column in <span class="ui">Mailboxes</span> and, if you're
+    an agency admin, <a href="#s16">Visibility</a>.
+  </p>
+</section>
+
+      <section id="s19">
+  <h2><span class="num">19</span>Best practices</h2>
+  <p class="purpose">
+    The rules for setting up a client in Outply. They're the values mailboxes and campaigns are
+    created with, and they're behind the notices you'll see on screen.
+  </p>
+
+  <h3>The golden rule of domains</h3>
+  <p>
+    <b>The client's main domain is never used for cold email.</b> You send from dedicated variant
+    domains (<code>trytucliente.com</code>, <code>gettucliente.com</code>): if one gets damaged, it
+    doesn't drag down the main domain or the others.
+  </p>
+
+  <h3>The default values</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Measure</th><th class="n">Value</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Emails per mailbox per day</b></td><td class="n">40</td><td>The limit every mailbox starts with. Each client's cap is decided by their deliverability team; above 50, the tool warns you.</td></tr>
+        <tr><td><b>Mailboxes per domain</b></td><td class="n">3</td><td>Spreads the risk: a burned domain takes three mailboxes with it, not ten.</td></tr>
+        <tr><td><b>Wait between emails</b></td><td class="n">300–450 s</td><td>Random, the way a person writes.</td></tr>
+        <tr><td><b>New mailbox ramp</b></td><td class="n">10 + 3/day</td><td>Going from zero to forty emails at once is exactly what filters look for.</td></tr>
+        <tr><td><b>Bounce threshold</b></td><td class="n">3%</td><td>Over 7 days and with at least 50 sends. Once it's exceeded, the campaign pauses automatically before the damage gets expensive.</td></tr>
+        <tr><td><b>Format</b></td><td class="n">Plain text</td><td>It looks like an email written by hand, with no pixels or rewritten links.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Raising the daily limit doesn't make more emails go out: providers look at how the account
+    behaves, and the wait and the split also limit sending. <b>For more volume, add more
+    mailboxes.</b>
+  </p>
+
+  <h3>Before launching</h3>
+  <ul>
+    <li>SPF, DKIM, DMARC and MX in green.</li>
+    <li>A <span class="ui">Display name</span> with a person's name on every mailbox in the pool.</li>
+    <li>The ramp on for every new mailbox (it comes that way) and no synthetic warm-up.</li>
+    <li>One delivery test per mailbox, to an inbox on another provider.</li>
+    <li>A preview of step 1 with a real contact.</li>
+    <li>A reply-to-unsubscribe line at the end of every email, instead of a link.</li>
+  </ul>
+
+  <h3>While it runs</h3>
+  <ul>
+    <li>Check <span class="ui">Overview</span> every morning: the notice “One mailbox is not sending”
+        means the campaigns that depend on it are sending less than you think.</li>
+    <li>Check <span class="ui">Bounces</span>: lots of <code>5.1.</code> mean the list is old; a
+        repeated <code>5.7.</code> means you need to stop and review the domain.</li>
+    <li>Read the replies even if there are few: they're the only signal that can't be faked.</li>
+    <li>Limit new contacts per company per day: five emails to the same company on the same Tuesday
+        is the fastest way to get marked as spam.</li>
+    <li>Each active campaign takes its share of the mailboxes: pause the ones that have nobody left
+        to write to.</li>
+    <li>Let A/B variants build up sends before you choose: with twenty emails per variant there's
+        nothing to read.</li>
+  </ul>
+</section>
+
+      <section id="s20">
+  <h2><span class="num">20</span>Troubleshooting</h2>
+  <p class="purpose">The most common questions, with the real cause and what to do.</p>
+
+  <div class="trouble">
+
+    <div>
+      <h3>I can't activate the campaign</h3>
+      <p><b>Why</b> Something is missing: steps, a subject or content in an email step, mailboxes
+      that can send, a sender name on some mailbox in the pool, or sending days.</p>
+      <p><b>What to do</b> The <span class="ui">This is missing before it can be activated</span>
+      panel lists them all. For mailboxes without a name, set a <span class="ui">Display name</span> in
+      <span class="ui">Mailboxes</span> → <span class="ui">Settings</span>.</p>
+    </div>
+
+    <div>
+      <h3>“One mailbox is not sending” on the overview</h3>
+      <p><b>Why</b> It's in <b>Error</b> or the provider blocked the account: an expired permission,
+      a Gmail box left unticked, a changed SMTP password or a deleted Google account. The reason
+      shows in red under its email, in <span class="ui">Mailboxes</span>.</p>
+      <p><b>What to do</b> Reconnect it with <span class="ui">Connect</span> (in Gmail, with every
+      box ticked; in SMTP, with the same email and the new password). Changing its status doesn't
+      fix it. If the provider blocked the account, resolve that with the provider first.</p>
+    </div>
+
+    <div>
+      <h3>Much less is being sent than I expected</h3>
+      <p><b>Why</b> It's almost always one of these brakes: a new mailbox's ramp; the wait between
+      emails (about 86 a day at most in 9 hours); other campaigns using the same mailboxes; the
+      campaign's caps or the new-contacts-per-company cap; the sending window or days; or mailboxes
+      that are down.</p>
+      <p><b>What to do</b> Look at the <span class="ui">Send queue</span> and the
+      <span class="ui">Quota today</span> column in <span class="ui">Mailboxes</span>; an agency
+      admin sees it all together in <span class="ui">Visibility</span>. Whatever didn't go out today
+      isn't lost.</p>
+    </div>
+
+    <div>
+      <h3>I activated a new campaign and almost nothing goes out today</h3>
+      <p><b>Why</b> It shares mailboxes with campaigns that had already booked the day. It's only
+      entitled to its share and gets it back little by little. Without contacts, it sends nothing.</p>
+      <p><b>What to do</b> Check that it has contacts and active mailboxes. For more volume, add
+      mailboxes or pause campaigns that have nobody left to write to.</p>
+    </div>
+
+    <div>
+      <h3>The email arrived with a gap: “Hi ,”</h3>
+      <p><b>Why</b> A variable with no data for that contact. It comes out empty, silently.</p>
+      <p><b>What to do</b> Load or fix the data with <span class="ui">Edit</span>, or write a
+      fallback: <code>{{FirstName or 'ahí'}}</code>. If it happens with many contacts, review the
+      CSV mapping.</p>
+    </div>
+
+    <div>
+      <h3>I don't see opens or clicks</h3>
+      <p><b>Why</b> Most likely, the campaign is in <b>Plain text</b>, which measures nothing. In
+      HTML: tracking is off, there's no tracking domain, the domain doesn't point to Outply, or the
+      workspace's tracking is off.</p>
+      <p><b>What to do</b> Decide whether you really need to measure. If so: turn off
+      <span class="ui">Plain text</span>, turn on tracking, confirm with whoever manages the
+      domain that it's connected, and check <span class="ui">Tracking on (opens and
+      clicks)</span> in the workspace settings.</p>
+    </div>
+
+    <div>
+      <h3>The signature goes out without its image, or cut off</h3>
+      <p><b>Why</b> No image: the campaign is in plain text. Cut off: the image is wider than an
+      email, and Gmail crops it.</p>
+      <p><b>What to do</b> For the image, switch the campaign to HTML. If it's cut off, lower the
+      <span class="ui">Image width</span> until it fits in the 600&nbsp;px box.</p>
+    </div>
+
+    <div>
+      <h3>The reply rate looks very low</h3>
+      <p><b>Why</b> You're probably reading the rate <b>per email</b>, which counts follow-ups.</p>
+      <p><b>What to do</b> Look at the <b>rate per contact</b> in <span class="ui">Analytics</span>.</p>
+    </div>
+
+    <div>
+      <h3>I imported a CSV and fewer contacts came in</h3>
+      <p><b>Why</b> Duplicates, suppressed contacts (on the workspace or global blocklist, for
+      example because they bounced with another client) or invalid ones.</p>
+      <p><b>What to do</b> Don't force the suppressed ones. For the invalid ones, the error list
+      says which row failed.</p>
+    </div>
+
+    <div>
+      <h3>Someone who already replied still gets emails from another campaign</h3>
+      <p><b>Why</b> Pausing on reply is set to <b>Nothing</b> for that workspace.</p>
+      <p><b>What to do</b> In the workspace settings, set <span class="ui">When someone
+      replies</span> to at least “That person, in your other campaigns”.</p>
+    </div>
+
+    <div>
+      <h3>Someone asked to unsubscribe and I don't know if they were blocked</h3>
+      <p><b>Why</b> Only explicit requests count; “not interested” isn't an unsubscribe.</p>
+      <p><b>What to do</b> Look for them in <span class="ui">Blocklist</span> → <span class="ui">This
+      workspace</span>, with reason <code>unsubscribe</code>. If they aren't there and you want to
+      block them, add them by hand.</p>
+    </div>
+
+    <div>
+      <h3>A contact shows as Stopped and nobody touched it</h3>
+      <p><b>Why</b> Their address can't exist (and was blocked across all clients), or it went onto
+      the blocklist when it already had an email scheduled.</p>
+      <p><b>What to do</b> If the email was misspelled, add the contact again with the right one. If
+      it's on the blocklist, find out why before removing it.</p>
+    </div>
+
+    <div>
+      <h3>I stopped contacts by mistake</h3>
+      <p><b>Why</b> <span class="ui">Stop</span> is final, and in the campaign's
+      <span class="ui">Contacts</span> tab it doesn't ask for confirmation.</p>
+      <p><b>What to do</b> It can't be undone: enroll them again or import them again. For
+      temporary holds, use <span class="ui">Pause</span>.</p>
+    </div>
+
+    <div>
+      <h3>When I save the queue it says it can't</h3>
+      <p><b>Why</b> Saving is all or nothing and a move was no longer valid: the email goes out in
+      less than an hour, the contact got a send time while you were editing, it's on the blocklist
+      or its company reached its cap.</p>
+      <p><b>What to do</b> The red strip says which one. Click <span class="ui">Cancel</span>, then
+      <span class="ui">Edit</span> again, and redo whatever still makes sense.</p>
+    </div>
+
+    <div>
+      <h3>A campaign paused itself</h3>
+      <p><b>Why</b> At the close of the day, its bounce rate over the window went above the
+      threshold, with the minimum sample met.</p>
+      <p><b>What to do</b> Look at that campaign's <span class="ui">Bounces</span>: addresses that
+      don't exist call for cleaning the list; reputation rejections point to the domain.</p>
+    </div>
+
+    <div>
+      <h3>I see “Restricted access”, or Visibility shows me no data</h3>
+      <p><b>Why</b> These are agency admin screens, with data from all workspaces.</p>
+      <p><b>What to do</b> If you need them, ask an agency admin for the permission. For your
+      campaign, use the <span class="ui">Send queue</span> and <span class="ui">Mailboxes</span>.</p>
+    </div>
+
+    <div>
+      <h3>The indicator says “API offline”</h3>
+      <p><b>Why</b> The browser can't reach Outply's engine, often because of an update.</p>
+      <p><b>What to do</b> Wait a minute and reload. If it stays red, don't make decisions based on
+      what you see, and tell the technical team. If you see the amber saving banner, don't close the
+      window.</p>
+    </div>
+
+  </div>
+</section>
+
+      <section id="s21">
+  <h2><span class="num">21</span>Glossary</h2>
+
+  <dl class="glossary">
+    <div><dt>Mailbox</dt><dd>A real email account connected to Outply, from which emails are sent.</dd></div>
+    <div><dt>Unsubscribe by reply</dt><dd>A reply asking not to receive more emails. It puts the address on the workspace blocklist.</dd></div>
+    <div><dt>Draft</dt><dd>A campaign that hasn't been activated yet. It accepts contacts and sends nothing.</dd></div>
+    <div><dt>Synthetic warm-up</dt><dd>Automatic emails among a network of mailboxes to “warm up” an account. It's turned off. Not to be confused with the ramp.</dd></div>
+    <div><dt>Send queue</dt><dd>Who gets an email today, at what time and from which mailbox, plus what's waiting and what's coming.</dd></div>
+    <div><dt>Control (variant A)</dt><dd>The step's own subject and body: the version the variants compete against.</dd></div>
+    <div><dt>Quota</dt><dd>The emails a mailbox or a domain can send today. It counts what was sent plus what is scheduled for today.</dd></div>
+    <div><dt>Display name</dt><dd>The mailbox name the recipient sees. It's the sender.</dd></div>
+    <div><dt>Tracking domain</dt><dd>A subdomain of the client's (<code>trk.tudominio.com</code>) for measuring opens and clicks. Only in HTML campaigns, and only if it points to Outply.</dd></div>
+    <div><dt>DSN</dt><dd>The bounce notice the recipient's server sends back, with the code and the reason.</dd></div>
+    <div><dt>Waiting</dt><dd>Contacts who are due an email and didn't fit today. They aren't lost.</dd></div>
+    <div><dt>Enroll</dt><dd>To put a contact into a campaign, at a specific step.</dd></div>
+    <div><dt>Workspace</dt><dd>A client, with its campaigns, contacts, mailboxes and metrics isolated from the rest.</dd></div>
+    <div><dt>Jitter</dt><dd>The random wait between two emails from the same mailbox. 300–450 seconds by default.</dd></div>
+    <div><dt>Blocklist / suppression</dt><dd>Addresses and domains that never receive email. The global one blocks in all workspaces and fills itself with bounces.</dd></div>
+    <div><dt>Minimum sample / Window</dt><dd>The safeguards of the bounce rule: a campaign isn't judged until it has 50 sends in the last 7 days.</dd></div>
+    <div><dt>OOO</dt><dd>An automatic out-of-office reply. It doesn't count as a reply and the sequence continues.</dd></div>
+    <div><dt>Step</dt><dd>Each touch in the sequence: an automatic email or a manual task.</dd></div>
+    <div><dt>Pool</dt><dd>The mailboxes assigned to a campaign.</dd></div>
+    <div><dt>Placement test</dt><dd>Sending step 1 to test inboxes at Gmail, Outlook and Yahoo to see whether it lands in the inbox, spam or promotions.</dd></div>
+    <div><dt>Ramp</dt><dd>The cap that rises each day on a new mailbox: 10 on the day it's added and 3 more each day. On screen, “Warmup”.</dd></div>
+    <div><dt>Bounce</dt><dd>An email returned by the recipient's server. Final the first time; it blocks the address across all clients unless it's a reputation rejection.</dd></div>
+    <div><dt>Reputation rejection</dt><dd>A bounce caused by the sender's domain or IP. It counts in the campaign, but the address isn't blocked.</dd></div>
+    <div><dt>Split</dt><dd>How a mailbox's quota is divided among the active campaigns that use it.</dd></div>
+    <div><dt>Round-robin</dt><dd>The rotation of sends among the pool's mailboxes.</dd></div>
+    <div><dt>SPF · DKIM · DMARC</dt><dd>The three DNS records that prove your emails are legitimate.</dd></div>
+    <div><dt>Spintax</dt><dd>Several wordings for one fragment: <code>{hola|buenas}</code>. Each email picks one.</dd></div>
+    <div><dt>Plain text</dt><dd>The default format: text only, no images and no open or click tracking.</dd></div>
+    <div><dt>Variable / merge field</dt><dd>A piece of contact data inserted in the email: <code>{{FirstName}}</code>.</dd></div>
+    <div><dt>Sending window</dt><dd>The time range and the days when the campaign can send.</dd></div>
+    <div><dt>Webhook</dt><dd>An automatic notification Outply sends to another system when an event happens.</dd></div>
+  </dl>
+</section>
+
+      <footer>
+  <p>
+    Outply · User guide · October 2026. The deliverability figures (40 emails per mailbox per day,
+    3 mailboxes per domain, 300–450 seconds between emails and a ramp of 10 + 3 a day) are the
+    values mailboxes are created with. Each client's cap is decided by their deliverability team;
+    the tool warns above 50 emails per mailbox per day.
+  </p>
+</footer>
+    </main>
+  </div>
+</div>
+
+<script src="../assets/manual.js" defer></script>
+</body>
+</html>
